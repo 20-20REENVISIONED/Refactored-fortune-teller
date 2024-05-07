@@ -33,3 +33,23 @@ By default, our test suite runs E2E tests on the live version of the site. To sp
 ```sh
 $ BASE=http://127.0.0.1:5502 npm test
 ```
+
+If you have Python3 installed, you can start a simple http server to run the E2E tests by simply navigating to the repo root folder and then running:
+
+```sh
+python3 -m http.server
+```
+
+Then in a seperate window run:
+
+```sh
+BASE=http://127.0.0.1:8000 npm test
+```
+
+### Check for JavaScript Problems
+
+To check for any code quality or coding style issues using ESLint, just run the following:
+
+```sh
+npm run lint
+```
