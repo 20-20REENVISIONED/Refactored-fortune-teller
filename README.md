@@ -8,6 +8,26 @@ Improving the student experience by alleviating decision-making anxiety. Brought
 
 ## Development
 
+### Getting Started
+
+You will need Node.js and npm for, among other things, running tests (Jest), JS statis code analysis (ESLint) and code formatting (Prettier). For installation instructions see [the official documentation](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+
+After you've successfully installed Node.js and npm and verified installation, simply run the following to initialize npm for the project:
+
+```sh
+npm install
+```
+
+### Code Formatting
+
+To run Prettier to format your code (and to make sure you earn that check-mark when you push to the Github repository), simply run the following:
+
+```sh
+npm run format
+```
+
+### Testing
+
 By default, our test suite runs E2E tests on the live version of the site. To specify where your local version is, set the `BASE` environment variable. For example:
 
 ```sh

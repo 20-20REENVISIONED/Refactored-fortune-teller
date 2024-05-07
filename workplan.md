@@ -27,18 +27,18 @@ Hour Estimates (05/02-05/09):
 
 1. [H] [2 hours] Transcribe features into github issues
 2. [H — first step] [8 hours] Improve the documentation: [link](https://github.com/JosephBurger/fortune-teller/issues/1)
-    - open door in README (incl. class/code diagrams — tool: PlantUML)
-    - file headers
-    - CI/CD pipeline
+   - open door in README (incl. class/code diagrams — tool: PlantUML)
+   - file headers
+   - CI/CD pipeline
 3. [H, Easy] [5 hours] Notify users with javascript off that the site will not work (Probably a noscript tag). [link](https://github.com/JosephBurger/fortune-teller/issues/2)
 4. [H] Ask powell questions about unknown like language translation
 5. [H/M] [3 hours] Fix the open cookie button is not visible on an iPhone SE3 if it's in landscape. [link](https://github.com/JosephBurger/fortune-teller/issues/3)
-    - May be flexbox-related issue
+   - May be flexbox-related issue
 6. [M] [7.5 hours] {uncertainty: low} Make site installable as a Progressive Web App with offline access. [link](https://github.com/JosephBurger/fortune-teller/issues/4)
 7. [M] [next sprint] [? hours] {uncertainty: high} Setup to allow the site to be translated into various languages (maybe CI/CD pipeline that spits out a en folder, zh folder by reading localization. alternatively can be done locally in javascript with a json containing localizations) [link](https://github.com/JosephBurger/fortune-teller/issues/5)
-    - Support the usage of different writing-mode for applicable languages.
+   - Support the usage of different writing-mode for applicable languages.
 8. [M, ] [10 hours?] Fix the audio that does not work. [link](https://github.com/JosephBurger/fortune-teller/issues/6)
-    - fortune-cookie reading; test whether voices work across different devices/OS
+   - fortune-cookie reading; test whether voices work across different devices/OS
 
 ### Priority
 
@@ -61,7 +61,7 @@ H = High, M = Medium, L = Low
   - Occurs when opening cookie several times (potentially asynchronous call issue; reproduce by adding timeout calls to experiment with different event ordering)
   - Fix skipping animation in Fortune Cookie also means the text-to-speech is skipped
 - [L] Fix poor practices in HTML (use of div over section) {semantic HTML}
-no usage of picture just img
+  no usage of picture just img
   - Background PNG -> WEBPs, JPGs
 - [L] Fix poor CSS practices (use of literal values instead of var, usage of absolute units (px) in CSS instead of relative units (scaling problem), usage of width and height instead of inline and block or left/right and top/bottom instead of inline-start/inline-end and block-start/block-end (accessibility problem))
 - [L — leave for later] Some text does not meet WCAG standards for accessible text
