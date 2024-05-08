@@ -46,10 +46,14 @@ Then in a seperate window run:
 BASE=http://127.0.0.1:8000 npm test
 ```
 
-### Check for JavaScript Problems
+### Checking for JavaScript Problems
 
 To check for any code quality or coding style issues using ESLint, just run the following:
 
 ```sh
 npm run lint
 ```
+
+## Additional Documentation
+
+Additional documentation is available in the [wiki](https://github.com/20-20REENVISIONED/Refactored-fortune-teller/wiki).
