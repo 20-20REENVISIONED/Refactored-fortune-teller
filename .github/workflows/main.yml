@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cahce: 'npm'
+          cache: "npm"
       - name: Install modules
         run: npm ci
       - name: Run ESLint
@@ -26,7 +26,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cahce: 'npm'
+          cache: "npm"
       - name: Install modules
         run: npm ci
       - name: Check if Prettier could format code
