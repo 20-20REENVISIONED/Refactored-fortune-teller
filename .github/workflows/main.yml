@@ -32,6 +32,24 @@ jobs:
       - name: Check if Prettier could format code
         run: npx prettier --check --no-config .
 
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Install modules
+        run: npm ci
+      - name: Launch Python Server
+        run: python3 -m http.server &
+      - name: Run Jest Tests
+        run: BASE=http://127.0.0.1:8000 npm test
+
   jsdocs:
     runs-on: ubuntu-latest
     steps:
