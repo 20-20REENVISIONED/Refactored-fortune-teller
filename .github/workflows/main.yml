@@ -53,15 +53,15 @@ jobs:
   jsdocs:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Build JSDOCS
-        uses: andstor/jsdoc-action@v1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          recurse: true
-          output_dir: ./JSDOCs
-          config_file: .jsdoc.conf.json
-          template: minami
+          node-version: 20
+          cache: "npm"
+      - name: Install modules
+        run: npm ci
+      - name: Build JSDOCS
+        run: npm run docs
       - name: Commit JSDOCS
         uses: EndBug/add-and-commit@v9
         with:
