@@ -4,3 +4,23 @@
  */
 
 import "./nav.js";
+
+import Banana from 'https://cdn.jsdelivr.net/npm/banana-i18n@2.3.3/+esm'
+
+const banana = new Banana('en')
+
+
+function updateTexts() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    el.textContent = banana.i18n(key);
+  });
+}
+
+fetch(
+  '/Refactored-fortune-teller/source/i18n/en.json'
+).then(
+  (response) => response.json()
+).then((messages) => {
+  banana.load(messages, 'en');
+}).then(updateTexts);
