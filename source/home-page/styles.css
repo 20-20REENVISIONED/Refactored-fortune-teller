@@ -189,7 +189,6 @@ footer {
 /* Used to style the no js popup */
 
 .popup-wrapper {
-  visibility: hidden;
   pointer-events: none;
   transition: all 0.5s;
   position: fixed;
@@ -203,15 +202,10 @@ footer {
   z-index: 10;
   background-color: #3d3c597b;
   backdrop-filter: blur(15px);
-  opacity: 0;
-}
-.open {
-  visibility: visible;
   pointer-events: unset;
-  opacity: 1;
 }
 .popup {
-  position: relative;
+  /* position: relative; */
   z-index: 1;
   margin: 40px;
   max-width: 800px;
@@ -223,23 +217,20 @@ footer {
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3), 0 10px 50px rgba(0, 0, 0, 0.5);
-  transform: scale(0.95);
-  transition: transform 0.5s;
 }
 @media (max-width: 500px) {
   .popup-wrapper {
-    align-items: flex-end;
+    align-items: flex-start;
   }
   .popup {
     padding: 20px;
-    border-bottom: none;
+    border-top: none;
     border-left: none;
     border-right: none;
     margin: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     max-height: calc(100% - 20px);
-    transform: translateY(20px);
   }
 }
 .open .popup {
