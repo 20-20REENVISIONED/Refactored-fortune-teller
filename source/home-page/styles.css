@@ -233,18 +233,11 @@ footer {
     max-height: calc(100% - 20px);
   }
 }
-.open .popup {
-  transform: none;
-}
 .popup h2 {
   text-align: center;
   margin: 0;
 }
-.popup ul {
-  margin: 0;
-}
-.popup p,
-.popup li {
+.popup p {
   line-height: 1.5;
   margin: 0.5em 0;
 }
