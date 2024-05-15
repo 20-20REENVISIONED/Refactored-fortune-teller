@@ -1,80 +1,80 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Fortune Cookie | Envision Your Destiny</title>
-    <meta
-      name="description"
-      content="Crack open the secrets of your destiny by combining ancient wisdom with
+<head>
+  <title>Fortune Cookie | Envision Your Destiny</title>
+  <meta
+    name="description"
+    content="Crack open the secrets of your destiny by combining ancient wisdom with
       modern technology to bring clarity and inspiration."
-    />
-    <meta name="theme-color" content="#f1c86c" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../common/styles.css" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="../common/index.js" type="module"></script>
-    <script src="script.js" type="module"></script>
-  </head>
-  <body>
-    <div class="background" id="background"></div>
-    <div class="dramatic-bar top"></div>
-    <div class="dramatic-bar bottom"></div>
-    <header>
-      <h1 class="title">Fortune Cookie</h1>
-      <aside class="subtitle">
-        Begin your day with a taste of destiny by cracking open the secrets of
-        your future.
-      </aside>
-    </header>
+  />
+  <meta name="theme-color" content="#f1c86c" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../common/styles.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="../common/index.js" type="module"></script>
+  <script src="script.js" type="module"></script>
+</head>
+<body>
+<div class="background" id="background"></div>
+<div class="dramatic-bar top"></div>
+<div class="dramatic-bar bottom"></div>
+<header>
+  <h1 class="title">Fortune Cookie</h1>
+  <aside class="subtitle">
+    Begin your day with a taste of destiny by cracking open the secrets of
+    your future.
+  </aside>
+</header>
 
-    <main class="content">
-      <div class="fortune-container" id="cookie-wrapper">
-        <div class="fortune-paper" id="fortune-paper">
-          <p id="fortune-text">
-            Believe in yourself and you will achieve great things.
-          </p>
-        </div>
-        <button class="fortune-button" id="cookie-button">
-          <img
-            class="fortune-cookie full"
-            src="./images/transparent-cookie.png"
-            alt="fortune cookie"
-          />
-          <img
-            class="fortune-cookie right-side"
-            src="./images/transparent-cookie-right.png"
-            alt="fortune cookie right half"
-          />
-        </button>
-        <img
-          class="fortune-cookie left-side"
-          src="./images/transparent-cookie-left.png"
-          alt="fortune cookie left half"
-          id="fortune-image-left"
-        />
-        <button class="button fortune-button" id="fortune-button">
-          Open the cookie
-        </button>
-        <button class="button" id="reset-button" disabled>New cookie</button>
-      </div>
-    </main>
-
-    <div class="cancel-animation-wrapper">
-      <button id="cancel-animation-btn">Skip animation</button>
+<main class="content">
+  <div class="fortune-container" id="cookie-wrapper">
+    <div class="fortune-paper" id="fortune-paper">
+      <p id="fortune-text">
+        Believe in yourself and you will achieve great things.
+      </p>
     </div>
+    <button class="fortune-button" id="cookie-button">
+      <img
+        class="fortune-cookie full"
+        src="./images/transparent-cookie.png"
+        alt="fortune cookie"
+      />
+      <img
+        class="fortune-cookie right-side"
+        src="./images/transparent-cookie-right.png"
+        alt="fortune cookie right half"
+      />
+    </button>
+    <img
+      class="fortune-cookie left-side"
+      src="./images/transparent-cookie-left.png"
+      alt="fortune cookie left half"
+      id="fortune-image-left"
+    />
+    <button class="button fortune-button" id="fortune-button">
+      Open the cookie
+    </button>
+    <button class="button" id="reset-button" disabled>New cookie</button>
+  </div>
+</main>
 
-    <footer>
-      <label class="voice-select-label">
-        <span>Voice:</span>
-        <select name="voice" id="voice-select">
-          <option value="none">None (disable voice)</option>
-          <option value="--" disabled>&mdash;&mdash;&mdash;</option>
-        </select>
-      </label>
-    </footer>
+<div class="cancel-animation-wrapper">
+  <button id="cancel-animation-btn">Skip animation</button>
+</div>
 
-    <audio id="fortune-crack">
-      <source src="audio/fortune-crack.mp3" type="audio/mpeg" />
-    </audio>
-  </body>
+<footer>
+  <label class="voice-select-label">
+    <span>Voice:</span>
+    <select name="voice" id="voice-select">
+      <option value="none">None (disable voice)</option>
+      <option value="--" disabled>&mdash;&mdash;&mdash;</option>
+    </select>
+  </label>
+</footer>
+
+<audio id="fortune-crack">
+  <source src="audio/fortune-crack.mp3" type="audio/mpeg" />
+</audio>
+</body>
 </html>
