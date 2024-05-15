@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="../common/styles.css" />
   <link rel="stylesheet" type="text/css" href="styles.css" />
   <script src="../common/index.js" type="module"></script>
-  <title>Envision Your Destiny</title>
+  <title data-i18n="homepage-title">Envision Your Destiny</title>
   <meta
     name="description"
     content="Improving the student experience by alleviating decision-making anxiety. Brought to you by 20/20 Visionaries."
@@ -22,12 +22,13 @@
 
 <body>
 <div class="welcome-section">
-  <h1 class="title">Envision Your Destiny</h1>
+  <h1 class="title" data-i18n="homepage-body-title">Envision Your Destiny</h1>
   <aside class="subtitle">
-    Brought to you by
+    <span data-i18n="brought-by">Brought to you by</span>
     <a
       href="https://github.com/20-20REENVISIONED/Refactored-fortune-teller/blob/main/admin/team.md"
       class="team-link hover-underline"
+      data-i18n="team-name"
     >20/20 Visionaries</a
     >
   </aside>
@@ -40,7 +41,7 @@
     />
     <span class="description">
           <strong data-i18n="love-compatibility">Love Compatibility</strong>
-          <span>
+          <span data-i18n="love-compatibility-description">
             Discover your perfect match with cutting-edge astrological signs to
             provide insightful guidance on finding lasting love.
           </span>
@@ -49,8 +50,8 @@
   <a href="../fortune-cookie/" class="card-container">
     <img src="images/fortune-cookie-img.png" alt="Fortune Cookie Card" />
     <span class="description">
-          <strong>Fortune Cookie</strong>
-          <span>
+          <strong data-i18n="fortune-cookie">Fortune Cookie</strong>
+          <span data-i18n="fortune-cookie-description">
             Crack open the secrets of your destiny by combining ancient wisdom
             with modern technology to bring clarity and inspiration.
           </span>
@@ -59,8 +60,8 @@
   <a href="../palm-reading/" class="card-container">
     <img src="images/palm-reading-img.png" alt="Palm Reading Card" />
     <span class="description">
-          <strong>Palm Reading</strong>
-          <span>
+          <strong data-i18n="palm-reading">Palm Reading</strong>
+          <span data-i18n="palm-reading-description">
             Capture your heartbeat with your webcam to decode the hidden
             messages in your hands to create a brighter future.
           </span>
@@ -69,17 +70,18 @@
 </div>
 <div class="randomize">
   <div>
-    <h2>Can't decide?</h2>
-    <p>Your destiny is in our hands.</p>
+    <h2 data-i18n="cant-decide-title">Can't decide?</h2>
+    <p data-i18n="cant-decide-description">Your destiny is in our hands.</p>
   </div>
-  <button class="randomize-button button">Randomize</button>
+  <button class="randomize-button button" data-i18n="randomize-button">Randomize</button>
 </div>
-<footer>
+<footer data-i18n="footer-text">
   Improving the student experience by alleviating decision-making anxiety
   since 2023.
   <a
     href="https://github.com/20-20REENVISIONED/Refactored-fortune-teller"
     class="team-link hover-underline"
+    data-i18n="github-link"
   >GitHub</a
   >
 </footer>
