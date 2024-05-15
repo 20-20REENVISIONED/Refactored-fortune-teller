@@ -17,10 +17,17 @@ function updateTexts() {
   });
 }
 
-fetch(
-  '/Refactored-fortune-teller/source/i18n/en.json'
-).then(
-  (response) => response.json()
-).then((messages) => {
-  banana.load(messages, 'en');
-}).then(updateTexts);
+function setLang(lang='zh-hans') {
+  fetch(
+    `/Refactored-fortune-teller/source/i18n/${lang}.json`
+  ).then(
+    (response) => response.json()
+  ).then((messages) => {
+    banana.setLocale(lang)
+    banana.load(messages, lang);
+  }).then(updateTexts);
+}
+
+setLang('en')
+
+
