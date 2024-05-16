@@ -47,5 +47,16 @@
   "step-2-instruction-2": "等待片刻，计算过程完成。",
   "step-3-title": "步骤 3：解释匹配结果",
   "step-3-instruction-1": "匹配结果将提供所选星座之间的浪漫匹配度见解。",
-  "step-3-instruction-2": "然后你可以按“返回”按钮返回星座匹配页面。"
+  "step-3-instruction-2": "然后你可以按“返回”按钮返回星座匹配页面。",
+  "fortune-cookie-title": "幸运饼干 | 展望你的命运",
+  "fortune-cookie-subtitle": "开始你的一天，打开命运的秘密，展望你的未来。",
+  "fortune-text": "相信自己，你将成就伟大的事情。",
+  "fortune-cookie-full-alt": "幸运饼干",
+  "fortune-cookie-right-alt": "幸运饼干右半部分",
+  "fortune-cookie-left-alt": "幸运饼干左半部分",
+  "open-cookie-button": "打开饼干",
+  "new-cookie-button": "新的饼干",
+  "skip-animation-button": "跳过动画",
+  "voice-label": "语音：",
+  "none-option": "无（禁用语音）"
 }

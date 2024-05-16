@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Fortune Cookie | Envision Your Destiny</title>
+  <title data-i18n="fortune-cookie-title">Fortune Cookie | Envision Your Destiny</title>
   <meta
     name="description"
     content="Crack open the secrets of your destiny by combining ancient wisdom with
       modern technology to bring clarity and inspiration."
+    data-i18n="fortune-cookie-description"
   />
   <meta name="theme-color" content="#f1c86c" />
   <meta charset="UTF-8" />
@@ -20,8 +21,8 @@
 <div class="dramatic-bar top"></div>
 <div class="dramatic-bar bottom"></div>
 <header>
-  <h1 class="title">Fortune Cookie</h1>
-  <aside class="subtitle">
+  <h1 class="title" data-i18n="fortune-cookie">Fortune Cookie</h1>
+  <aside class="subtitle" data-i18n="fortune-cookie-subtitle">
     Begin your day with a taste of destiny by cracking open the secrets of
     your future.
   </aside>
@@ -30,7 +31,7 @@
 <main class="content">
   <div class="fortune-container" id="cookie-wrapper">
     <div class="fortune-paper" id="fortune-paper">
-      <p id="fortune-text">
+      <p id="fortune-text" data-i18n="fortune-text">
         Believe in yourself and you will achieve great things.
       </p>
     </div>
@@ -39,11 +40,13 @@
         class="fortune-cookie full"
         src="./images/transparent-cookie.png"
         alt="fortune cookie"
+        data-i18n="fortune-cookie-full-alt"
       />
       <img
         class="fortune-cookie right-side"
         src="./images/transparent-cookie-right.png"
         alt="fortune cookie right half"
+        data-i18n="fortune-cookie-right-alt"
       />
     </button>
     <img
@@ -51,23 +54,24 @@
       src="./images/transparent-cookie-left.png"
       alt="fortune cookie left half"
       id="fortune-image-left"
+      data-i18n="fortune-cookie-left-alt"
     />
-    <button class="button fortune-button" id="fortune-button">
+    <button class="button fortune-button" id="fortune-button" data-i18n="open-cookie-button">
       Open the cookie
     </button>
-    <button class="button" id="reset-button" disabled>New cookie</button>
+    <button class="button" id="reset-button" disabled data-i18n="new-cookie-button">New cookie</button>
   </div>
 </main>
 
 <div class="cancel-animation-wrapper">
-  <button id="cancel-animation-btn">Skip animation</button>
+  <button id="cancel-animation-btn" data-i18n="skip-animation-button">Skip animation</button>
 </div>
 
 <footer>
   <label class="voice-select-label">
-    <span>Voice:</span>
+    <span data-i18n="voice-label">Voice:</span>
     <select name="voice" id="voice-select">
-      <option value="none">None (disable voice)</option>
+      <option value="none" data-i18n="none-option">None (disable voice)</option>
       <option value="--" disabled>&mdash;&mdash;&mdash;</option>
     </select>
   </label>
