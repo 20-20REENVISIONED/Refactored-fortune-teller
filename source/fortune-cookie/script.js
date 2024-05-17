@@ -1,3 +1,10 @@
+/**
+ * This file manages the interactivity and animation for a fortune cookie application. 
+ * It handles the functionality for breaking the cookie, displaying a fortune, resetting the animation, 
+ * and enabling voice synthesis to read out the fortune. 
+ * To enable voice synthesis, it initializes voice synthesis to enable audio playback of the fortune and populates a dropdown with available voices.
+ * The script uses various imported utility functions and elements from the DOM to achieve these tasks.
+ */
 import { pick, timeoutId, wait } from "../utils.js";
 import { fortunes } from "./fortunes.js";
 

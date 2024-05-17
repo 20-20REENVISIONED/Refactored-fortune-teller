@@ -1,3 +1,16 @@
+/*
+Manages a zodiac wheel UI, allowing users to rotate the wheel, select zodiac signs, 
+and display pairings.
+Includes pointer event handling, momentum animations, and snapping functionality. 
+Key elements and event listeners manage user interactions and display results.
+and display pairings.
+
+Key Imports: Utilities for waiting and calculating zodiac angles. Elements for handling pointer events and animations.
+DOM Elements:
+- button: triggers results display.
+- howTo, help, popup: elements for displaying help instructions and results.
+*/
+
 import { wait } from "../utils.js";
 import {
   angleDiff,

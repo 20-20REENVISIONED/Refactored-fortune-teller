@@ -1,4 +1,11 @@
 // @ts-check
+/*
+Handles zodiac sign calculations and pairings based on wheel angles.
+Includes functions for rounding angles, mapping angles to zodiac signs, determining date ranges,
+calculating zodiac pairings, generating compatibility texts, and finding angle differences.
+
+Key Imports: Utilities for modular arithmetic and zodiac data arrays.
+*/
 
 import { mod } from "../utils.js";
 import { zodiacOrder, zodiacDateRanges, romantic } from "./data/data-array.js";

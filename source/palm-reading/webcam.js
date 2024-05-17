@@ -1,3 +1,15 @@
+/**
+ * This script manages the webcam functionality and UI interactions for an 
+ * application that analyzes the user's palm and displays a fortune. It handles 
+ * the initialization and control of the webcam, manages UI elements such as 
+ * instructions and ECG graph, and integrates fortune generation.
+ * 
+ * Event Listeners:
+ * - `requestBtn` click: Starts the camera and initializes the webcam.
+ * - `video` loadedmetadata: Handles the process after the webcam feed starts.
+ * - `readAnother` click: Resets the app for a new palm reading.
+ */
+
 import { wait } from "../utils.js";
 import { handleFortune } from "./script.js";
 
