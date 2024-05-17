@@ -1,10 +1,10 @@
 /**
- * This script is responsible for generating and displaying random fortunes 
- * based on different categories and managing the interactivity of a tabbed 
- * interface. It utilizes imported fortune data from `fortunes.js` and updates 
+ * This script is responsible for generating and displaying random fortunes
+ * based on different categories and managing the interactivity of a tabbed
+ * interface. It utilizes imported fortune data from `fortunes.js` and updates
  * the content of the respective tabs when a fortune is generated
- * 
- * The event listeners are added to the tab labels to update the displayed 
+ *
+ * The event listeners are added to the tab labels to update the displayed
  * content based on the selected tab.
  */
 
