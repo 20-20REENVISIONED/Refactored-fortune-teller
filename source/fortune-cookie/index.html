@@ -1,84 +1,101 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title data-i18n="fortune-cookie-title">Fortune Cookie | Envision Your Destiny</title>
-  <meta
-    name="description"
-    content="Crack open the secrets of your destiny by combining ancient wisdom with
+  <head>
+    <title data-i18n="fortune-cookie-title">
+      Fortune Cookie | Envision Your Destiny
+    </title>
+    <meta
+      name="description"
+      content="Crack open the secrets of your destiny by combining ancient wisdom with
       modern technology to bring clarity and inspiration."
-    data-i18n="fortune-cookie-description"
-  />
-  <meta name="theme-color" content="#f1c86c" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../common/styles.css" />
-  <link rel="stylesheet" href="style.css" />
-  <script src="../common/index.js" type="module"></script>
-  <script src="script.js" type="module"></script>
-</head>
-<body>
-<div class="background" id="background"></div>
-<div class="dramatic-bar top"></div>
-<div class="dramatic-bar bottom"></div>
-<header>
-  <h1 class="title" data-i18n="fortune-cookie">Fortune Cookie</h1>
-  <aside class="subtitle" data-i18n="fortune-cookie-subtitle">
-    Begin your day with a taste of destiny by cracking open the secrets of
-    your future.
-  </aside>
-</header>
-
-<main class="content">
-  <div class="fortune-container" id="cookie-wrapper">
-    <div class="fortune-paper" id="fortune-paper">
-      <p id="fortune-text" data-i18n="fortune-text">
-        Believe in yourself and you will achieve great things.
-      </p>
-    </div>
-    <button class="fortune-button" id="cookie-button">
-      <img
-        class="fortune-cookie full"
-        src="./images/transparent-cookie.png"
-        alt="fortune cookie"
-        data-i18n="fortune-cookie-full-alt"
-      />
-      <img
-        class="fortune-cookie right-side"
-        src="./images/transparent-cookie-right.png"
-        alt="fortune cookie right half"
-        data-i18n="fortune-cookie-right-alt"
-      />
-    </button>
-    <img
-      class="fortune-cookie left-side"
-      src="./images/transparent-cookie-left.png"
-      alt="fortune cookie left half"
-      id="fortune-image-left"
-      data-i18n="fortune-cookie-left-alt"
+      data-i18n="fortune-cookie-description"
     />
-    <button class="button fortune-button" id="fortune-button" data-i18n="open-cookie-button">
-      Open the cookie
-    </button>
-    <button class="button" id="reset-button" disabled data-i18n="new-cookie-button">New cookie</button>
-  </div>
-</main>
+    <meta name="theme-color" content="#f1c86c" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../common/styles.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="../common/index.js" type="module"></script>
+    <script src="script.js" type="module"></script>
+  </head>
+  <body>
+    <div class="background" id="background"></div>
+    <div class="dramatic-bar top"></div>
+    <div class="dramatic-bar bottom"></div>
+    <header>
+      <h1 class="title" data-i18n="fortune-cookie">Fortune Cookie</h1>
+      <aside class="subtitle" data-i18n="fortune-cookie-subtitle">
+        Begin your day with a taste of destiny by cracking open the secrets of
+        your future.
+      </aside>
+    </header>
 
-<div class="cancel-animation-wrapper">
-  <button id="cancel-animation-btn" data-i18n="skip-animation-button">Skip animation</button>
-</div>
+    <main class="content">
+      <div class="fortune-container" id="cookie-wrapper">
+        <div class="fortune-paper" id="fortune-paper">
+          <p id="fortune-text" data-i18n="fortune-text">
+            Believe in yourself and you will achieve great things.
+          </p>
+        </div>
+        <button class="fortune-button" id="cookie-button">
+          <img
+            class="fortune-cookie full"
+            src="./images/transparent-cookie.png"
+            alt="fortune cookie"
+            data-i18n="fortune-cookie-full-alt"
+          />
+          <img
+            class="fortune-cookie right-side"
+            src="./images/transparent-cookie-right.png"
+            alt="fortune cookie right half"
+            data-i18n="fortune-cookie-right-alt"
+          />
+        </button>
+        <img
+          class="fortune-cookie left-side"
+          src="./images/transparent-cookie-left.png"
+          alt="fortune cookie left half"
+          id="fortune-image-left"
+          data-i18n="fortune-cookie-left-alt"
+        />
+        <button
+          class="button fortune-button"
+          id="fortune-button"
+          data-i18n="open-cookie-button"
+        >
+          Open the cookie
+        </button>
+        <button
+          class="button"
+          id="reset-button"
+          disabled
+          data-i18n="new-cookie-button"
+        >
+          New cookie
+        </button>
+      </div>
+    </main>
 
-<footer>
-  <label class="voice-select-label">
-    <span data-i18n="voice-label">Voice:</span>
-    <select name="voice" id="voice-select">
-      <option value="none" data-i18n="none-option">None (disable voice)</option>
-      <option value="--" disabled>&mdash;&mdash;&mdash;</option>
-    </select>
-  </label>
-</footer>
+    <div class="cancel-animation-wrapper">
+      <button id="cancel-animation-btn" data-i18n="skip-animation-button">
+        Skip animation
+      </button>
+    </div>
 
-<audio id="fortune-crack">
-  <source src="audio/fortune-crack.mp3" type="audio/mpeg" />
-</audio>
-</body>
+    <footer>
+      <label class="voice-select-label">
+        <span data-i18n="voice-label">Voice:</span>
+        <select name="voice" id="voice-select">
+          <option value="none" data-i18n="none-option">
+            None (disable voice)
+          </option>
+          <option value="--" disabled>&mdash;&mdash;&mdash;</option>
+        </select>
+      </label>
+    </footer>
+
+    <audio id="fortune-crack">
+      <source src="audio/fortune-crack.mp3" type="audio/mpeg" />
+    </audio>
+  </body>
 </html>

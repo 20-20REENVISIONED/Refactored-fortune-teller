@@ -1,164 +1,208 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title data-i18n="love-compatibility-title">Love Compatibility | Envision Your Destiny</title>
-  <meta
-    name="description"
-    content="Discover your perfect match with cutting-edge astrological signs to
+  <head>
+    <title data-i18n="love-compatibility-title">
+      Love Compatibility | Envision Your Destiny
+    </title>
+    <meta
+      name="description"
+      content="Discover your perfect match with cutting-edge astrological signs to
       provide insightful guidance on finding lasting love."
-    data-i18n="love-compatibility-description"
-  />
-  <meta name="theme-color" content="#f1c86c" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+      data-i18n="love-compatibility-description"
+    />
+    <meta name="theme-color" content="#f1c86c" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="stylesheet" href="../common/styles.css" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap"
-    rel="stylesheet"
-  />
-  <script type="module" src="./data/data-array.js"></script>
-  <script src="../common/index.js" type="module"></script>
-  <script src="script.js" type="module"></script>
-</head>
-<body>
-<div class="container">
-  <header>
-    <h1 class="title" data-i18n="love-compatibility">Love Compatibility</h1>
-    <div id="guide">
-      <button class="button" id="how-to" data-i18n="how-to-use">How to Use</button>
-    </div>
-  </header>
-  <div class="wheel-field" id="left-wheel-field">
-    <div class="wheel" id="left-wheel">
-      <img
-        src="images/zodiac-wheel.png"
-        class="wheel-img"
-        id="left-wheel-img"
-        alt="left zodiac wheel"
-        draggable="false"
-        data-i18n="left-zodiac-wheel-alt"
-      />
-    </div>
-  </div>
-  <div class="bday-input" id="left-bday-input">
-    <form>
-      <label for="left-birthday" id="birthday-label" data-i18n="your-dob-label">YOUR DATE OF BIRTH:</label><br />
-      <input
-        type="text"
-        id="left-birthday"
-        name="left-birthday"
-        value="Dec 22 - Jan 19"
-      /><br />
-    </form>
-  </div>
+    <link rel="stylesheet" href="../common/styles.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="./data/data-array.js"></script>
+    <script src="../common/index.js" type="module"></script>
+    <script src="script.js" type="module"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="title" data-i18n="love-compatibility">Love Compatibility</h1>
+        <div id="guide">
+          <button class="button" id="how-to" data-i18n="how-to-use">
+            How to Use
+          </button>
+        </div>
+      </header>
+      <div class="wheel-field" id="left-wheel-field">
+        <div class="wheel" id="left-wheel">
+          <img
+            src="images/zodiac-wheel.png"
+            class="wheel-img"
+            id="left-wheel-img"
+            alt="left zodiac wheel"
+            draggable="false"
+            data-i18n="left-zodiac-wheel-alt"
+          />
+        </div>
+      </div>
+      <div class="bday-input" id="left-bday-input">
+        <form>
+          <label
+            for="left-birthday"
+            id="birthday-label"
+            data-i18n="your-dob-label"
+            >YOUR DATE OF BIRTH:</label
+          ><br />
+          <input
+            type="text"
+            id="left-birthday"
+            name="left-birthday"
+            value="Dec 22 - Jan 19"
+          /><br />
+        </form>
+      </div>
 
-  <div class="middle">
-    <button class="button" id="find-out" data-i18n="find-out-button">Find Out!</button>
-  </div>
+      <div class="middle">
+        <button class="button" id="find-out" data-i18n="find-out-button">
+          Find Out!
+        </button>
+      </div>
 
-  <div class="wheel-field" id="right-wheel-field">
-    <div class="wheel" id="right-wheel">
-      <img
-        src="images/zodiac-wheel.png"
-        class="wheel-img"
-        id="right-wheel-img"
-        alt="right zodiac wheel"
-        draggable="false"
-        data-i18n="right-zodiac-wheel-alt"
-      />
+      <div class="wheel-field" id="right-wheel-field">
+        <div class="wheel" id="right-wheel">
+          <img
+            src="images/zodiac-wheel.png"
+            class="wheel-img"
+            id="right-wheel-img"
+            alt="right zodiac wheel"
+            draggable="false"
+            data-i18n="right-zodiac-wheel-alt"
+          />
+        </div>
+      </div>
+      <div id="arrows">
+        <img
+          src="images/arrow-left.png"
+          id="left-arrow"
+          data-i18n="left-arrow-alt"
+        />
+        <img
+          src="images/arrow-right.png"
+          id="right-arrow"
+          data-i18n="right-arrow-alt"
+        />
+      </div>
+      <div class="bday-input" id="right-bday-input">
+        <form>
+          <label
+            for="right-birthday"
+            id="birthday-label"
+            data-i18n="their-dob-label"
+            >THEIR DATE OF BIRTH:</label
+          ><br />
+          <input
+            type="text"
+            id="right-birthday"
+            name="right-birthday"
+            value="Jun 21 - Jul 22"
+          /><br />
+        </form>
+      </div>
     </div>
-  </div>
-  <div id="arrows">
-    <img src="images/arrow-left.png" id="left-arrow" data-i18n="left-arrow-alt"/>
-    <img src="images/arrow-right.png" id="right-arrow" data-i18n="right-arrow-alt"/>
-  </div>
-  <div class="bday-input" id="right-bday-input">
-    <form>
-      <label for="right-birthday" id="birthday-label" data-i18n="their-dob-label">THEIR DATE OF BIRTH:</label><br />
-      <input
-        type="text"
-        id="right-birthday"
-        name="right-birthday"
-        value="Jun 21 - Jul 22"
-      /><br />
-    </form>
-  </div>
-</div>
 
-<div class="popup-wrapper">
-  <div class="popup" id="pop-up">
-    <div id="text">
-      <h2 id="pairing" data-i18n="popup-box-title">Pop-up Box</h2>
-      <p id="pairing-text" data-i18n="popup-box-text">This is some sample text for the pop-up box.</p>
+    <div class="popup-wrapper">
+      <div class="popup" id="pop-up">
+        <div id="text">
+          <h2 id="pairing" data-i18n="popup-box-title">Pop-up Box</h2>
+          <p id="pairing-text" data-i18n="popup-box-text">
+            This is some sample text for the pop-up box.
+          </p>
+        </div>
+        <div>
+          <button
+            class="button close-button"
+            id="go-back"
+            data-i18n="go-back-button"
+          >
+            Back
+          </button>
+        </div>
+      </div>
     </div>
-    <div>
-      <button class="button close-button" id="go-back" data-i18n="go-back-button">Back</button>
-    </div>
-  </div>
-</div>
 
-<div class="popup-wrapper">
-  <div class="popup" id="help">
-    <div id="text">
-      <button class="close-button" id="close-button">
-        <img src="./images/close.png" alt="close" data-i18n="close-button-alt"/>
-      </button>
-      <h2 id="pairing" data-i18n="user-guide-title">User Guide</h2>
-      <h3 data-i18n="step-1-title">Step 1: Selecting Zodiac Pairs</h3>
-      <ul>
-        <li data-i18n="step-1-instruction-1">Position your mouse cursor over the left wheel.</li>
-        <li data-i18n="step-1-instruction-2">Click and hold down the mouse button.</li>
-        <li data-i18n="step-1-instruction-3">
-          While keeping the button pressed, move your cursor along the wheel
-          to rotate it.
+    <div class="popup-wrapper">
+      <div class="popup" id="help">
+        <div id="text">
+          <button class="close-button" id="close-button">
+            <img
+              src="./images/close.png"
+              alt="close"
+              data-i18n="close-button-alt"
+            />
+          </button>
+          <h2 id="pairing" data-i18n="user-guide-title">User Guide</h2>
+          <h3 data-i18n="step-1-title">Step 1: Selecting Zodiac Pairs</h3>
           <ul>
-            <li data-i18n="step-1-note">
-              Note: Alternatively, you can scroll up or down while hovering
-              over the wheel to rotate it.
+            <li data-i18n="step-1-instruction-1">
+              Position your mouse cursor over the left wheel.
+            </li>
+            <li data-i18n="step-1-instruction-2">
+              Click and hold down the mouse button.
+            </li>
+            <li data-i18n="step-1-instruction-3">
+              While keeping the button pressed, move your cursor along the wheel
+              to rotate it.
+              <ul>
+                <li data-i18n="step-1-note">
+                  Note: Alternatively, you can scroll up or down while hovering
+                  over the wheel to rotate it.
+                </li>
+              </ul>
+            </li>
+            <li data-i18n="step-1-instruction-4">
+              If you do not know your zodiac sign, rotate the wheel until the
+              date range displayed in the middle of the wheel includes your
+              birthday. The zodiac pointed to by the wheel's corresponding arrow
+              is your sign.
+            </li>
+            <li data-i18n="step-1-instruction-5">
+              Once the arrow is pointing to your zodiac sign, release the mouse
+              button or stop scrolling to make your selection.
+            </li>
+            <li data-i18n="step-1-instruction-6">
+              Repeat the same action on the right wheel to select your partner's
+              zodiac sign using their birthday.
             </li>
           </ul>
-        </li>
-        <li data-i18n="step-1-instruction-4">
-          If you do not know your zodiac sign, rotate the wheel until the
-          date range displayed in the middle of the wheel includes your
-          birthday. The zodiac pointed to by the wheel's corresponding arrow
-          is your sign.
-        </li>
-        <li data-i18n="step-1-instruction-5">
-          Once the arrow is pointing to your zodiac sign, release the mouse
-          button or stop scrolling to make your selection.
-        </li>
-        <li data-i18n="step-1-instruction-6">
-          Repeat the same action on the right wheel to select your partner's
-          zodiac sign using their birthday.
-        </li>
-      </ul>
-      <h3 data-i18n="step-2-title">Step 2: Confirm Selection and Calculate Compatibility</h3>
-      <ul>
-        <li data-i18n="step-2-instruction-1">
-          After selecting you and your partner's zodiac sign, press the
-          "Find Out" button located near the bottom of the page.
-        </li>
-        <li data-i18n="step-2-instruction-2">
-          Wait for a moment as the compatibility calculation is processed.
-        </li>
-      </ul>
-      <h3 data-i18n="step-3-title">Step 3: Interpret the Compatibility Results</h3>
-      <ul>
-        <li data-i18n="step-3-instruction-1">
-          The compatibility results will provide insights into the romantic
-          compatibility between the selected zodiac signs.
-        </li>
-        <li data-i18n="step-3-instruction-2">
-          From there, you can then press the "Back" button to return to the
-          Zodiac Compatibility site.
-        </li>
-      </ul>
+          <h3 data-i18n="step-2-title">
+            Step 2: Confirm Selection and Calculate Compatibility
+          </h3>
+          <ul>
+            <li data-i18n="step-2-instruction-1">
+              After selecting you and your partner's zodiac sign, press the
+              "Find Out" button located near the bottom of the page.
+            </li>
+            <li data-i18n="step-2-instruction-2">
+              Wait for a moment as the compatibility calculation is processed.
+            </li>
+          </ul>
+          <h3 data-i18n="step-3-title">
+            Step 3: Interpret the Compatibility Results
+          </h3>
+          <ul>
+            <li data-i18n="step-3-instruction-1">
+              The compatibility results will provide insights into the romantic
+              compatibility between the selected zodiac signs.
+            </li>
+            <li data-i18n="step-3-instruction-2">
+              From there, you can then press the "Back" button to return to the
+              Zodiac Compatibility site.
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-</body>
+  </body>
 </html>
