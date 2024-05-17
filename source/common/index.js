@@ -19,7 +19,7 @@ function updateTexts() {
 
 function setLang(lang='zh-hans') {
   fetch(
-    `/Refactored-fortune-teller/source/i18n/${lang}.json`
+    `../i18n/${lang}.json`
   ).then(
     (response) => response.json()
   ).then((messages) => {
