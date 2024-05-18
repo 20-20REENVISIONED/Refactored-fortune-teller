@@ -1,0 +1,5 @@
+body {
+  background-image: url("../common/Images/Background.png");
+  display: flex;
+  flex-direction: column;
+}

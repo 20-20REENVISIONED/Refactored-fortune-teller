@@ -39,6 +39,12 @@ const links = [
     url: "../palm-reading/",
     imageUrl: "../home-page/images/palm-reading-img.png",
   },
+  {
+    label: "Settings",
+    url: "../settings/",
+    imageUrl: "../home-page/images/settings-img.png",
+  },
+
 ];
 
 /**
