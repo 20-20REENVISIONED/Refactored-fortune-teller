@@ -74,6 +74,24 @@
       </div>
       <button class="randomize-button button">Randomize</button>
     </div>
+    <div class="music">
+        <button class="play-music-button button">Play</button>
+        <button class="stop-music-button button">Mute</button>
+        <audio id="music-audio" loop src="audio/Space Jazz.mp3">
+        <script>
+          let play = document.querySelector(".play-music-button");
+          let stop = document.querySelector(".stop-music-button");
+          let audio = document.getElementById("music-audio");
+          function playMusic() {
+            audio.play();
+          }
+          function stopMusic() {
+            audio.pause();
+          }
+          play.addEventListener("click", playMusic);
+          stop.addEventListener("click", stopMusic);
+        </script>
+    </div>
     <footer>
       Improving the student experience by alleviating decision-making anxiety
       since 2023.
