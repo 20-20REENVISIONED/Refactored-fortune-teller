@@ -42,23 +42,47 @@
           </p>
         </div>
         <button class="fortune-button" id="cookie-button">
-          <img
-            class="fortune-cookie full"
-            src="./images/transparent-cookie.png"
-            alt="fortune cookie"
-          />
-          <img
-            class="fortune-cookie right-side"
-            src="./images/transparent-cookie-right.png"
-            alt="fortune cookie right half"
-          />
+          <picture>
+            <source srcset="images/transparent-cookie.avif" type="image/avif" />
+            <source srcset="images/transparent-cookie.webp" type="image/webp" />
+            <img
+              class="fortune-cookie full"
+              src="images/transparent-cookie.png"
+              alt="fortune cookie"
+            />
+          </picture>
+          <picture>
+            <source
+              srcset="images/transparent-cookie-right.avif"
+              type="image/avif"
+            />
+            <source
+              srcset="images/transparent-cookie-right.webp"
+              type="image/webp"
+            />
+            <img
+              class="fortune-cookie right-side"
+              src="./images/transparent-cookie-right.png"
+              alt="fortune cookie right half"
+            />
+          </picture>
         </button>
-        <img
-          class="fortune-cookie left-side"
-          src="./images/transparent-cookie-left.png"
-          alt="fortune cookie left half"
-          id="fortune-image-left"
-        />
+        <picture>
+          <source
+            srcset="images/transparent-cookie-left.avif"
+            type="image/avif"
+          />
+          <source
+            srcset="images/transparent-cookie-left.webp"
+            type="image/webp"
+          />
+          <img
+            class="fortune-cookie left-side"
+            src="./images/transparent-cookie-left.png"
+            alt="fortune cookie left half"
+            id="fortune-image-left"
+          />
+        </picture>
         <button class="button fortune-button" id="fortune-button">
           Open the cookie
         </button>
