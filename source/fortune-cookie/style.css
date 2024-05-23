@@ -24,18 +24,15 @@ footer {
   position: relative;
   z-index: 2;
 }
-
 header {
   margin-top: 50px;
   margin-bottom: auto;
 }
-
 footer {
   margin-bottom: 20px;
   display: flex;
   color: rgba(255, 255, 255, 0.5);
 }
-
 .voice-select-label {
   display: flex;
   gap: 10px;
@@ -43,7 +40,6 @@ footer {
   align-items: center;
   flex-wrap: wrap;
 }
-
 select {
   max-width: calc(100vw - 40px);
   border: 1px solid currentColor;
@@ -52,12 +48,10 @@ select {
   border-radius: 5px;
   cursor: pointer;
 }
-
 select:hover,
 select:focus {
   color: white;
 }
-
 option {
   background-color: #3d3c59;
 }
@@ -88,6 +82,7 @@ li a,
 
 li a:hover,
 .audio-dropdown:hover .dropbtn {
+  /* background-color: #3d3c59; */
   background-color: #1e1f2e;
   color: #5d59d1;
 }
@@ -141,12 +136,10 @@ li.audio-dropdown {
   align-items: center;
   justify-content: center;
 }
-
 .fortune-cookie {
   width: 300px;
   height: 300px;
 }
-
 .left-side {
   position: absolute;
   top: 0;
@@ -155,26 +148,21 @@ li.audio-dropdown {
   pointer-events: none;
   display: none;
 }
-
 .right-side,
 .cracked .full {
   display: none;
 }
-
 .cracked .left-side,
 .cracked .right-side,
 .cracked .fortune-paper {
   display: block;
 }
-
 .fortune-button {
   position: relative;
 }
-
 .cracked .fortune-button:focus {
   outline: none;
 }
-
 .hide-cookie {
   visibility: hidden;
 }
@@ -185,7 +173,6 @@ li.audio-dropdown {
   width: 200px;
   text-align: center;
 }
-
 .button:disabled {
   opacity: 0;
   pointer-events: none;
@@ -209,71 +196,53 @@ li.audio-dropdown {
   transform: perspective(1000px) scale(0.5) rotateY(-196deg) rotateX(20deg)
     translateZ(900px) rotateZ(135deg);
 }
-
 #fortune-text {
   margin: 0;
 }
-
 .pull-out {
   animation: pull-out-paper 3s forwards;
 }
-
 @keyframes pull-out-paper {
   0% {
-    transform: perspective(1000px) scale(0.5) rotateY(-196deg) rotateX(20deg) translateZ(900px) rotateZ(135deg);
+    transform: perspective(1000px) scale(0.5) rotateY(-196deg) rotateX(20deg)
+      translateZ(900px) rotateZ(135deg);
     z-index: -1;
   }
   33% {
-    transform: perspective(1000px) scale(0.5) rotateY(-155deg) rotateX(43deg) translateZ(900px) rotateZ(168deg);
+    transform: perspective(1000px) scale(0.5) rotateY(-155deg) rotateX(43deg)
+      translateZ(900px) rotateZ(168deg);
     z-index: -1;
   }
   100% {
-    transform: perspective(1000px) scale(0.5) rotateY(0deg) rotateX(0) translateZ(350px) rotateZ(360deg);
+    transform: perspective(1000px) scale(0.5) rotateY(0deg) rotateX(0)
+      translateZ(350px) rotateZ(360deg);
     z-index: 5;
   }
 }
 
 .reveal {
-  transform: perspective(1000px) scale(0.5) rotateY(0deg) rotateX(0) translateZ(350px) rotateZ(360deg);
+  transform: perspective(1000px) scale(0.5) rotateY(0deg) rotateX(0)
+    translateZ(350px) rotateZ(360deg);
   z-index: 5;
   display: block;
 }
-
 .reveal p {
-  background-image: linear-gradient(90deg, transparent, transparent, rgb(255, 0, 221), #f1c86c, #f1c86c);
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    transparent,
+    rgb(255, 0, 221),
+    #f1c86c,
+    #f1c86c
+  );
   background-size: 2000px;
   -webkit-background-clip: text;
   background-clip: text;
   animation: reveal-text 1s forwards;
 }
-
 @media (prefers-reduced-motion) {
   .reveal p {
     background-position: right;
-  }
-}
-
-@media screen and (orientation: landscape) {
-  header {
-    margin-top: 0px;
-  }
-  footer {
-    margin-bottom: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .fortune-cookie {
-    width: 200px; 
-    height: 200px;
-    margin-top: 60px;
-  }
-  .button {
-    margin-top: 0px;
-  }
-  .button:disabled {
-    position: absolute;
   }
 }
 
@@ -308,25 +277,20 @@ li.audio-dropdown {
   transition: height 1s;
   z-index: 5;
 }
-
 .dramatic-mode .dramatic-bar {
   height: 15vh;
 }
-
 .top {
   top: 0;
 }
-
 .bottom {
   bottom: 0;
 }
-
 footer,
 h1,
 aside {
   transition: opacity 0.5s 0.5s;
 }
-
 .dramatic-mode footer,
 .dramatic-mode h1,
 .dramatic-mode aside {
@@ -347,23 +311,42 @@ aside {
   justify-content: center;
   z-index: 6;
 }
-
 .animating {
   visibility: visible;
   opacity: 1;
   transition-delay: 0s, 0.5s;
 }
-
 .animating-new-cookie {
   margin-bottom: 60px;
   transition-delay: 0s;
 }
-
 #cancel-animation-btn {
   padding: 20px;
   color: rgba(255, 255, 255, 0.3);
 }
-
 #cancel-animation-btn:hover {
   text-decoration: underline;
+}
+@media screen and (orientation: landscape) {
+  header {
+    margin-top: 0px;
+  }
+  footer {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .fortune-cookie {
+    width: 200px;
+    height: 200px;
+    margin-top: 60px;
+  }
+  .button {
+    margin-top: 0px;
+  }
+  .button:disabled {
+    position: absolute;
+  }
 }
