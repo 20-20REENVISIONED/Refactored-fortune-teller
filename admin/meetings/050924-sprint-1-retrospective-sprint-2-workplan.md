@@ -1,17 +1,21 @@
 # Miscellaneous Notes
+
 - Git branching: name according to kind of branch/specifics. E.g. “feat/i18n”, “fix/my_bug”. For issues, mention the commit in the comments.
 - Arnav volunteered to spearhead GitHub issues (e.g. minimize version conflicts).
 - Stand-ups: every other day (Monday/Wednesday/Friday) – message in stand-up channel.
 
 # New channels
+
 - work-plan
 - help
 
 # New issue ideas
+
 - User Documentation (add “How to Use” buttons on pages where that’s not already a button).
 - Do runtime testing/messages for.
 
 # Last Week’s Progress & Velocity (05/02-05/09)
+
 - Julia: ⅗ hours = 0.6
   - Task: Documentation generation (README, file headers).
 - Henry: 5 hours.
@@ -43,12 +47,13 @@
   - Animation upon selecting the randomize button.
   - Setup GitHub Organization and transferred ownership to the organization rather than my own personal fork.
 - Emily: ⅗ tasks: familiarize with codebase and JavaScript, reviewed docs and online resources, as well as CI/CD pipeline.
-- Dony: ⅖  = 0.4
+- Dony: ⅖ = 0.4
   - Task: Be familiar with the structure of the code design the structure of the new features on how they are put together.
 - JD: 2/4 hours = 0.5
   - Task: Adding background music to the app.
 
 # Tasks & Hour Estimates (05/10-05/17)
+
 - Julia: 5 hours
   - Task: Complete file headers and README documentation; hopefully start on creating buttons displaying instructions for usage on each page where we don't already have them.
 - Henry: 5 hours
@@ -63,7 +68,7 @@
 - Bill:
   - Task: Generate en.json for all English strings.
 - Joseph: 5 Hours
-  - Work on updating the UI using anime.js  (I think this is the library I am going to use).
+  - Work on updating the UI using anime.js (I think this is the library I am going to use).
 - Emily: 4- hours
   - Keep working on same issue.
 - JD: 4 hours

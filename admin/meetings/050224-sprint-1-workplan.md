@@ -1,12 +1,15 @@
 # Priority
+
 - H = High
 - M = Medium
 - L = Low
 
 # Sprints
+
 - Start Thursday
 
 # Hour Estimates (05/02-05/09)
+
 - Julia: 5-8 hrs (more if necessary)
 - Henry: 5 hrs, maybe 10 if needed or interested and free
 - Iris: 5 hours, can be a little bit more
@@ -18,6 +21,7 @@
 - JD: 4-6 hours, but can do more if necessary
 
 # Tasks for First Sprint
+
 - [H] [2 hours] Transcribe features into GitHub issues
 - [H — first step] [8 hours] Improve the documentation:
   - Open door in README (incl. class/code diagrams — tool: PlantUML)
