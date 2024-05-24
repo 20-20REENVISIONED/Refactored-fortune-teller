@@ -27,24 +27,23 @@ const links = [
   {
     label: "Love Compatibility",
     url: "../love-compatibility/",
-    imageUrl: "../home-page/images/love-compatibility-img.png",
+    imageUrl: "../home-page/images/love-compatibility-img.jpg",
   },
   {
     label: "Fortune Cookie",
     url: "../fortune-cookie/",
-    imageUrl: "../home-page/images/fortune-cookie-img.png",
+    imageUrl: "../home-page/images/fortune-cookie-img.jpg",
   },
   {
     label: "Palm Reading",
     url: "../palm-reading/",
-    imageUrl: "../home-page/images/palm-reading-img.png",
+    imageUrl: "../home-page/images/palm-reading-img.jpg",
   },
   {
     label: "Settings",
     url: "../settings/",
     imageUrl: "../home-page/images/settings-img.png",
   },
-
 ];
 
 /**

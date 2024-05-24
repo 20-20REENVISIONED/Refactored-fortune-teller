@@ -1,7 +1,7 @@
 /* used to set background image*/
 
 body {
-  background-image: url("../common/Images/Background.png");
+  background-image: url("../common/Images/Background.jpg");
   display: flex;
   flex-direction: column;
 }
@@ -185,7 +185,6 @@ footer {
   margin-top: auto;
   text-align: center;
 }
-
 
 .settings-button {
   position: fixed;

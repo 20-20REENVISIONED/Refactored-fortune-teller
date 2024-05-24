@@ -1,4 +1,5 @@
 /* global process */
 
 export const BASE =
-  process.env.BASE || "https://cse110-sp23-group20.github.io/fortune-teller";
+  process.env.BASE ||
+  "https://20-20reenvisioned.github.io/Refactored-fortune-teller";
