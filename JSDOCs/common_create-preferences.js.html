@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: common/index.js</title>
+    <title>JSDoc: Source: common/create-preferences.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: common/index.js</h1>
+    <h1 class="page-title">Source: common/create-preferences.js</h1>
 
     
 
@@ -27,12 +27,28 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * @file A JavaScript file that is included on every page. If we want to apply a
- * script onto every page for consistency, this is the place to do so.
+ * Defines what the preference keys and values are.
+ * @typedef {object} defaultPreferenceKeyValues
+ * @property {float} globalVolume - The globalVolume of all sounds in the web app.
+ * @property {string} language - The language to display the web app in.
  */
 
-import "./nav.js";
-import "./create-preferences.js";
+/**
+ * An object that has as all the  preference keys and values.
+ * @type {defaultPreferenceKeyValues}
+ */
+const defaultPreferenceKeyValues = {
+  globalVolume: 0.5,
+  language: navigator.language,
+};
+
+if (localStorage.length != Object.entries(defaultPreferenceKeyValues).length) {
+  localStorage.clear();
+  for (const [key, value] of Object.entries(defaultPreferenceKeyValues)) {
+    console.log(key);
+    localStorage[key] = value;
+  }
+}
 </code></pre>
         </article>
     </section>
