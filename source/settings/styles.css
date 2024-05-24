@@ -1,85 +1,80 @@
+:root {
+  --h1-size: 5rem;
+  --h2-size: 3.125rem;
+  --footer-padding: 1.25rem;
+}
+
 /* used to set background image */
 body {
   background-image: url("../common/Images/Background.jpg");
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* used to style the settings section */
-.settings-section {
+settings-section {
+  --margin-block-size: 0.625rem;
   text-align: center;
-  max-width: 800px;
   margin: 0 auto;
-  margin-top: 50px;
-  padding: 20px;
-}
 
-/* used to style the volume adjust section */
-.volume-adjust {
-  margin-bottom: 20px;
-}
+  * {
+    margin-block: var(--margin-block-size);
+    margin-inline: 0;
+    text-align: start;
+  }
 
-.volume-adjust h2 {
-  display: block;
-  font-family: "Enchanted Land", cursive;
-  font-size: 50px;
-  font-weight: normal;
-  color: white;
-  margin-bottom: 10px;
-  background: transparent;
-}
+  h1,
+  h2 {
+    font-family: "Enchanted Land", cursive;
+    color: white;
+  }
+  h1 {
+    font-size: var(--h1-size);
+  }
+  h2 {
+    font-size: var(--h2-size);
+    font-weight: normal;
+  }
 
-.volume-adjust input[type="range"] {
-  width: 100%;
-}
-
-/* used to style the language selector section */
-.language-selector {
-  margin-bottom: 40px;
-}
-
-.language-selector h2 {
-  display: block;
-  font-family: "Enchanted Land", cursive;
-  font-size: 50px;
-  font-weight: normal;
-  color: white;
-  margin-bottom: 10px;
-  background: transparent;
-}
-
-.language-selector select {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-/* used to style the feedback button */
-.feedback-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #f1c86c;
-  color: black;
-  text-decoration: none;
-  border-radius: 5px;
-  font-family: "Enchanted Land", cursive;
-  font-size: 50px;
-  font-weight: normal;
-  cursor: pointer;
-}
-
-.feedback-button:hover {
-  background-color: #f1c86c;
-  color: white;
+  /* used to style the volume adjust section */
+  volume-adjust-global {
+    input[type="range"] {
+      inline-size: 100%;
+    }
+  }
+  /* used to style the language selector section */
+  language-selector {
+    select {
+      inline-size: 100%;
+      padding: var(--margin-block-size);
+      border-radius: 0.3125rem;
+      border: 0.0625rem solid #ccc;
+    }
+  }
+  /* used to style the feedback button */
+  #feedback-button {
+    display: inline-block;
+    margin-block: calc(2 * var(--margin-block-size));
+    padding: var(--margin-block-size);
+    background-color: #f1c86c;
+    color: black;
+    text-decoration: none;
+    border-radius: 5.3125rem;
+    font-family: "Enchanted Land", cursive;
+    font-size: var(--h2-size);
+    font-weight: normal;
+    cursor: pointer;
+  }
+  #feedback-button:hover {
+    color: white;
+  }
 }
 
 /* footer styling */
 footer {
   color: rgba(255, 255, 255, 0.5);
-  font-size: 0.8em;
-  padding: 20px;
-  margin-top: auto;
-  text-align: center;
+  font-size: 0.8rem;
+  padding: var(--footer-padding);
 }

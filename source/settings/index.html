@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,20 +20,21 @@
     <meta name="theme-color" content="#f1c86c" />
   </head>
   <body>
-    <div class="settings-section">
-      <h1 class="title">Settings</h1>
-      <div class="volume-adjust">
+    <settings-section>
+      <h1>Settings</h1>
+      <volume-adjust-global>
         <h2>Volume Adjust</h2>
         <input type="range" min="0" max="100" />
-      </div>
-      <div class="language-selector">
+      </volume-adjust-global>
+      <language-selector>
         <h2>Language Selector</h2>
         <select>
-          <!-- Options will be added here -->
+          <option value="en">English</option>
+          <option value="jp">日本語</option>
         </select>
-      </div>
-      <a href="#" class="feedback-button">Submit Feedback</a>
-    </div>
+      </language-selector>
+      <button id="feedback-button">Submit Feedback</button>
+    </settings-section>
     <footer>
       Improving the student experience by alleviating decision-making anxiety
       since 2023.
