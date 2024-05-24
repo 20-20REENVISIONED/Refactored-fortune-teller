@@ -14,16 +14,6 @@ body {
   padding: 20px;
 }
 
-/* used to style the title */
-.settings-title {
-  font-family: "Enchanted Land", cursive;
-  font-size: 100px;
-  font-weight: normal;
-  color: #f1c86c;
-  text-shadow: 0 0 5px #f1c86c, 0 0 10px #f1c86c, 0 0 15px #f1c86c, 0 0 20px #f1c86c, 0 0 30px #f1c86c, 0 0 40px #f1c86c, 0 0 50px #f1c86c;
-  margin-bottom: 50px;
-}
-
 /* used to style the volume adjust section */
 .volume-adjust {
   margin-bottom: 20px;
