@@ -42,7 +42,7 @@ const links = [
   {
     label: "Settings",
     url: "../settings/",
-    imageUrl: "../home-page/images/settings-img.png",
+    imageUrl: "../common/icons/settings-img.svg",
   },
 ];
 
