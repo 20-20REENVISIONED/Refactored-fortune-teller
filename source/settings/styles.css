@@ -1,5 +1,95 @@
+/* used to set background image */
 body {
   background-image: url("../common/Images/Background.png");
   display: flex;
   flex-direction: column;
+}
+
+/* used to style the settings section */
+.settings-section {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+/* used to style the title */
+.settings-title {
+  font-family: "Enchanted Land", cursive;
+  font-size: 100px;
+  font-weight: normal;
+  color: #f1c86c;
+  text-shadow: 0 0 5px #f1c86c, 0 0 10px #f1c86c, 0 0 15px #f1c86c, 0 0 20px #f1c86c, 0 0 30px #f1c86c, 0 0 40px #f1c86c, 0 0 50px #f1c86c;
+  margin-bottom: 50px;
+}
+
+/* used to style the volume adjust section */
+.volume-adjust {
+  margin-bottom: 20px;
+}
+
+.volume-adjust h2 {
+  display: block;
+  font-family: "Enchanted Land", cursive;
+  font-size: 50px;
+  font-weight: normal;
+  color: white;
+  margin-bottom: 10px;
+  background: transparent;
+}
+
+.volume-adjust input[type="range"] {
+  width: 100%;
+}
+
+/* used to style the language selector section */
+.language-selector {
+  margin-bottom: 20px;
+}
+
+.language-selector h2 {
+  display: block;
+  font-family: "Enchanted Land", cursive;
+  font-size: 50px;
+  font-weight: normal;
+  color: white;
+  margin-bottom: 10px;
+  background: transparent;
+}
+
+.language-selector select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* used to style the feedback button */
+.feedback-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f1c86c;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: "Enchanted Land", cursive;
+  font-size: 50px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.feedback-button:hover {
+  background-color: #f1c86c;
+  color: white;
+}
+
+/* footer styling */
+footer {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8em;
+  padding: 20px;
+  margin-top: auto;
+  text-align: center;
 }
