@@ -27,5 +27,12 @@
     "testPathIgnorePatterns": [
       "/__tests__/consts.js"
     ]
+  },
+  "dependencies": {
+    "@barba/core": "^2.9.7",
+    "animejs": "^3.2.2",
+    "gsap": "^3.12.5",
+    "python3": "^0.0.1",
+    "vanta": "^0.5.24"
   }
 }

@@ -9,7 +9,9 @@
     "browser": true,
     "context": true,
     "puppeteerConfig": true,
-    "jestPuppeteer": true
+    "jestPuppeteer": true,
+    "anime": "readonly", // Added as a global variable
+    "gsap": "readonly"   // Added as a global variable
   },
   "extends": ["eslint:recommended", "prettier"],
   "parserOptions": {
