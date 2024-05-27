@@ -23,7 +23,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Function to shuffle array elements randomly
+/**
+ * Shuffles the elements of an array randomly.
+ *
+ * @param {Array} array - The array to shuffle.
+ */
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
