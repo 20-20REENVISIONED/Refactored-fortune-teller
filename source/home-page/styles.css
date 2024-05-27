@@ -1,6 +1,6 @@
 /* General body styles */
 body {
-  background-image: url("../common/Images/Background.png");
+  background-image: url("../common/Images/Background.jpg");
   display: flex;
   flex-direction: column;
   align-items: center;

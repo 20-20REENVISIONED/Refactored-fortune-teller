@@ -27,17 +27,17 @@ const links = [
   {
     label: "Love Compatibility",
     url: "../love-compatibility/",
-    imageUrl: "../home-page/images/newLoveImage.JPG",
+    imageUrl: "../home-page/images/new-love-compatibility-img.jpg",
   },
   {
     label: "Fortune Cookie",
     url: "../fortune-cookie/",
-    imageUrl: "../home-page/images/newFortuneImage.JPG",
+    imageUrl: "../home-page/images/new-fortune-cookie-img.jpg",
   },
   {
     label: "Palm Reading",
     url: "../palm-reading/",
-    imageUrl: "../home-page/images/newHandImage.JPG",
+    imageUrl: "../home-page/images/new-palm-reading-img.jpg",
   },
 ];
 
