@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>love-compatibility/zodiac-angles.js - Documentation</title>
+    <title>home-page/cardAnimate.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">love-compatibility/zodiac-angles.js</h1>
+    <h1 class="page-title">home-page/cardAnimate.js</h1>
     
 
     
@@ -39,101 +39,41 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>// @ts-check
+            <pre class="prettyprint source linenums"><code>document.addEventListener("DOMContentLoaded", function () {
+  var cards = document.querySelectorAll(".card");
 
-import { mod } from "../utils.js";
-import { zodiacOrder, zodiacDateRanges, romantic } from "./data/data-array.js";
+  // Convert NodeList to array
+  cards = Array.from(cards);
+
+  // Shuffle the array randomly
+  shuffleArray(cards);
+
+  // Animate shuffled cards into position
+  anime({
+    targets: cards,
+    translateY: [-400, 0], // Initial Y position to final position
+    opacity: [0, 1], // Fade in animation
+    rotate: {
+      value: "+=360", // Spin rapidly 360 degrees
+      duration: 800, // Duration of spinning animation
+      easing: "easeInOutSine", // Easing for spinning animation
+    },
+    scale: [0.8, 1], // Bounce effect - start smaller and expand to full size
+    easing: "easeOutElastic(1, 0.8)", // Easing for bounce effect
+    delay: anime.stagger(1000), // Stagger animation for each card
+  });
+});
 
 /**
- * Rounds the given angle to the nearest multiple of 30.
- * @param {number} angle - The angle to round.
- * @returns {number} The rounded angle.
+ * Shuffles the elements of an array randomly.
+ *
+ * @param {Array} array - The array to shuffle.
  */
-export function roundAngle(angle) {
-  return Math.round(angle / 30) * 30;
-}
-
-/**
- * Retrieves the zodiac sign mapping for the given angle on the left wheel.
- * @param {number} roundedAngle - The angle on the left wheel pre-rounded to the nearest 30 degree increment
- * @returns {string} The corresponding zodiac sign, or `'unknown'` if the angle does not correspond to a zodiac.
- */
-export function getMappingLeft(roundedAngle) {
-  if (Math.round(roundedAngle / 30) * 30 !== roundedAngle) {
-    return "unknown";
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
   }
-  const index = Math.round(mod(roundedAngle, 360) / 30);
-  return zodiacOrder[index &lt; 12 ? Math.round(mod(roundedAngle, 360) / 30) : 0];
-}
-
-/**
- * Retrieves the zodiac sign mapping for the given angle on the right wheel.
- * @param {number} roundedAngle - The angle on the right wheel pre-rounded to the nearest 30 degree increment
- * @returns {string} The corresponding zodiac sign, or `'unknown'` if the angle does not correspond to a zodiac.
- */
-export function getMappingRight(roundedAngle) {
-  if (Math.round(roundedAngle / 30) * 30 !== roundedAngle) {
-    return "unknown";
-  }
-  const index = Math.round(mod(roundedAngle, 360) / 30);
-  return zodiacOrder[index &lt; 6 ? index + 6 : index &lt; 12 ? index - 6 : 0];
-}
-
-/**
- * Determines the zodiac sign date range based on the given angle on the left wheel.
- * @param {number} angle - The angle of the left wheel.
- * @returns {string} The zodiac sign associated with the angle.
- */
-export function determineDateRangeLeft(angle) {
-  return zodiacDateRanges[getMappingLeft(angle)] ?? "unknown";
-}
-
-/**
- * Determines the zodiac sign date range based on the given angle on the right wheel.
- * @param {number} angle - The angle of the right wheel.
- * @returns {string} The zodiac sign associated with the angle.
- */
-export function determineDateRangeRight(angle) {
-  return zodiacDateRanges[getMappingRight(angle)] ?? "unknown";
-}
-
-/**
- * Gets the zodiac sign pair based on the angles of the left and right wheels.
- * @param {number} angleLeft - The angle of the left wheel.
- * @param {number} angleRight - The angle of the right wheel.
- * @returns {Array} An array containing the zodiac sign pair.
- */
-export function determinePairing(angleLeft, angleRight) {
-  const leftMapping = getMappingLeft(angleLeft);
-  const rightMapping = getMappingRight(angleRight);
-  return [leftMapping, rightMapping];
-}
-
-/**
- * Generates the text describing the romantic compatibility between two zodiac signs.
- * @param {string} leftSign - The left wheel's zodiac sign.
- * @param {string} rightSign - The right wheel's zodiac sign.
- * @returns {string} The generated text.
- */
-export function textGenerator(leftSign, rightSign) {
-  return (
-    romantic.get(`${leftSign} and ${rightSign}`) ??
-    romantic.get(`${rightSign} and ${leftSign}`) ??
-    "An error has occurred"
-  );
-}
-
-/**
- * Finds the smaller difference between two angles. For example, the difference
- * -170° - 170° should be 20°, because -170° is equivalent to 190°.
- * @param {number} angle - The angle to subtract the base from.
- * @param {number} base - The base angle that is subtracted from the angle.
- * @returns {number} `angle - base`, but it's guaranteed to be between -180° and
- * 180°.
- */
-export function angleDiff(angle, base) {
-  const diff = mod(angle - base, 360);
-  return diff > 180 ? diff - 360 : diff;
 }
 </code></pre>
         </article>
