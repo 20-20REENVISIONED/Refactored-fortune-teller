@@ -64,6 +64,9 @@ function handleCardContainerClick(event) {
  * @param {HTMLElement} cardContainer - The card container element to animate.
  */
 function animateCardContainer(cardContainer) {
+  // Clear any existing animations on the card
+  gsap.killTweensOf(cardContainer);
+
   // Define animation properties
   gsap.to(cardContainer, {
     opacity: 0, // Fade out the card
@@ -93,8 +96,19 @@ const cardContainers = document.querySelectorAll(".card-container");
 randomizeButton.addEventListener("click", randomize);
 
 // Add click event listeners to each card container
-cardContainers.forEach((container) => {
+cardContainers.forEach(container => {
   container.addEventListener("click", handleCardContainerClick);
+});
+
+// Ensure the proper reset of animations and styles when the page is loaded from the browser cache
+window.addEventListener("pageshow", function(event) {
+  if (event.persisted) {
+    // The page was restored from the cache
+    console.log("Page loaded from cache. Resetting animations and states.");
+    document.querySelectorAll(".card-container").forEach(container => {
+      gsap.to(container, { opacity: 1, scale: 1, y: 0, skewX: 0, skewY: 0, blur: 0, clearProps: "all" });
+    });
+  }
 });
 </code></pre>
         </article>
