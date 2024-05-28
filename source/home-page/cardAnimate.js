@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
+  initializeCards();
+
+  window.addEventListener("popstate", function () {
+    initializeCards();
+  });
+});
+
+function initializeCards() {
   var cards = document.querySelectorAll(".card");
 
   // Convert NodeList to array
@@ -21,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     easing: "easeOutElastic(1, 0.8)", // Easing for bounce effect
     delay: anime.stagger(1000), // Stagger animation for each card
   });
-});
+}
 
 /**
  * Shuffles the elements of an array randomly.
