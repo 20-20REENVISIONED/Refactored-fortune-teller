@@ -47,6 +47,14 @@ if (localStorage.length != Object.entries(defaultPreferenceKeyValues).length) {
   for (const [key, value] of Object.entries(defaultPreferenceKeyValues)) {
     console.log(key);
     localStorage[key] = value;
+    if (key == "language") {
+      let langauge = localStorage["language"].split("-")[0];
+      if (langauge == "zh") {
+        langauge =
+          langauge + "-" + localStorage["language"].split("-")[1].toLowerCase();
+      }
+      localStorage[key] = langauge;
+    }
   }
 }
 </code></pre>
