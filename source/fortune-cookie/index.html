@@ -30,6 +30,13 @@
       </aside>
     </header>
 
+    <noscript>
+      <popup-widget>
+        <h2>JavaScript is disabled</h2>
+        <p>Please enable JavaScript to ensure the app will work properly.</p>
+      </popup-widget>
+    </noscript>
+
     <main class="content">
       <div class="fortune-container" id="cookie-wrapper">
         <div class="fortune-paper" id="fortune-paper">
@@ -38,26 +45,50 @@
           </p>
         </div>
         <button class="fortune-button" id="cookie-button">
-          <img
-            class="fortune-cookie full"
-            src="./images/transparent-cookie.png"
-            alt="fortune cookie"
-            data-i18n="fortune-cookie-full-alt"
-          />
-          <img
-            class="fortune-cookie right-side"
-            src="./images/transparent-cookie-right.png"
-            alt="fortune cookie right half"
-            data-i18n="fortune-cookie-right-alt"
-          />
+          <picture>
+            <source srcset="images/transparent-cookie.avif" type="image/avif" />
+            <source srcset="images/transparent-cookie.webp" type="image/webp" />
+            <img
+              class="fortune-cookie full"
+              src="images/transparent-cookie.png"
+              alt="fortune cookie"
+              data-i18n="fortune-cookie-full-alt"
+            />
+          </picture>
+          <picture>
+            <source
+              srcset="images/transparent-cookie-right.avif"
+              type="image/avif"
+            />
+            <source
+              srcset="images/transparent-cookie-right.webp"
+              type="image/webp"
+            />
+            <img
+              class="fortune-cookie right-side"
+              src="./images/transparent-cookie-right.png"
+              alt="fortune cookie right half"
+              data-i18n="fortune-cookie-right-alt"
+            />
+          </picture>
         </button>
-        <img
-          class="fortune-cookie left-side"
-          src="./images/transparent-cookie-left.png"
-          alt="fortune cookie left half"
-          id="fortune-image-left"
-          data-i18n="fortune-cookie-left-alt"
-        />
+        <picture>
+          <source
+            srcset="images/transparent-cookie-left.avif"
+            type="image/avif"
+          />
+          <source
+            srcset="images/transparent-cookie-left.webp"
+            type="image/webp"
+          />
+          <img
+            class="fortune-cookie left-side"
+            src="./images/transparent-cookie-left.png"
+            alt="fortune cookie left half"
+            id="fortune-image-left"
+            data-i18n="fortune-cookie-left-alt"
+          />
+        </picture>
         <button
           class="button fortune-button"
           id="fortune-button"

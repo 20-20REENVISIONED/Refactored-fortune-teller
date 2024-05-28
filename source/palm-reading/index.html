@@ -26,6 +26,13 @@
     <script src="script.js" type="module"></script>
   </head>
   <body>
+    <noscript>
+      <popup-widget>
+        <h2>JavaScript is disabled</h2>
+        <p>Please enable JavaScript to ensure the app will work properly.</p>
+      </popup-widget>
+    </noscript>
+
     <div class="camera-frame">
       <div class="webcam-wrapper" id="webcam-wrapper">
         <h1 class="title" data-i18n="palm-reading">Palm Reading</h1>
@@ -72,12 +79,16 @@
     <div id="results-frame-anchor">
       <div id="results-frame">
         <h2 id="results-title" data-i18n="results-title">Results</h2>
-        <img
-          id="palm-guide"
-          class="align-div"
-          src="images/palm-reading.PNG"
-          data-i18n="palm-guide-alt"
-        />
+        <picture>
+          <source srcset="images/palm-reading.avif" type="image/avif" />
+          <source srcset="images/webp.avif" type="image/webp" />
+          <img
+            id="palm-guide"
+            class="align-div"
+            src="images/palm-reading.PNG"
+            data-i18n="palm-guide-alt"
+          />
+        </picture>
         <div class="tabs-wrapper">
           <div class="tabs">
             <label class="tab" style="--color: #f7ac80">

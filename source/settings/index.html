@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../common/styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="../common/index.js" type="module"></script>
+    <title>Settings - Envision Your Destiny</title>
+    <meta
+      name="description"
+      content="Customize your experience with Envision Your Destiny. Brought to you by 20/20 Visionaries."
+    />
+    <meta name="theme-color" content="#f1c86c" />
+  </head>
+  <body>
+    <settings-section>
+      <h1>Settings</h1>
+      <volume-adjust-global>
+        <h2>Volume Adjust</h2>
+        <input type="range" min="0" max="100" />
+      </volume-adjust-global>
+      <language-selector>
+        <h2>Language Selector</h2>
+        <select>
+          <option value="en">English</option>
+          <option value="jp">日本語</option>
+          <option value="zh-hans">中文简体</option>
+          <option value="zh-hant">繁體中文</option>
+        </select>
+      </language-selector>
+      <button id="feedback-button">Submit Feedback</button>
+    </settings-section>
+    <footer>
+      Improving the student experience by alleviating decision-making anxiety
+      since 2023.
+      <a
+        href="https://github.com/cse110-sp23-group20/fortune-teller"
+        class="team-link hover-underline"
+        >GitHub</a
+      >
+    </footer>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
