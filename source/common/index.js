@@ -29,3 +29,4 @@ function setLang(lang = "zh-hans") {
 }
 
 setLang("en");
+setLang("traditionalChinese");
