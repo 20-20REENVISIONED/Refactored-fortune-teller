@@ -37,6 +37,7 @@
  * Defines an entry in the navigation menu.
  * @typedef {object} Link
  * @property {string} label - The text to show for the link.
+ * @property {string} i18n - Label for data-i18n for translations.
  * @property {string} url - The URL of the page to link to.
  * @property {string} imageUrlBase - The URL base of the image icon to show next
  *  to the link text.
@@ -53,24 +54,28 @@
 const links = [
   {
     label: "Home",
+    i18n: "home",
     url: "../home-page/",
     imageUrlBase: "../common/icons/home",
     imageFormats: [".svg"],
   },
   {
     label: "Love Compatibility",
+    i18n: "love-compatibility",
     url: "../love-compatibility/",
     imageUrlBase: "../home-page/images/new-love-compatibility-img",
     imageFormats: [".avif", ".webp", ".jpg"],
   },
   {
     label: "Fortune Cookie",
+    i18n: "fortune-cookie",
     url: "../fortune-cookie/",
     imageUrlBase: "../home-page/images/new-fortune-cookie-img",
     imageFormats: [".avif", ".webp", ".jpg"],
   },
   {
     label: "Palm Reading",
+    i18n: "palm-reading",
     url: "../palm-reading/",
     imageUrlBase: "../home-page/images/new-palm-reading-img",
     imageFormats: [".avif", ".webp", ".jpg"],
@@ -78,6 +83,7 @@ const links = [
   {
     label: "Settings",
     url: "../settings/",
+    i18n: "settings",
     imageUrlBase: "../common/icons/settings-img",
     imageFormats: [".svg"],
   },
@@ -101,7 +107,7 @@ menuButton.className = "site-nav-menu-icon";
 menuButton.tabIndex = 0;
 nav.append(menuButton);
 
-for (const { label, imageUrlBase, url, imageFormats } of links) {
+for (const { label, i18n, imageUrlBase, url, imageFormats } of links) {
   const link = document.createElement("a");
   link.className = "site-nav-link";
   link.href = url;
@@ -121,7 +127,11 @@ for (const { label, imageUrlBase, url, imageFormats } of links) {
 
   picture.append(image);
 
-  link.append(picture, label);
+  const text = document.createElement("div");
+  text.setAttribute("data-i18n", i18n);
+  text.append(label);
+
+  link.append(picture, text);
 }
 
 document.body.prepend(nav);
