@@ -32,19 +32,19 @@ const links = [
   {
     label: "Love Compatibility",
     url: "../love-compatibility/",
-    imageUrlBase: "../home-page/images/love-compatibility-img",
+    imageUrlBase: "../home-page/images/new-love-compatibility-img",
     imageFormats: [".avif", ".webp", ".jpg"],
   },
   {
     label: "Fortune Cookie",
     url: "../fortune-cookie/",
-    imageUrlBase: "../home-page/images/fortune-cookie-img",
+    imageUrlBase: "../home-page/images/new-fortune-cookie-img",
     imageFormats: [".avif", ".webp", ".jpg"],
   },
   {
     label: "Palm Reading",
     url: "../palm-reading/",
-    imageUrlBase: "../home-page/images/palm-reading-img",
+    imageUrlBase: "../home-page/images/new-palm-reading-img",
     imageFormats: [".avif", ".webp", ".jpg"],
   },
   {
