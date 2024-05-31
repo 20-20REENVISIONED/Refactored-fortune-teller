@@ -5,6 +5,11 @@
     "locale": "jp",
     "message-documentation": "qqq"
   },
+  "home": "Home",
+  "settings": "Settings",
+  "volume-adjust": "Volume Adjust",
+  "language-selector": "Language Selector",
+  "submit-feedback": "Submit Feedback",
   "love-compatibility": "恋愛の相性",
   "homepage-title": "運命を見る",
   "homepage-body-title": "運命を見る",

@@ -21,13 +21,13 @@
   </head>
   <body>
     <settings-section>
-      <h1>Settings</h1>
+      <h1 data-i18n="settings">Settings</h1>
       <volume-adjust-global>
-        <h2>Volume Adjust</h2>
+        <h2 data-i18n="volume-adjust">Volume Adjust</h2>
         <input type="range" min="0" max="100" />
       </volume-adjust-global>
       <language-selector>
-        <h2>Language Selector</h2>
+        <h2 data-i18n="language-selector">Language Selector</h2>
         <select>
           <option value="en">English</option>
           <option value="jp">日本語</option>
@@ -35,9 +35,11 @@
           <option value="zh-hant">繁體中文</option>
         </select>
       </language-selector>
-      <button id="feedback-button">Submit Feedback</button>
+      <button id="feedback-button" data-i18n="submit-feedback">
+        Submit Feedback
+      </button>
     </settings-section>
-    <footer>
+    <footer data-i18n="footer-text">
       Improving the student experience by alleviating decision-making anxiety
       since 2023.
       <a

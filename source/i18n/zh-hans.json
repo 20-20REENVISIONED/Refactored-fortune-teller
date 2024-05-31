@@ -5,6 +5,11 @@
     "locale": "zh-hans",
     "message-documentation": "qqq"
   },
+  "home": "Home",
+  "settings": "Settings",
+  "volume-adjust": "Volume Adjust",
+  "language-selector": "Language Selector",
+  "submit-feedback": "Submit Feedback",
   "love-compatibility": "爱情匹配",
   "homepage-title": "展望你的命运",
   "homepage-body-title": "展望你的命运",
