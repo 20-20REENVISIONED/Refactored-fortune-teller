@@ -4,3 +4,4 @@
  */
 
 import "./nav.js";
+import "./create-preferences.js";

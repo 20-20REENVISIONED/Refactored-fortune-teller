@@ -170,8 +170,8 @@ button,
   top: 0;
   left: 0;
   z-index: 3;
-  width: 52px;
-  height: 52px;
+  width: 0px;
+  height: 0px;
   white-space: nowrap;
   animation: fade-in 0.5s;
   transition: width 0.3s, height 0.3s, background-color 0.3s,
@@ -183,8 +183,8 @@ button,
 }
 .site-nav:hover,
 .site-nav:focus-within {
-  width: 220px;
-  height: 220px;
+  width: fit-content;
+  height: fit-content;
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
   transition-delay: 0s;
@@ -235,25 +235,35 @@ button,
 .site-nav-link:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
-.site-nav-link:nth-child(5),
+
+/* TODO: FIXME: These 5 CSS rules should honestly be done as a part of nav.js
+so if you add more links the animations still work. This would go in that for
+loop that iterates over the list of links. */
+
+.site-nav-link:nth-child(6),
 .site-nav:hover .site-nav-link:nth-child(2),
 .site-nav:focus-within .site-nav-link:nth-child(2) {
   transition-delay: 0s;
 }
-.site-nav-link:nth-child(4),
+.site-nav-link:nth-child(5),
 .site-nav:hover .site-nav-link:nth-child(3),
 .site-nav:focus-within .site-nav-link:nth-child(3) {
   transition-delay: 0.1s;
 }
-.site-nav-link:nth-child(3),
+.site-nav-link:nth-child(4),
 .site-nav:hover .site-nav-link:nth-child(4),
 .site-nav:focus-within .site-nav-link:nth-child(4) {
   transition-delay: 0.2s;
 }
-.site-nav-link:nth-child(2),
+.site-nav-link:nth-child(3),
 .site-nav:hover .site-nav-link:nth-child(5),
 .site-nav:focus-within .site-nav-link:nth-child(5) {
   transition-delay: 0.3s;
+}
+.site-nav-link:nth-child(2),
+.site-nav:hover .site-nav-link:nth-child(6),
+.site-nav:focus-within .site-nav-link:nth-child(6) {
+  transition-delay: 0.4s;
 }
 .site-nav-image {
   width: 24px;
