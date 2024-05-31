@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,15 +11,17 @@
     <link rel="stylesheet" href="../common/styles.css" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <script src="../common/index.js" type="module"></script>
+    <script src="../home-page/cardAnimate.js"></script>
     <title>Envision Your Destiny</title>
     <meta
       name="description"
       content="Improving the student experience by alleviating decision-making anxiety. Brought to you by 20/20 Visionaries."
     />
     <meta name="theme-color" content="#f1c86c" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core@2.9.7/dist/barba.umd.min.js"></script>
   </head>
-
-  <body>
+  <body data-barba="wrapper">
     <div class="welcome-section">
       <h1 class="title">Envision Your Destiny</h1>
       <aside class="subtitle">
@@ -32,67 +33,90 @@
         >
       </aside>
     </div>
-
     <noscript>
       <popup-widget>
         <h2>JavaScript is disabled</h2>
         <p>Please enable JavaScript to ensure the app will work properly.</p>
       </popup-widget>
     </noscript>
-
-    <div class="cards">
-      <a href="../love-compatibility/" class="card-container">
-        <picture>
-          <source
-            srcset="images/love-compatibility-img.avif"
-            type="image/avif"
-          />
-          <source
-            srcset="images/love-compatibility-img.webp"
-            type="image/webp"
-          />
-          <img
-            src="images/love-compatibility-img.jpg"
-            alt="Love Compatibility Card"
-          />
-        </picture>
-        <span class="description">
-          <strong>Love Compatibility</strong>
-          <span>
-            Discover your perfect match with cutting-edge astrological signs to
-            provide insightful guidance on finding lasting love.
-          </span>
-        </span>
-      </a>
-      <a href="../fortune-cookie/" class="card-container">
-        <picture>
-          <source srcset="images/fortune-cookie-img.avif" type="image/avif" />
-          <source srcset="images/fortune-cookie-img.webp" type="image/webp" />
-          <img src="images/fortune-cookie-img.jpg" alt="Fortune Cookie Card" />
-        </picture>
-        <span class="description">
-          <strong>Fortune Cookie</strong>
-          <span>
-            Crack open the secrets of your destiny by combining ancient wisdom
-            with modern technology to bring clarity and inspiration.
-          </span>
-        </span>
-      </a>
-      <a href="../palm-reading/" class="card-container">
-        <picture>
-          <source srcset="images/palm-reading-img.avif" type="image/avif" />
-          <source srcset="images/palm-reading-img.webp" type="image/webp" />
-          <img src="images/palm-reading-img.jpg" alt="Palm Reading Card" />
-        </picture>
-        <span class="description">
-          <strong>Palm Reading</strong>
-          <span>
-            Capture your heartbeat with your webcam to decode the hidden
-            messages in your hands to create a brighter future.
-          </span>
-        </span>
-      </a>
-    </div>
+    <main data-barba="container" data-barba-namespace="home">
+      <div class="container">
+        <!-- Container for cards -->
+        <div class="cards">
+          <a href="../love-compatibility/" class="card-container card">
+            <picture>
+              <source
+                srcset="images/new-love-compatibility-img.avif"
+                type="image/avif"
+              />
+              <source
+                srcset="images/new-love-compatibility-img.webp"
+                type="image/webp"
+              />
+              <img
+                src="images/new-love-compatibility-img.jpg"
+                alt="Love Compatibility Card"
+              />
+            </picture>
+            <span class="description">
+              <strong>Love Compatibility</strong>
+              <span
+                >Discover your perfect match with cutting-edge astrological
+                signs to provide insightful guidance on finding lasting
+                love.</span
+              >
+            </span>
+          </a>
+          <a href="../fortune-cookie/" class="card-container card">
+            <picture>
+              <source
+                srcset="images/new-fortune-cookie-img.avif"
+                type="image/avif"
+              />
+              <source
+                srcset="images/new-fortune-cookie-img.webp"
+                type="image/webp"
+              />
+              <img
+                src="images/new-fortune-cookie-img.jpg"
+                alt="Fortune Cookie Card"
+              />
+            </picture>
+            <span class="description">
+              <strong>Fortune Cookie</strong>
+              <span
+                >Crack open the secrets of your destiny by combining ancient
+                wisdom with modern technology to bring clarity and
+                inspiration.</span
+              >
+            </span>
+          </a>
+          <a href="../palm-reading/" class="card-container card">
+            <picture>
+              <source
+                srcset="images/new-palm-reading-img.avif"
+                type="image/avif"
+              />
+              <source
+                srcset="images/new-palm-reading-img.webp"
+                type="image/webp"
+              />
+              <img
+                src="images/new-palm-reading-img.jpg"
+                alt="Palm Reading Card"
+              />
+            </picture>
+            <span class="description">
+              <strong>Palm Reading</strong>
+              <span
+                >Capture your heartbeat with your webcam to decode the hidden
+                messages in your hands to create a brighter future.</span
+              >
+            </span>
+          </a>
+        </div>
+      </div>
+    </main>
     <div class="randomize">
       <div>
         <h2>Can't decide?</h2>
@@ -109,6 +133,7 @@
         >GitHub</a
       >
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="script.js" type="module"></script>
   </body>
 </html>

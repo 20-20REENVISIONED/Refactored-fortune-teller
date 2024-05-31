@@ -4,6 +4,9 @@ import { BASE } from "./consts.js";
 describe("Basic unit Tests for the Home Page", () => {
   beforeAll(async () => {
     await page.goto(`${BASE}/source/home-page/`);
+    //FIXME: The page click test fails because the animations have not finished.
+    //As a hack this waits 2 seconds, but we should really just wait for the animations to finish.
+    await new Promise((r) => setTimeout(r, 2000));
   });
 
   //checking to make sure team website link is correct

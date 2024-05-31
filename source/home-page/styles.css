@@ -1,38 +1,29 @@
-/* used to set background image*/
-
+/* General body styles */
 body {
   background-image: url("../common/Images/Background.jpg");
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
 }
 
-/*used to style our "welcome to our Fortune Telling App" section */
-
-/* .welcome-section {
-    text-align: center;
-    background-color: #F1C86C;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom:50px;
-  } */
-
-/* smaller version of the welcome section */
-
+/* Welcome section styles */
 .welcome-section {
   text-align: center;
   max-width: 800px;
-  margin: 0 auto;
-  margin-top: auto;
-  padding-bottom: 40px;
-  padding-top: 20px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(21, 23, 50, 0.8);
+  border-radius: 10px;
 }
 
 .team-link {
   font-weight: bold;
 }
+
 .team-link:hover {
   color: white;
 }
@@ -42,8 +33,7 @@ body {
   font-style: italic;
 }
 
-/*used to center all of the image cards */
-
+/* Card container styles */
 .cards {
   display: flex;
   justify-content: center;
@@ -54,8 +44,7 @@ body {
 
 .card-container {
   text-align: center;
-  display: inline-block;
-  background-color: #4b51754b;
+  background-color: rgba(75, 81, 117, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(15px);
   border-radius: 15px;
@@ -68,23 +57,16 @@ body {
 
 .card-container:hover {
   color: black;
-  background-position: -600px;
   box-shadow: 0 0 10px #f1c86c, 0 0 40px #f1c86c;
   border-color: #f1c86c;
 }
 
-/*used to adjust the alignment of the "3 fortune telling cards" and their size */
-
 .card-container img {
-  text-align: center;
-  display: block;
-  margin: 0 auto;
   width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .card-container .description {
-  display: block;
-  transition: all 0.5s;
   background-image: linear-gradient(
     to bottom,
     transparent,
@@ -97,20 +79,18 @@ body {
   background-position: top;
   flex: auto;
   padding: 10px 20px;
+  transition: background-position 0.5s;
 }
 
 .card-container:hover .description {
   background-position: bottom;
 }
 
-/*used to style the text under each card */
-
 .card-container strong {
   display: block;
-  font-size: 18px;
+  font-size: 50px;
   border-radius: 5px;
   font-family: "Enchanted Land", cursive;
-  font-size: 50px;
   font-weight: normal;
 }
 
@@ -121,19 +101,20 @@ body {
   transition: color 0.2s;
   line-height: 1.3;
 }
+
 .card-container:hover .description span {
   color: black;
 }
 
-/*used to style the randomzier button */
-
+/* Randomize button section */
 .randomize {
-  align-self: center;
   display: flex;
   align-items: center;
   gap: 20px;
   margin: 40px;
   margin-bottom: 0;
+  flex-direction: column;
+  text-align: center;
 }
 
 .randomize h2,
@@ -141,43 +122,21 @@ body {
   margin: 0;
 }
 
-.sign-in-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f2f2f2;
-  border-radius: 5px;
-}
-
-.sign-in-form label {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.sign-in-form input[type="text"],
-.sign-in-form input[type="date"],
-.sign-in-form input[type="number"] {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-.sign-in-form input[type="submit"] {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 20px;
+.randomize-button {
+  background-color: #f1c86c;
   border: none;
-  border-radius: 4px;
+  padding: 10px 20px;
+  border-radius: 5px;
   cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
 }
 
-.sign-in-form input[type="submit"]:hover {
-  background-color: #45a049;
+.randomize-button:hover {
+  background-color: #d4a759;
 }
 
+/* Footer styles */
 footer {
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.8em;

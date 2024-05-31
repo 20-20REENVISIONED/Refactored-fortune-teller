@@ -29,25 +29,95 @@
             <pre class="prettyprint source linenums"><code>import { pick } from "../utils.js";
 
 /**
- * Event handler for the "Randomize" button. Clicks a random card to navigate to
- * the corresponding page.
+ * Handles the randomization process when the "Randomize" button is clicked.
+ * Logs the action, selects a random card container, and triggers its animation.
  */
 function randomize() {
-  // Get all the card containers
-  const cardContainers = document.querySelectorAll(".card-container");
+  console.log("Randomize button clicked.");
 
-  // Retrieve the corresponding card container element
+  // Retrieve a random card container element
   const randomCardContainer = pick(cardContainers);
+  console.log("Random card container selected:", randomCardContainer);
 
-  // Trigger the click event on the random card container
-  randomCardContainer.click();
+  // Trigger animation for the selected random card container
+  animateCardContainer(randomCardContainer);
+}
+
+/**
+ * Handles the click event on a card container.
+ * Prevents the default link behavior, logs the action, and triggers the card container's animation.
+ *
+ * @param {Event} event - The click event object.
+ */
+function handleCardContainerClick(event) {
+  event.preventDefault(); // Prevent default link behavior
+  console.log("Card container clicked:", event.currentTarget);
+
+  // Trigger animation for the clicked card container
+  animateCardContainer(event.currentTarget);
+}
+
+/**
+ * Animates the specified card container element.
+ * Applies various animation effects and navigates to the card's link after the animation completes.
+ *
+ * @param {HTMLElement} cardContainer - The card container element to animate.
+ */
+function animateCardContainer(cardContainer) {
+  // Clear any existing animations on the card
+  gsap.killTweensOf(cardContainer);
+
+  // Define animation properties
+  gsap.to(cardContainer, {
+    opacity: 0, // Fade out the card
+    scale: 0.8, // Shrink the card slightly
+    y: 50, // Move the card downwards
+    skewX: 15, // Skew the card horizontally
+    skewY: 15, // Skew the card vertically
+    blur: 10, // Apply a blur effect to the card
+    duration: 0.5, // Duration of the animation
+    ease: "power2.out", // Easing function for a smoother transition
+    onComplete: function () {
+      // Animation complete callback function
+      console.log("Animation complete!");
+      // After animation, navigate to the next page
+      window.location.href = cardContainer.href;
+    },
+  });
 }
 
 // Get the "Randomize" button element
 const randomizeButton = document.querySelector(".randomize-button");
 
-/** Add click event listener to the "Randomize" button */
+// Get all card container elements
+const cardContainers = document.querySelectorAll(".card-container");
+
+// Add click event listener to the "Randomize" button
 randomizeButton.addEventListener("click", randomize);
+
+// Add click event listeners to each card container
+cardContainers.forEach((container) => {
+  container.addEventListener("click", handleCardContainerClick);
+});
+
+// Ensure the proper reset of animations and styles when the page is loaded from the browser cache
+window.addEventListener("pageshow", function (event) {
+  if (event.persisted) {
+    // The page was restored from the cache
+    console.log("Page loaded from cache. Resetting animations and states.");
+    document.querySelectorAll(".card-container").forEach((container) => {
+      gsap.to(container, {
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        skewX: 0,
+        skewY: 0,
+        blur: 0,
+        clearProps: "all",
+      });
+    });
+  }
+});
 </code></pre>
         </article>
     </section>
@@ -58,7 +128,7 @@ randomizeButton.addEventListener("click", randomize);
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Wheel.html">Wheel</a></li></ul><h3>Global</h3><ul><li><a href="global.html#FPS">FPS</a></li><li><a href="global.html#GRAVITY">GRAVITY</a></li><li><a href="global.html#PERIOD">PERIOD</a></li><li><a href="global.html#XSHIFT">XSHIFT</a></li><li><a href="global.html#YSHIFT">YSHIFT</a></li><li><a href="global.html#angleDiff">angleDiff</a></li><li><a href="global.html#context">context</a></li><li><a href="global.html#cookieFalling">cookieFalling</a></li><li><a href="global.html#determineDateRangeLeft">determineDateRangeLeft</a></li><li><a href="global.html#determineDateRangeRight">determineDateRangeRight</a></li><li><a href="global.html#determinePairing">determinePairing</a></li><li><a href="global.html#disableButton">disableButton</a></li><li><a href="global.html#displayResults">displayResults</a></li><li><a href="global.html#ecg">ecg</a></li><li><a href="global.html#ecgGraph">ecgGraph</a></li><li><a href="global.html#ecgHistory">ecgHistory</a></li><li><a href="global.html#ecgLength">ecgLength</a></li><li><a href="global.html#ecgPath">ecgPath</a></li><li><a href="global.html#ecgPoints">ecgPoints</a></li><li><a href="global.html#fallFortune">fallFortune</a></li><li><a href="global.html#fallLeft">fallLeft</a></li><li><a href="global.html#fallNewCookie">fallNewCookie</a></li><li><a href="global.html#fallRight">fallRight</a></li><li><a href="global.html#fates">fates</a></li><li><a href="global.html#flipCamera">flipCamera</a></li><li><a href="global.html#fortunes">fortunes</a></li><li><a href="global.html#frameId">frameId</a></li><li><a href="global.html#getMappingLeft">getMappingLeft</a></li><li><a href="global.html#getMappingRight">getMappingRight</a></li><li><a href="global.html#getRandomFortune">getRandomFortune</a></li><li><a href="global.html#handleCookieReady">handleCookieReady</a></li><li><a href="global.html#handleFortune">handleFortune</a></li><li><a href="global.html#handleFortuneEnd">handleFortuneEnd</a></li><li><a href="global.html#heads">heads</a></li><li><a href="global.html#hearts">hearts</a></li><li><a href="global.html#lastInstructionElem">lastInstructionElem</a></li><li><a href="global.html#lastTime">lastTime</a></li><li><a href="global.html#leftWheel">leftWheel</a></li><li><a href="global.html#lifes">lifes</a></li><li><a href="global.html#links">links</a></li><li><a href="global.html#menuButton">menuButton</a></li><li><a href="global.html#mod">mod</a></li><li><a href="global.html#nav">nav</a></li><li><a href="global.html#paint">paint</a></li><li><a href="global.html#paintEcg">paintEcg</a></li><li><a href="global.html#pick">pick</a></li><li><a href="global.html#populateVoiceList">populateVoiceList</a></li><li><a href="global.html#prefersReducedMotion">prefersReducedMotion</a></li><li><a href="global.html#randomize">randomize</a></li><li><a href="global.html#readAnother">readAnother</a></li><li><a href="global.html#requestBtn">requestBtn</a></li><li><a href="global.html#reset">reset</a></li><li><a href="global.html#result">result</a></li><li><a href="global.html#rightWheel">rightWheel</a></li><li><a href="global.html#romantic">romantic</a></li><li><a href="global.html#roundAngle">roundAngle</a></li><li><a href="global.html#setInstructions">setInstructions</a></li><li><a href="global.html#shakeV">shakeV</a></li><li><a href="global.html#simTime">simTime</a></li><li><a href="global.html#speakFortune">speakFortune</a></li><li><a href="global.html#startCamera">startCamera</a></li><li><a href="global.html#startTime">startTime</a></li><li><a href="global.html#suns">suns</a></li><li><a href="global.html#synth">synth</a></li><li><a href="global.html#tabContents">tabContents</a></li><li><a href="global.html#tabLabels">tabLabels</a></li><li><a href="global.html#textGenerator">textGenerator</a></li><li><a href="global.html#timeoutId">timeoutId</a></li><li><a href="global.html#video">video</a></li><li><a href="global.html#voiceSelect">voiceSelect</a></li><li><a href="global.html#voices">voices</a></li><li><a href="global.html#wait">wait</a></li><li><a href="global.html#webcamWrapper">webcamWrapper</a></li><li><a href="global.html#zodiacDateRanges">zodiacDateRanges</a></li><li><a href="global.html#zodiacOrder">zodiacOrder</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Wheel.html">Wheel</a></li></ul><h3>Global</h3><ul><li><a href="global.html#FPS">FPS</a></li><li><a href="global.html#GRAVITY">GRAVITY</a></li><li><a href="global.html#PERIOD">PERIOD</a></li><li><a href="global.html#XSHIFT">XSHIFT</a></li><li><a href="global.html#YSHIFT">YSHIFT</a></li><li><a href="global.html#angleDiff">angleDiff</a></li><li><a href="global.html#animateCardContainer">animateCardContainer</a></li><li><a href="global.html#context">context</a></li><li><a href="global.html#cookieFalling">cookieFalling</a></li><li><a href="global.html#determineDateRangeLeft">determineDateRangeLeft</a></li><li><a href="global.html#determineDateRangeRight">determineDateRangeRight</a></li><li><a href="global.html#determinePairing">determinePairing</a></li><li><a href="global.html#disableButton">disableButton</a></li><li><a href="global.html#displayResults">displayResults</a></li><li><a href="global.html#ecg">ecg</a></li><li><a href="global.html#ecgGraph">ecgGraph</a></li><li><a href="global.html#ecgHistory">ecgHistory</a></li><li><a href="global.html#ecgLength">ecgLength</a></li><li><a href="global.html#ecgPath">ecgPath</a></li><li><a href="global.html#ecgPoints">ecgPoints</a></li><li><a href="global.html#fallFortune">fallFortune</a></li><li><a href="global.html#fallLeft">fallLeft</a></li><li><a href="global.html#fallNewCookie">fallNewCookie</a></li><li><a href="global.html#fallRight">fallRight</a></li><li><a href="global.html#fates">fates</a></li><li><a href="global.html#flipCamera">flipCamera</a></li><li><a href="global.html#fortunes">fortunes</a></li><li><a href="global.html#frameId">frameId</a></li><li><a href="global.html#getMappingLeft">getMappingLeft</a></li><li><a href="global.html#getMappingRight">getMappingRight</a></li><li><a href="global.html#getRandomFortune">getRandomFortune</a></li><li><a href="global.html#handleCardContainerClick">handleCardContainerClick</a></li><li><a href="global.html#handleCookieReady">handleCookieReady</a></li><li><a href="global.html#handleFortune">handleFortune</a></li><li><a href="global.html#handleFortuneEnd">handleFortuneEnd</a></li><li><a href="global.html#heads">heads</a></li><li><a href="global.html#hearts">hearts</a></li><li><a href="global.html#lastInstructionElem">lastInstructionElem</a></li><li><a href="global.html#lastTime">lastTime</a></li><li><a href="global.html#leftWheel">leftWheel</a></li><li><a href="global.html#lifes">lifes</a></li><li><a href="global.html#links">links</a></li><li><a href="global.html#menuButton">menuButton</a></li><li><a href="global.html#mod">mod</a></li><li><a href="global.html#nav">nav</a></li><li><a href="global.html#paint">paint</a></li><li><a href="global.html#paintEcg">paintEcg</a></li><li><a href="global.html#pick">pick</a></li><li><a href="global.html#populateVoiceList">populateVoiceList</a></li><li><a href="global.html#prefersReducedMotion">prefersReducedMotion</a></li><li><a href="global.html#randomize">randomize</a></li><li><a href="global.html#readAnother">readAnother</a></li><li><a href="global.html#requestBtn">requestBtn</a></li><li><a href="global.html#reset">reset</a></li><li><a href="global.html#result">result</a></li><li><a href="global.html#rightWheel">rightWheel</a></li><li><a href="global.html#romantic">romantic</a></li><li><a href="global.html#roundAngle">roundAngle</a></li><li><a href="global.html#setInstructions">setInstructions</a></li><li><a href="global.html#shakeV">shakeV</a></li><li><a href="global.html#shuffleArray">shuffleArray</a></li><li><a href="global.html#simTime">simTime</a></li><li><a href="global.html#speakFortune">speakFortune</a></li><li><a href="global.html#startCamera">startCamera</a></li><li><a href="global.html#startTime">startTime</a></li><li><a href="global.html#suns">suns</a></li><li><a href="global.html#synth">synth</a></li><li><a href="global.html#tabContents">tabContents</a></li><li><a href="global.html#tabLabels">tabLabels</a></li><li><a href="global.html#textGenerator">textGenerator</a></li><li><a href="global.html#timeoutId">timeoutId</a></li><li><a href="global.html#video">video</a></li><li><a href="global.html#voiceSelect">voiceSelect</a></li><li><a href="global.html#voices">voices</a></li><li><a href="global.html#wait">wait</a></li><li><a href="global.html#webcamWrapper">webcamWrapper</a></li><li><a href="global.html#zodiacDateRanges">zodiacDateRanges</a></li><li><a href="global.html#zodiacOrder">zodiacOrder</a></li></ul>
 </nav>
 
 <br class="clear">

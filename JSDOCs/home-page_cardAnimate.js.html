@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: palm-reading/script.js</title>
+    <title>JSDoc: Source: home-page/cardAnimate.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: palm-reading/script.js</h1>
+    <h1 class="page-title">Source: home-page/cardAnimate.js</h1>
 
     
 
@@ -26,53 +26,50 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { heads, hearts, lifes, fates, suns } from "./fortunes.js";
+            <pre class="prettyprint source linenums"><code>document.addEventListener("DOMContentLoaded", function () {
+  initializeCards();
 
-/**
- * Generates random fortunes. Called when the app finishes analyzing the palm.
- */
-export function handleFortune() {
-  let headIndex = Math.floor(Math.random() * heads.length);
-  let heartIndex = Math.floor(Math.random() * hearts.length);
-  let lifeIndex = Math.floor(Math.random() * lifes.length);
-  let fateIndex = Math.floor(Math.random() * fates.length);
-  let sunIndex = Math.floor(Math.random() * suns.length);
+  window.addEventListener("popstate", function () {
+    initializeCards();
+  });
+});
 
-  let headResult = heads[headIndex];
-  let heartResult = hearts[heartIndex];
-  let lifeResult = lifes[lifeIndex];
-  let fateResult = fates[fateIndex];
-  let sunResult = suns[sunIndex];
+function initializeCards() {
+  var cards = document.querySelectorAll(".card");
 
-  document.getElementById("head-tab").querySelector("p").innerText = headResult;
-  document.getElementById("heart-tab").querySelector("p").innerText =
-    heartResult;
-  document.getElementById("life-tab").querySelector("p").innerText = lifeResult;
-  document.getElementById("fate-tab").querySelector("p").innerText = fateResult;
-  document.getElementById("sun-tab").querySelector("p").innerText = sunResult;
+  // Convert NodeList to array
+  cards = Array.from(cards);
+
+  // Shuffle the array randomly
+  shuffleArray(cards);
+
+  // Animate shuffled cards into position
+  anime({
+    targets: cards,
+    translateY: [-400, 0], // Initial Y position to final position
+    opacity: [0, 1], // Fade in animation
+    rotate: {
+      value: "+=360", // Spin rapidly 360 degrees
+      duration: 800, // Duration of spinning animation
+      easing: "easeInOutSine", // Easing for spinning animation
+    },
+    scale: [0.8, 1], // Bounce effect - start smaller and expand to full size
+    easing: "easeOutElastic(1, 0.8)", // Easing for bounce effect
+    delay: anime.stagger(1000), // Stagger animation for each card
+  });
 }
 
 /**
- * The tabs' `&lt;input type=radio>` elements.
- * @type {ArrayLike&lt;HTMLInputElement>}
+ * Shuffles the elements of an array randomly.
+ *
+ * @param {Array} array - The array to shuffle.
  */
-const tabLabels = document.querySelectorAll('input[name="tab"]');
-/**
- * Each tabs' tab content.
- * @type {ArrayLike&lt;HTMLDivElement>}
- */
-const tabContents = document.querySelectorAll(".tab-content");
-
-tabLabels.forEach(function (label) {
-  label.addEventListener("change", function () {
-    tabContents.forEach(function (content) {
-      content.hidden = true;
-    });
-
-    const selectedContent = document.getElementById(`${this.value}-tab`);
-    selectedContent.hidden = false;
-  });
-});
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
 </code></pre>
         </article>
     </section>
