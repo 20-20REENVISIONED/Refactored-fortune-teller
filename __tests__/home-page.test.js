@@ -6,8 +6,8 @@ describe("Basic unit Tests for the Home Page", () => {
     await page.goto(`${BASE}/source/home-page/`);
     //FIXME: The page click test fails because the animations have not finished.
     //As a hack this waits 2 seconds, but we should really just wait for the animations to finish.
-    await new Promise((r) => setTimeout(r, 2000));
-  });
+    await new Promise((r) => setTimeout(r, 7000));
+  }, 15000);
 
   //checking to make sure team website link is correct
   it("should have the correct link", async () => {
@@ -18,7 +18,7 @@ describe("Basic unit Tests for the Home Page", () => {
     expect(hrefValue).toBe(
       "https://github.com/20-20REENVISIONED/Refactored-fortune-teller/blob/main/admin/team.md"
     );
-  });
+  }, 15000);
 
   //checking to make sure the link actually works
   it("should navigate to the correct page when the link is clicked", async () => {
@@ -35,5 +35,5 @@ describe("Basic unit Tests for the Home Page", () => {
     expect(currentURL).toBe(
       "https://github.com/20-20REENVISIONED/Refactored-fortune-teller/blob/main/admin/team.md"
     );
-  });
+  }, 15000);
 });
