@@ -12,6 +12,7 @@ const cookieLeft = document.getElementById("fortune-image-left");
 const background = document.getElementById("background");
 const resetButton = document.getElementById("reset-button");
 const cancelButton = document.getElementById("cancel-animation-btn");
+const howTo = document.getElementById("how-to");
 
 let hasEnabledVoice = false;
 
@@ -23,6 +24,10 @@ document.addEventListener("click", () => {
   lecture.volume = 0;
   speechSynthesis.speak(lecture);
   hasEnabledVoice = true;
+});
+
+howTo.addEventListener("click", () => {
+  help.parentElement.classList.add("open");
 });
 
 /**

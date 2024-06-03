@@ -25,6 +25,9 @@
         Begin your day with a taste of destiny by cracking open the secrets of
         your future.
       </aside>
+      <div id="guide">
+        <button class="button" id="how-to">How to Use</button>
+      </div>
     </header>
 
     <noscript>
@@ -107,5 +110,32 @@
     <audio id="fortune-crack">
       <source src="audio/fortune-crack.mp3" type="audio/mpeg" />
     </audio>
+
+    <div class="popup-wrapper">
+      <div class="popup" id="help">
+        <div id="text">
+          <button class="close-button" id="close-button">
+            <picture>
+              <source srcset="images/close.avif" type="image/avif" />
+              <source srcset="images/close.webp" type="image/webp" />
+              <img src="images/close.png" alt="close" />
+            </picture>
+          </button>
+          <h2 id="pairing">User Guide</h2>
+          <h3>Step 1: Using the Fortune Cookie</h3>
+          <ul>
+            <li>Click the fortune cookie image to crack it open.</li>
+            <li>Read the fortune displayed on the paper inside the cookie.</li>
+            <li>Click the "New cookie" button to generate another fortune.</li>
+            <li>Use the voice feature to hear the fortune read aloud if desired.</li>
+          </ul>
+          <h3>Step 2: Additional Options</h3>
+          <ul>
+            <li>Use the "Skip animation" button to bypass the cookie cracking animation.</li>
+            <li>Change the voice settings using the dropdown menu in the footer.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
