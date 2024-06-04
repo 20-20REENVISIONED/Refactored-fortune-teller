@@ -49,10 +49,26 @@ if (localStorage.length != Object.entries(defaultPreferenceKeyValues).length) {
     localStorage[key] = value;
     if (key == "language") {
       let langauge = localStorage["language"].split("-")[0];
+
+      //Decision logic to decide to use traditional or simplifed Chinese.
       if (langauge == "zh") {
-        langauge =
-          langauge + "-" + localStorage["language"].split("-")[1].toLowerCase();
+        //Use Simplified characters by default
+        let characterStyle = "hans";
+
+        //If navigator.language specifies traditional characters, or if it
+        //specifies Chinese as used in Hong Kong, Macau or Taiwan, use traditional.
+        localStorage["language"]
+          .split("-")
+          .map((e) => e.toLowerCase())
+          .forEach((e) => {
+            if (["hant", "hk", "mo", "tw"].includes(e)) {
+              characterStyle = "hant";
+            }
+          });
+
+        langauge = langauge + "-" + characterStyle;
       }
+
       localStorage[key] = langauge;
     }
   }
