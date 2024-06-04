@@ -1,0 +1,3 @@
+#See https://github.com/github-linguist/linguist/blob/master/docs/overrides.md
+JSDOCs/* linguist-documentation linguist-generated
+package-lock.json -linguist-generated
