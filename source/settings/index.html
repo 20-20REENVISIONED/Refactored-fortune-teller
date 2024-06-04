@@ -28,7 +28,7 @@
     </noscript>
     <settings-section>
       <h1 data-i18n="settings">Settings</h1>
-      <volume-adjust-global>
+      <volume-adjust-global style="display: none">
         <h2 data-i18n="volume-adjust">Volume Adjust</h2>
         <input type="range" min="0" max="100" />
       </volume-adjust-global>
@@ -41,7 +41,11 @@
           <option value="zh-hant">繁體中文</option>
         </select>
       </language-selector>
-      <button id="feedback-button" data-i18n="submit-feedback">
+      <button
+        id="feedback-button"
+        data-i18n="submit-feedback"
+        style="display: none"
+      >
         Submit Feedback
       </button>
     </settings-section>
