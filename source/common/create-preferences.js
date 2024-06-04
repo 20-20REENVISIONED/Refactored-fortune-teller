@@ -11,7 +11,7 @@
  */
 const defaultPreferenceKeyValues = {
   globalVolume: 0.5,
-  language: navigator.language,
+  language: "en",
 };
 
 if (localStorage.length != Object.entries(defaultPreferenceKeyValues).length) {
@@ -20,7 +20,7 @@ if (localStorage.length != Object.entries(defaultPreferenceKeyValues).length) {
     console.log(key);
     localStorage[key] = value;
     if (key == "language") {
-      let langauge = localStorage["language"].split("-")[0];
+      let langauge = navigator.language.split("-")[0];
 
       //Decision logic to decide to use traditional or simplifed Chinese.
       if (langauge == "zh") {
@@ -29,7 +29,7 @@ if (localStorage.length != Object.entries(defaultPreferenceKeyValues).length) {
 
         //If navigator.language specifies traditional characters, or if it
         //specifies Chinese as used in Hong Kong, Macau or Taiwan, use traditional.
-        localStorage["language"]
+        navigator.language
           .split("-")
           .map((e) => e.toLowerCase())
           .forEach((e) => {
@@ -38,10 +38,8 @@ if (localStorage.length != Object.entries(defaultPreferenceKeyValues).length) {
             }
           });
 
-        langauge = langauge + "-" + characterStyle;
+        localStorage[key] = langauge + "-" + characterStyle;
       }
-
-      localStorage[key] = langauge;
     }
   }
 }
