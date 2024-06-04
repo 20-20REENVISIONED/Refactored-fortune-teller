@@ -222,7 +222,7 @@ document.body.addEventListener("click", async function (event) {
     });
 
     cookieWrapper.classList.add("cracked");
-    fortuneText.textContent = getRandomFortune();
+    fortuneText['data-18n'] = getRandomFortune();
     fallLeft();
 
     await wait(1000);
