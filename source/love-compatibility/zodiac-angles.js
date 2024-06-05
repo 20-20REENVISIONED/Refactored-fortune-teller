@@ -1,7 +1,7 @@
 /**
  * zodiac-angles.js: Wheel Angle Calculations and Compatibility Functions
  *
- * This file contains functions to manage and calculate the orientations of zodiac wheels, 
+ * This file contains functions to manage and calculate the orientations of zodiac wheels,
  * translate these angles into zodiac signs, and determine compatibility between selected signs.
  * It utilizes modular arithmetic to handle angular calculations and ensures proper mapping of angles to zodiac signs.
  *
