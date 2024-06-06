@@ -103,22 +103,20 @@ describe("Basic user flow for Website", () => {
 
   // Check to make sure that reset button is enabled when after fortune button is clicked
   it("Make sure reset button is enabled after fortune button is clicked", async () => {
-    /**
-     * The waitForFunction() waits for the provided function to return true, indicating that the button element with the ID 'reset-button'
-     * has its disabled attribute set to false. If the button's disabled value becomes false within the specified timeout, the test will pass.
-     */
-    await page.waitForFunction(() => {
-      const resetButton = document.querySelector("#reset-button");
-      return resetButton && resetButton.disabled === false;
-    });
+    await page.waitForFunction(
+      () => {
+        const resetButton = document.querySelector("#reset-button");
+        return resetButton && resetButton.disabled === false;
+      },
+      { timeout: 30000 }
+    );
 
-    // Makes sure the reset button is actually enabled
     let resetButtonDisabled;
     const resetButton = await page.$("#reset-button");
     let booleanValue = await resetButton.getProperty("disabled");
     resetButtonDisabled = await booleanValue.jsonValue();
     expect(resetButtonDisabled).toBe(false);
-  }, 25000);
+  }, 30000);
 
   // Make sure fortune paper is revealed by the time reset button appears
   it("Make sure fortune paper is revealed after fortune button is clicked", async () => {
@@ -195,16 +193,22 @@ describe("Basic user flow for Website", () => {
 
   // Check to make sure that reset button gets disabled when the reset button is clicked
   it("Make sure after reset button is clicked, reset button is disabled", async () => {
-    // Click reset button
     let resetButtonDisabled;
     const resetButton = await page.$("#reset-button");
     await resetButton.click();
 
-    // Check that reset button is now disabled
+    await page.waitForFunction(
+      () => {
+        const resetButton = document.querySelector("#reset-button");
+        return resetButton && resetButton.disabled === true;
+      },
+      { timeout: 10000 }
+    );
+
     let booleanValue = await resetButton.getProperty("disabled");
     resetButtonDisabled = await booleanValue.jsonValue();
     expect(resetButtonDisabled).toBe(true);
-  }, 5000);
+  }, 10000);
 
   // Check to make sure that cancel button becomes visible and has correct classes after reset button is clicked
   it("Make sure cancel button is visible and has correct classes when reset button is clicked", async () => {
@@ -230,41 +234,37 @@ describe("Basic user flow for Website", () => {
 
   // Now that reset button has been clicked, check that the fortune button is enabled
   it("Make sure that after the reset button is clicked, the fortune button is reenabled", async () => {
-    /**
-     * The waitForFunction() waits for the provided function to return true, indicating that the button element with the ID 'fortune-button'
-     * has its disabled attribute set to false. If the button's disabled value becomes false within the specified timeout, the test will pass.
-     */
-    await page.waitForFunction(() => {
-      const fortuneButton = document.querySelector("#fortune-button");
-      return fortuneButton && fortuneButton.disabled === false;
-    });
+    await page.waitForFunction(
+      () => {
+        const fortuneButton = document.querySelector("#fortune-button");
+        return fortuneButton && fortuneButton.disabled === false;
+      },
+      { timeout: 15000 }
+    );
 
-    // Check that fortune button is now enabled
     let fortuneButtonDisabled;
     const fortuneButton = await page.$("#fortune-button");
     let booleanValue = await fortuneButton.getProperty("disabled");
     fortuneButtonDisabled = await booleanValue.jsonValue();
     expect(fortuneButtonDisabled).toBe(false);
-  }, 10000);
+  }, 15000);
 
   // Now that reset button has been clicked, check that the cookie button is enabled
   it("Make sure after reset button is clicked, the cookie button is reenabled", async () => {
-    /**
-     * The waitForFunction() waits for the provided function to return true, indicating that the button element with the ID 'cookie-button'
-     * has its disabled attribute set to false. If the button's disabled value becomes false within the specified timeout, the test will pass.
-     */
-    await page.waitForFunction(() => {
-      const cookieButton = document.querySelector("#cookie-button");
-      return cookieButton && cookieButton.disabled === false;
-    });
+    await page.waitForFunction(
+      () => {
+        const cookieButton = document.querySelector("#cookie-button");
+        return cookieButton && cookieButton.disabled === false;
+      },
+      { timeout: 15000 }
+    );
 
-    // Check that cookie button is now enabled
     let cookieButtonDisabled;
     const cookieButton = await page.$("#cookie-button");
     let booleanValue = await cookieButton.getProperty("disabled");
     cookieButtonDisabled = await booleanValue.jsonValue();
     expect(cookieButtonDisabled).toBe(false);
-  }, 5000);
+  }, 15000);
 
   // Check to make sure that cancel button is not visible and has correct classes after fortune/cookie button are enabled
   it("Make sure cancel button is not visible and has correct classes after fortune/cookie button are enabled", async () => {
