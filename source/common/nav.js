@@ -39,6 +39,11 @@ const links = [
     url: "../palm-reading/",
     imageUrl: "../home-page/images/new-palm-reading-img.jpg",
   },
+  {
+    label: "Life Path Number",
+    url: "../lifePath-calculator/",
+    imageUrl: "../home-page/images/lifepath.JPG",
+  },
 ];
 
 /**
