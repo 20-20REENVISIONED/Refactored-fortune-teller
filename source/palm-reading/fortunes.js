@@ -1,4 +1,14 @@
 /**
+ * palm-readings.js: Outcomes of Palm Reading Lines
+ *
+ * This file contains arrays of strings detailing possible outcomes for various lines interpreted in palm reading.
+ * Each array contains strings that represent different outcomes based on the appearance and qualities of the respective palm lines.
+ * Each line on a person's palm is associated with different aspects of their life and personality
+ *
+ * The outcomes are used within the application to provide users with personalized readings based on the lines present on their palms.
+ */
+
+/**
  * Possible outcomes for the head line in a palm reading.
  * @type {string[]}
  */

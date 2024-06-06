@@ -1,3 +1,18 @@
+/**
+ * zodiac-angles.js: Wheel Angle Calculations and Compatibility Functions
+ *
+ * This file contains functions to manage and calculate the orientations of zodiac wheels,
+ * translate these angles into zodiac signs, and determine compatibility between selected signs.
+ * It utilizes modular arithmetic to handle angular calculations and ensures proper mapping of angles to zodiac signs.
+ *
+ * Key unctions include: Rounding angles to nearest division, retrieving zodiac signs based on angles,
+ * calculating date ranges associated with signs for both wheels, calculating the angular difference to support wheel interaction dynamics,
+ *  determining zodiac sign pairs, and generating compatibility text.
+ *
+ * Dependencies:
+ * - utils.js: Contains utility functions such as the mod function for angle calculations.
+ * - data/data-array.js: Stores data related to zodiac orders, date ranges, and romantic compatibility text.
+ */
 // @ts-check
 
 import { mod } from "../utils.js";
