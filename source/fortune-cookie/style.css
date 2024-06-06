@@ -330,7 +330,7 @@ aside {
 #cancel-animation-btn:hover {
   text-decoration: underline;
 }
-@media screen and (orientation: landscape) {
+@media screen and (orientation: landscape) and (max-width: 600px) {
   footer {
     margin-bottom: 5px;
     display: flex;
@@ -344,5 +344,14 @@ aside {
   header h1.title {
     white-space: nowrap;
     margin: 0;
+  }
+
+  .voice-select-label {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .button {
+    margin-top: 10px;
   }
 }
