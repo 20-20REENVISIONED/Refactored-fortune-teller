@@ -158,14 +158,15 @@ describe("Basic user flow for Website", () => {
     await resetButton.click();
 
     // Wait for the reset button to become disabled
-    await page.waitForSelector("#reset-button[disabled]");
+    await page.waitForFunction(() => {
+      const resetButton = document.querySelector("#reset-button");
+      return resetButton && resetButton.disabled === true;
+    });
 
     // Check that reset button is now disabled
-    const resetButtonDisabled = await page.$eval(
-      "#reset-button",
-      (button) => button.disabled
-    );
-    expect(resetButtonDisabled).toBe(true);
+    const resetButtonDisabled = await resetButton.getProperty("disabled");
+    const isDisabled = await resetButtonDisabled.jsonValue();
+    expect(isDisabled).toBe(true);
   }, 15000);
 
   // Now that reset button has been clicked, check that the fortune button is enabled
