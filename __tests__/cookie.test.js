@@ -158,10 +158,7 @@ describe("Basic user flow for Website", () => {
     await resetButton.click();
 
     // Wait for the reset button to become disabled
-    await page.waitForFunction(() => {
-      const resetButton = document.querySelector("#reset-button");
-      return resetButton && resetButton.disabled === true;
-    });
+    await page.waitForSelector("#reset-button[disabled]", { timeout: 15000 });
 
     // Check that reset button is now disabled
     const resetButtonDisabled = await resetButton.getProperty("disabled");
