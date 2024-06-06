@@ -1,17 +1,3 @@
-/**
- * styles.css: Layout and Styling for the app
- *
- * This stylesheet configures the visual presentation and responsive design for the Love Compatibility application.
- * It utilizes a dark theme with accents to ensure readability and user engagement.
- * It includes global styles, specific layout settings for HTML elements, and custom animations for interactivity.
- * Some key features include:
- * - Central alignment and styling of the main container and its components.
- * - Responsive design adjustments for various screen sizes.
- * - animations for UI elements such as the zodiac wheels and input forms.
- * - Styling for popup including transitions and visibility handling.
- *
- */
-
 * {
   color: white;
 }
