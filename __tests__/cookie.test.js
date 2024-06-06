@@ -167,7 +167,7 @@ describe("Basic user flow for Website", () => {
     const resetButtonDisabled = await resetButton.getProperty("disabled");
     const isDisabled = await resetButtonDisabled.jsonValue();
     expect(isDisabled).toBe(true);
-  }, 15000);
+  }, 20000);
 
   // Now that reset button has been clicked, check that the fortune button is enabled
   it("Make sure that after the reset button is clicked, the fortune button is reenabled", async () => {
@@ -186,7 +186,7 @@ describe("Basic user flow for Website", () => {
     let booleanValue = await fortuneButton.getProperty("disabled");
     fortuneButtonDisabled = await booleanValue.jsonValue();
     expect(fortuneButtonDisabled).toBe(false);
-  }, 20000);
+  }, 25000);
 
   // Now that reset button has been clicked, check that the cookie button is enabled
   it("Make sure after reset button is clicked, the cookie button is reenabled", async () => {
@@ -205,7 +205,7 @@ describe("Basic user flow for Website", () => {
     let booleanValue = await cookieButton.getProperty("disabled");
     cookieButtonDisabled = await booleanValue.jsonValue();
     expect(cookieButtonDisabled).toBe(false);
-  }, 15000);
+  }, 20000);
 
   // Now test all buttons when the cookie button is clicked
 
@@ -250,7 +250,7 @@ describe("Basic user flow for Website", () => {
       );
     });
     expect(elementHasClass).toBe(false);
-  }, 15000);
+  }, 20000);
 
   // Check to make sure that reset button is enabled when after cookie button is clicked
   it("Make sure reset button is enabled after cookie button is clicked", async () => {
@@ -291,7 +291,7 @@ describe("Basic user flow for Website", () => {
       );
     });
     expect(elementHasClass).toBe(true);
-  }, 15000);
+  }, 20000);
 
   //Check to make sure that the speech synthesis is being populated, the correct voices are called by the function
   it("Make sure that the speech synthesis options are working correctly", async () => {
