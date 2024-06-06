@@ -1,15 +1,3 @@
-/**
- * script.js: Random Fortune Generation and Display Logic
- *
- * This JavaScript module imports predefined fortune outcomes from the "fortunes.js" file and
- * provides functionality to randomly select and display these fortunes based on the user's
- * interaction with the palm reading application (head, heart,
- * life, fate, and sun lines within user's palm reading).
- *
- * Dependencies:
- * - fortunes.js: Contains arrays of possible outcomes for various palm lines.
- */
-
 import { heads, hearts, lifes, fates, suns } from "./fortunes.js";
 
 /**
