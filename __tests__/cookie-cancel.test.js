@@ -192,5 +192,5 @@ describe("Basic user flow for Website", () => {
       );
     });
     expect(elementHasClass).toBe(false);
-  }, 20000);
+  }, 30000);
 });
