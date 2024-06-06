@@ -25,6 +25,7 @@ And that's it! Good luck on your Progressive Web App adventure!
 [![Get started with the pwa-starter!](https://img.youtube.com/vi/u3pWKpmic_k/0.jpg)](https://www.youtube.com/watch?v=u3pWKpmic_k)
 
 With it you get an app that:
+
 - Has no build system to set up and no boilerplate code to add. Everything is included out of the box.
 - Has a Service Worker system using [Workbox](https://developers.google.com/web/tools/workbox/)
 - Scores close to 100 on Lighthouse out of the box

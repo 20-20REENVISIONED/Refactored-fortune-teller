@@ -44,14 +44,8 @@
       "type": "image/png"
     }
   ],
-  "features": [
-    "Cross Platform",
-    "fast",
-    "simple"
-  ],
-  "categories": [
-    "social"
-  ],
+  "features": ["Cross Platform", "fast", "simple"],
+  "categories": ["social"],
   "shortcuts": [
     {
       "name": "Open About",
