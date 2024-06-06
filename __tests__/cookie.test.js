@@ -244,7 +244,7 @@ describe("Basic user flow for Website", () => {
       );
     });
     expect(elementHasClass).toBe(true);
-  }, 10000);
+  }, 5000);
 
   // Now test all buttons when the cookie button is clicked
 
