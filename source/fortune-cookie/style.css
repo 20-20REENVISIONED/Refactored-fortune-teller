@@ -32,8 +32,6 @@ footer {
   margin-bottom: 20px;
   display: flex;
   color: rgba(255, 255, 255, 0.5);
-  align-items: center;
-  flex-wrap: wrap;
 }
 .voice-select-label {
   display: flex;
@@ -133,11 +131,10 @@ li.audio-dropdown {
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
 }
 .fortune-cookie {
   width: 300px;
@@ -328,37 +325,4 @@ aside {
 }
 #cancel-animation-btn:hover {
   text-decoration: underline;
-}
-@media screen and (orientation: landscape) and (max-width: 600px) {
-  footer {
-    margin-bottom: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .fortune-paper {
-    max-width: 90%;
-  }
-  header h1.title {
-    white-space: nowrap;
-    margin: 0;
-  }
-
-  .voice-select-label {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 10px;
-  }
-
-  .voice-select-label select {
-    width: 100%;
-  }
-
-  .button {
-    margin-top: 20px;
-    width: calc(100% - 40px);
-    text-align: center;
-  }
 }
