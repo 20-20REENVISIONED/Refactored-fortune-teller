@@ -26,8 +26,29 @@ document.addEventListener("click", () => {
   hasEnabledVoice = true;
 });
 
+// Pop-up element and close button
+const popup = document.getElementById("popup");
+const closePopup = document.getElementById("close-popup");
+
+// Function to open the pop-up
+function openPopup() {
+  popup.style.display = "block";
+}
+
+// Function to close the pop-up
+closePopup.onclick = function() {
+  popup.style.display = "none";
+}
+
+// Close the pop-up when clicking outside of it
+window.onclick = function(event) {
+  if (event.target == popup) {
+    popup.style.display = "none";
+  }
+}
+
 howTo.addEventListener("click", () => {
-  help.parentElement.classList.add("open");
+  openPopup(); //help.parentElement.classList.add("open");
 });
 
 /**
