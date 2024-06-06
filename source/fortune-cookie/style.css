@@ -327,26 +327,3 @@ aside {
 #cancel-animation-btn:hover {
   text-decoration: underline;
 }
-@media screen and (orientation: landscape) {
-  header {
-    margin-top: 0px;
-  }
-  footer {
-    margin-bottom: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .fortune-cookie {
-    width: 200px;
-    height: 200px;
-    margin-top: 60px;
-  }
-  .button {
-    margin-top: 0px;
-  }
-  .button:disabled {
-    position: absolute;
-  }
-}
