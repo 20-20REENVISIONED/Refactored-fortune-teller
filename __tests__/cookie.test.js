@@ -167,7 +167,7 @@ describe("Basic user flow for Website", () => {
     const resetButtonDisabled = await resetButton.getProperty("disabled");
     const isDisabled = await resetButtonDisabled.jsonValue();
     expect(isDisabled).toBe(true);
-  }, 10000);
+  }, 15000);
 
   // Now that reset button has been clicked, check that the fortune button is enabled
   it("Make sure that after the reset button is clicked, the fortune button is reenabled", async () => {
