@@ -330,3 +330,19 @@ aside {
 #cancel-animation-btn:hover {
   text-decoration: underline;
 }
+@media screen and (orientation: landscape) {
+  footer {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .fortune-paper {
+    max-width: 90%;
+  }
+  header h1.title {
+    white-space: nowrap;
+    margin: 0;
+  }
+}
