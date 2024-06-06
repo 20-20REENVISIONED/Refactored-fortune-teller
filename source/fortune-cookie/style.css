@@ -32,8 +32,6 @@ footer {
   margin-bottom: 20px;
   display: flex;
   color: rgba(255, 255, 255, 0.5);
-  align-items: center;
-  flex-wrap: wrap;
 }
 .voice-select-label {
   display: flex;
@@ -137,7 +135,6 @@ li.audio-dropdown {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
 }
 .fortune-cookie {
   width: 300px;
