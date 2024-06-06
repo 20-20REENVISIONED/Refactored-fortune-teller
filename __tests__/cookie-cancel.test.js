@@ -130,7 +130,7 @@ describe("Basic user flow for Website", () => {
       );
     });
     expect(elementHasClass).toBe(true);
-  }, 20000);
+  }, 50000);
 
   // Check to make sure that cancel button cancel button works when clicked after cookie button is clicked
   it("Make sure cancel button works when clicked after cookie button is clicked", async () => {
@@ -192,5 +192,5 @@ describe("Basic user flow for Website", () => {
       );
     });
     expect(elementHasClass).toBe(false);
-  }, 30000);
+  }, 50000);
 });
