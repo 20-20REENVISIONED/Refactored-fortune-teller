@@ -336,14 +336,13 @@ class Wheel {
         this.#setAngle(wheelAngle - 2);
       }
     }
-    
 
     this.#stopMomentum();
     this.#wheelTimeout = setTimeout(() => {
       this.#wheelTimeout = null;
       this.#snap();
     }, 500);
-  }
+  };
 
   /**
    * Starts rotating the wheel with momentum given an initial angular velocity.
