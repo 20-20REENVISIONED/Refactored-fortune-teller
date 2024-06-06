@@ -154,20 +154,37 @@ describe("Basic user flow for Website", () => {
   // Check to make sure that reset button gets disabled when the reset button is clicked
   it("Make sure after reset button is clicked, reset button is disabled", async () => {
     // Click reset button
+    let resetButtonDisabled;
     const resetButton = await page.$("#reset-button");
     await resetButton.click();
 
-    // Wait for the reset button to become disabled
-    await page.waitForFunction(() => {
-      const resetButton = document.querySelector("#reset-button");
-      return resetButton && resetButton.disabled === true;
-    });
-
     // Check that reset button is now disabled
-    const resetButtonDisabled = await resetButton.getProperty("disabled");
-    const isDisabled = await resetButtonDisabled.jsonValue();
-    expect(isDisabled).toBe(true);
-  }, 20000);
+    let booleanValue = await resetButton.getProperty("disabled");
+    resetButtonDisabled = await booleanValue.jsonValue();
+    expect(resetButtonDisabled).toBe(true);
+  }, 5000);
+
+  // Check to make sure that cancel button becomes visible and has correct classes after reset button is clicked
+  it("Make sure cancel button is visible and has correct classes when reset button is clicked", async () => {
+    // Only get past here if cancel button is visible
+    await page.waitForSelector("#cancel-animation-btn", { visible: true });
+
+    // cancel button should have animating class
+    let elementHasClass = await page.evaluate(() => {
+      const cancelButton = document.querySelector("#cancel-animation-btn");
+      return cancelButton.parentElement.classList.contains("animating");
+    });
+    expect(elementHasClass).toBe(true);
+
+    // cancel button should have cancel-animation-wrapper class
+    elementHasClass = await page.evaluate(() => {
+      const cancelButton = document.querySelector("#cancel-animation-btn");
+      return cancelButton.parentElement.classList.contains(
+        "animating-new-cookie"
+      );
+    });
+    expect(elementHasClass).toBe(true);
+  }, 5000);
 
   // Now that reset button has been clicked, check that the fortune button is enabled
   it("Make sure that after the reset button is clicked, the fortune button is reenabled", async () => {
@@ -186,7 +203,7 @@ describe("Basic user flow for Website", () => {
     let booleanValue = await fortuneButton.getProperty("disabled");
     fortuneButtonDisabled = await booleanValue.jsonValue();
     expect(fortuneButtonDisabled).toBe(false);
-  }, 25000);
+  }, 10000);
 
   // Now that reset button has been clicked, check that the cookie button is enabled
   it("Make sure after reset button is clicked, the cookie button is reenabled", async () => {
@@ -205,7 +222,29 @@ describe("Basic user flow for Website", () => {
     let booleanValue = await cookieButton.getProperty("disabled");
     cookieButtonDisabled = await booleanValue.jsonValue();
     expect(cookieButtonDisabled).toBe(false);
-  }, 20000);
+  }, 5000);
+
+  // Check to make sure that cancel button becomes not visible and has correct classes after fortune/cookie button are enabled
+  it("Make sure cancel button is not visible and has correct classes after fortune/cookie button are enabled", async () => {
+    // Only get past here if cancel button is not visible
+    await page.waitForSelector("#cancel-animation-btn", { visible: false });
+
+    // cancel button should not have animating class
+    let elementHasClass = await page.evaluate(() => {
+      const cancelButton = document.querySelector("#cancel-animation-btn");
+      return cancelButton.parentElement.classList.contains("animating");
+    });
+    expect(elementHasClass).toBe(false);
+
+    // cancel button should have cancel-animation-wrapper class
+    elementHasClass = await page.evaluate(() => {
+      const cancelButton = document.querySelector("#cancel-animation-btn");
+      return cancelButton.parentElement.classList.contains(
+        "animating-new-cookie"
+      );
+    });
+    expect(elementHasClass).toBe(true);
+  }, 5000);
 
   // Now test all buttons when the cookie button is clicked
 
@@ -250,7 +289,7 @@ describe("Basic user flow for Website", () => {
       );
     });
     expect(elementHasClass).toBe(false);
-  }, 20000);
+  }, 5000);
 
   // Check to make sure that reset button is enabled when after cookie button is clicked
   it("Make sure reset button is enabled after cookie button is clicked", async () => {
@@ -270,6 +309,19 @@ describe("Basic user flow for Website", () => {
     resetButtonDisabled = await booleanValue.jsonValue();
     expect(resetButtonDisabled).toBe(false);
   }, 25000);
+
+  // Check to make sure that reset button gets disabled when the reset button is clicked
+  it("Make sure after reset button is clicked, reset button is disabled", async () => {
+    // Click reset button
+    let resetButtonDisabled;
+    const resetButton = await page.$("#reset-button");
+    await resetButton.click();
+
+    // Check that reset button is now disabled
+    let booleanValue = await resetButton.getProperty("disabled");
+    resetButtonDisabled = await booleanValue.jsonValue();
+    expect(resetButtonDisabled).toBe(true);
+  }, 5000);
 
   // Check to make sure that cancel button becomes visible and has correct classes after reset button is clicked
   it("Make sure cancel button is visible and has correct classes when reset button is clicked", async () => {
@@ -291,7 +343,67 @@ describe("Basic user flow for Website", () => {
       );
     });
     expect(elementHasClass).toBe(true);
-  }, 20000);
+  }, 5000);
+
+  // Now that reset button has been clicked, check that the fortune button is enabled
+  it("Make sure that after the reset button is clicked, the fortune button is reenabled", async () => {
+    /**
+     * The waitForFunction() waits for the provided function to return true, indicating that the button element with the ID 'fortune-button'
+     * has its disabled attribute set to false. If the button's disabled value becomes false within the specified timeout, the test will pass.
+     */
+    await page.waitForFunction(() => {
+      const fortuneButton = document.querySelector("#fortune-button");
+      return fortuneButton && fortuneButton.disabled === false;
+    });
+
+    // Check that fortune button is now enabled
+    let fortuneButtonDisabled;
+    const fortuneButton = await page.$("#fortune-button");
+    let booleanValue = await fortuneButton.getProperty("disabled");
+    fortuneButtonDisabled = await booleanValue.jsonValue();
+    expect(fortuneButtonDisabled).toBe(false);
+  }, 10000);
+
+  // Now that reset button has been clicked, check that the cookie button is enabled
+  it("Make sure after reset button is clicked, the cookie button is reenabled", async () => {
+    /**
+     * The waitForFunction() waits for the provided function to return true, indicating that the button element with the ID 'cookie-button'
+     * has its disabled attribute set to false. If the button's disabled value becomes false within the specified timeout, the test will pass.
+     */
+    await page.waitForFunction(() => {
+      const cookieButton = document.querySelector("#cookie-button");
+      return cookieButton && cookieButton.disabled === false;
+    });
+
+    // Check that cookie button is now enabled
+    let cookieButtonDisabled;
+    const cookieButton = await page.$("#cookie-button");
+    let booleanValue = await cookieButton.getProperty("disabled");
+    cookieButtonDisabled = await booleanValue.jsonValue();
+    expect(cookieButtonDisabled).toBe(false);
+  }, 5000);
+
+  // Check to make sure that cancel button is not visible and has correct classes after fortune/cookie button are enabled
+  it("Make sure cancel button is not visible and has correct classes after fortune/cookie button are enabled", async () => {
+    // Only get past here if cancel button is not visible
+    await page.waitForSelector("#cancel-animation-btn", { visible: false });
+
+    // cancel button should not have animating class
+    let elementHasClass = await page.evaluate(() => {
+      const cancelButton = document.querySelector("#cancel-animation-btn");
+      return cancelButton.parentElement.classList.contains("animating");
+    });
+    expect(elementHasClass).toBe(false);
+
+    // cancel button should have cancel-animation-wrapper class
+    elementHasClass = await page.evaluate(() => {
+      const cancelButton = document.querySelector("#cancel-animation-btn");
+      return cancelButton.parentElement.classList.contains(
+        "animating-new-cookie"
+      );
+    });
+    expect(elementHasClass).toBe(true);
+  }, 5000);
 
   //Check to make sure that the speech synthesis is being populated, the correct voices are called by the function
   it("Make sure that the speech synthesis options are working correctly", async () => {
