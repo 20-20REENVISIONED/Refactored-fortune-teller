@@ -69,16 +69,33 @@
               </span>
             </span>
           </a>
+          <!-- New Card Container Added Here -->
+          <a href="../lifePath-calculator/" class="card-container card">
+            <picture>
+              <source srcset="images/FILLIN.avif" type="image/avif" />
+              <source srcset="images/FILLIN.webp" type="image/webp" />
+              <img src="images/lifepath.JPG" alt="New Feature Card" />
+            </picture>
+            <span class="description">
+              <strong>Life Path Number</strong>
+              <span
+                >Explore our latest feature designed to enhance your experience
+                and provide new insights.</span
+              >
+              <strong data-i18n="love-compatibility">Love Compatibility</strong>
+              <span data-i18n="love-compatibility-description">
+                Discover your perfect match with cutting-edge astrological signs
+                to provide insightful guidance on finding lasting love.
+              </span>
+            </span>
+          </a>
           <a href="../fortune-cookie/" class="card-container card">
             <picture>
               <source
                 srcset="images/new-fortune-cookie-img.avif"
                 type="image/avif"
               />
-              <source
-                srcset="images/new-fortune-cookie-img.webp"
-                type="image/webp"
-              />
+              <source srcset="images/new-fortune-cookie-img.webp" />
               <img
                 src="images/new-fortune-cookie-img.jpg"
                 alt="Fortune Cookie Card"
@@ -123,7 +140,11 @@
         <h2 data-i18n="cant-decide-title">Can't decide?</h2>
         <p data-i18n="cant-decide-description">Your destiny is in our hands.</p>
       </div>
-      <button class="randomize-button button" data-i18n="randomize-button">
+      <button
+        class="randomize-button button"
+        aria-label="Randomize your choice"
+        data-i18n="randomize-button"
+      >
         Randomize
       </button>
     </div>

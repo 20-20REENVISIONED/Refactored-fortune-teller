@@ -59,6 +59,11 @@ const links = [
     imageUrlBase: "../common/icons/settings-img",
     imageFormats: [".svg"],
   },
+  {
+    label: "Life Path Number",
+    url: "../lifePath-calculator/",
+    imageUrl: "../home-page/images/lifepath.JPG",
+  },
 ];
 
 /**

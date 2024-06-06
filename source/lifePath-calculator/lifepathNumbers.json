@@ -1,0 +1,82 @@
+{
+  "1": {
+    "PersonalityTraits": "Individuals with Life Path 1 are known for their independence, ambition, and innovation. They naturally assume leadership roles and are pioneers in their fields.",
+    "RecommendedCareers": [
+      "Entrepreneurship",
+      "Leadership positions",
+      "Innovation-driven roles"
+    ],
+    "RelationshipPreferences": "In relationships, Life Path 1 individuals seek partners who are equally independent and driven. They value loyalty and mutual respect.",
+    "NotableFigures": ["Barack Obama", "Martin Luther King Jr.", "Steve Jobs"]
+  },
+  "2": {
+    "PersonalityTraits": "Life Path 2 individuals are cooperative, diplomatic, and intuitive. They thrive in partnerships and prioritize harmony in relationships.",
+    "RecommendedCareers": ["Mediation", "Counseling", "Diplomatic roles"],
+    "RelationshipPreferences": "Life Path 2 individuals value harmony and cooperation in relationships. They seek partners who are supportive and understanding.",
+    "NotableFigures": ["Mahatma Gandhi", "Mother Teresa", "Oprah Winfrey"]
+  },
+  "3": {
+    "PersonalityTraits": "Creative, expressive, and sociable, Life Path 3 individuals are natural communicators and enjoy self-expression.",
+    "RecommendedCareers": ["Artistry", "Writing", "Performing Arts"],
+    "RelationshipPreferences": "Life Path 3 individuals are charming and outgoing in relationships. They value fun and spontaneity.",
+    "NotableFigures": ["Jimi Hendrix", "J.K. Rowling", "Taylor Swift"]
+  },
+  "4": {
+    "PersonalityTraits": "Life Path 4 individuals are known for their practicality, hard work, and discipline. They are reliable and dedicated workers.",
+    "RecommendedCareers": ["Engineering", "Accounting", "Construction"],
+    "RelationshipPreferences": "In relationships, Life Path 4 individuals value stability and commitment. They are loyal and trustworthy partners.",
+    "NotableFigures": ["Abraham Lincoln", "Angelina Jolie", "Warren Buffett"]
+  },
+  "5": {
+    "PersonalityTraits": "Adventurous, versatile, and freedom-loving, Life Path 5 individuals are curious explorers who embrace change.",
+    "RecommendedCareers": ["Travel", "Sales", "Journalism"],
+    "RelationshipPreferences": "Life Path 5 individuals seek partners who share their sense of adventure and freedom. They value independence and spontaneity.",
+    "NotableFigures": ["Thomas Edison", "Marilyn Monroe", "Stephen King"]
+  },
+  "6": {
+    "PersonalityTraits": "Nurturing, responsible, and compassionate, Life Path 6 individuals are caretakers and family-oriented.",
+    "RecommendedCareers": ["Teaching", "Nursing", "Social Work"],
+    "RelationshipPreferences": "Life Path 6 individuals are loving and supportive partners. They prioritize harmony and balance in relationships.",
+    "NotableFigures": ["Albert Einstein", "Mother Teresa", "Will Smith"]
+  },
+  "7": {
+    "PersonalityTraits": "Analytical, introspective, and spiritual, Life Path 7 individuals are seekers of truth and knowledge.",
+    "RecommendedCareers": ["Research", "Philosophy", "Spirituality"],
+    "RelationshipPreferences": "Life Path 7 individuals value deep connections and intellectual stimulation in relationships. They seek partners who share their spiritual and philosophical interests.",
+    "NotableFigures": [
+      "Sir Isaac Newton",
+      "Albert Schweitzer",
+      "Ludwig van Beethoven"
+    ]
+  },
+  "8": {
+    "PersonalityTraits": "Ambitious, driven, and authoritative, Life Path 8 individuals are natural leaders and achievers.",
+    "RecommendedCareers": ["Corporate Leadership", "Politics", "Finance"],
+    "RelationshipPreferences": "Life Path 8 individuals seek partners who are equally ambitious and driven. They value power and success in relationships.",
+    "NotableFigures": ["Nelson Mandela", "Donald Trump", "Queen Elizabeth II"]
+  },
+  "9": {
+    "PersonalityTraits": "Compassionate, humanitarian, and idealistic, Life Path 9 individuals are altruistic and empathetic.",
+    "RecommendedCareers": ["Humanitarian Work", "Activism", "Counseling"],
+    "RelationshipPreferences": "Life Path 9 individuals value deep emotional connections and selflessness in relationships. They seek partners who share their ideals and values.",
+    "NotableFigures": ["Mother Teresa", "Mahatma Gandhi", "Elton John"]
+  },
+  "11": {
+    "PersonalityTraits": "Intuitive, inspirational, and visionary, Life Path 11 individuals are spiritual leaders and seekers of higher truths.",
+    "RecommendedCareers": ["Spiritual Leadership", "Teaching", "Creative Arts"],
+    "RelationshipPreferences": "Life Path 11 individuals seek partners who understand their spiritual journey and support their quest for enlightenment.",
+    "NotableFigures": ["Nelson Mandela", "Bill Clinton", "Prince William"]
+  },
+  "22": {
+    "PersonalityTraits": "Master builder, practical visionary, and achiever, Life Path 22 individuals are capable of manifesting big dreams into reality.",
+    "RecommendedCareers": ["Architecture", "Engineering", "Entrepreneurship"],
+    "RelationshipPreferences": "Life Path 22 individuals seek partners who share their ambitious vision and drive for success.",
+    "NotableFigures": ["Walt Disney", "Bill Gates", "Sir Richard Branson"]
+  },
+  "33": {
+    "PersonalityTraits": "Master teacher, compassionate healer, and spiritual guide, Life Path 33 individuals are dedicated to serving humanity and uplifting others.",
+    "RecommendedCareers": ["Healing Arts", "Teaching", "Philanthropy"],
+    "RelationshipPreferences": "Life Path 33 individuals seek partners who are equally compassionate and dedicated to making a positive impact in the world.",
+    "NotableFigures": ["Mahatma Gandhi", "Dalai Lama", "Deepak Chopra"]
+  }
+}

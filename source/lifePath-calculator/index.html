@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life Path Number Calculator | Envision Your Destiny</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="../common/styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- JavaScript Disabled Popup -->
+  <noscript>
+    <popup-widget>
+      <h2>JavaScript is disabled</h2>
+      <p>Please enable JavaScript to ensure the app will work properly.</p>
+    </popup-widget>
+  </noscript>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1 class="title">Life Path Number Calculator</h1>
+      <div id="guide">
+        <!-- "How to Use" Button -->
+        <button class="button" id="how-to" aria-label="How to Use">How to Use</button>
+        <!-- "Life Path Summary" Button -->
+        <button class="button" id="life-path-summary" aria-label="Life Path Summary">Life Path Summary</button>
+      </div>
+    </header>
+    <!-- Birthday Input Form -->
+    <div class="bday-input" id="birthday-input">
+      <form id="life-path-form">
+        <label for="birthday" id="birthday-label">YOUR DATE OF BIRTH:</label><br>
+        <div class="date-inputs">
+          <select id="day" aria-label="Day">
+            <option value="" disabled selected>Day</option>
+            <!-- Days will be added here by JavaScript -->
+          </select>
+          <select id="month" aria-label="Month">
+            <option value="" disabled selected>Month</option>
+            <!-- Months will be added here by JavaScript -->
+          </select>
+          <select id="year" aria-label="Year">
+            <option value="" disabled selected>Year</option>
+            <!-- Years will be added here by JavaScript -->
+          </select>
+        </div>
+      </form>
+    </div>
+    <!-- Calculate Button -->
+    <div class="middle">
+      <button class="button" id="calculate" aria-label="Calculate">Calculate</button>
+    </div>
+    <!-- Calculate Popup Wrapper -->
+    <div class="popup-wrapper" id="calculate-popup-wrapper" style="display: none;">
+      <!-- Calculate Popup Box -->
+      <div class="popup" id="calculate-popup">
+        <div id="calculate-text">
+          <!-- Close Button for Calculate Popup -->
+          <button class="close-button" id="close-calculate-button" aria-label="Close Calculate">
+            <picture>
+              <source srcset="images/close.avif" type="image/avif">
+              <source srcset="images/close.webp" type="image/webp">
+              <img src="images/close.webp" alt="close">
+            </picture>
+          </button>
+          <!-- Content for Calculate Popup -->
+          <h2 id="calculate-title">Your Life Path Number is:</h2>
+          <div id="calculate-number" class="calculate-number"></div>
+          <p id="life-path-description">Description of the Life Path Number will be displayed here.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlay and Loader -->
+  <div id="overlay" class="overlay" style="display: none;">
+    <div class="loader"></div>
+  </div>
+
+  <!-- "How to Use" Popup Wrapper -->
+  <div class="popup-wrapper" id="popup-wrapper" style="display: none;">
+    <!-- Popup Box for "How to Use" -->
+    <div class="popup" id="help">
+      <div id="text">
+        <!-- Close Button for "How to Use" Popup -->
+        <button class="close-button" id="close-button" aria-label="Close Help">
+          <picture>
+            <source srcset="images/close.avif" type="image/avif">
+            <source srcset="images/close.webp" type="image/webp">
+            <img src="../lifePath-calculator/images/close.webp" alt="close">
+          </picture>
+        </button>
+        <!-- Content for "How to Use" Popup -->
+        <h2 id="pairing">How to Use
+            <p>Welcome to the Life Path Number Calculator! Here's how to use it:</p>
+            <ol>
+              <li>Enter your date of birth in the provided fields.</li>
+              <li>Click the "Calculate" button to get your Life Path Number.</li>
+              <li>Read the description to learn about your Life Path Number's significance.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    
+      <!-- "Life Path Summary" Popup Wrapper -->
+      <!-- "Calculation Summary" Popup Wrapper -->
+<div class="popup-wrapper" id="summary-popup-wrapper" style="display: none;">
+    <!-- Popup Box for "Calculation Summary" -->
+    <div class="popup" id="summary-popup">
+      <div id="summary-text">
+        <!-- Close Button for "Calculation Summary" Popup -->
+        <button class="close-button" id="close-summary-button" aria-label="Close Summary">
+          <picture>
+            <source srcset="images/close.avif" type="image/avif" />
+            <source srcset="images/close.webp" type="image/webp" />
+            <img src="images/close.webp" alt="close" />
+          </picture>
+        </button>
+        <!-- Content for "Calculation Summary" Popup -->
+        <h2 id="summary-title">Life Path Number Calculation Summary</h2>
+        <p>The Life Path Number calculation is a method used in numerology to determine a single-digit number (from 1 to 9, or the master numbers 11, 22, and sometimes 33) that represents a person's core personality and life path.</p>
+        <p>It is derived from the person's birth date and involves the following steps:</p>
+        <ol>
+          <li><strong>Break Down the Birth Date:</strong> Separate the birth date into day, month, and year components.</li>
+          <li><strong>Reduce Each Component to a Single Digit:</strong> Sum the digits of each component to obtain single-digit numbers.</li>
+          <li><strong>Sum the Reduced Components:</strong> Add the reduced day, month, and year components together.</li>
+          <li><strong>Reduce the Sum to a Single Digit:</strong> Continue reducing the sum until you get a single digit or a master number.</li>
+        </ol>
+        <p>The final result is the Life Path Number, which provides insights into the individual's personality and life path.</p>
+        <!-- High-level description of life path number -->
+        <h3>Life Path Background and Context</h3>
+        <p>Your Life Path Number is one of the most important numbers in numerology. It represents the essence of who you are and the path you will take in life.</p>
+        <p>Derived from your birth date, your Life Path Number reveals your natural talents, strengths, and challenges. It provides insights into your personality, relationships, and life purpose.</p>
+        <p>Understanding your Life Path Number can help you make better decisions, navigate challenges, and live a more fulfilling life.</p>
+      </div>
+    </div>
+  </div>
+  
+    
+      <!-- JavaScript -->
+      <script src="../common/index.js" type="module"></script>
+      <script src="script.js" type="module"></script>
+    </body>
+    </html>
+    
