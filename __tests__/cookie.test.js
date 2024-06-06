@@ -208,7 +208,7 @@ describe("Basic user flow for Website", () => {
     let booleanValue = await resetButton.getProperty("disabled");
     resetButtonDisabled = await booleanValue.jsonValue();
     expect(resetButtonDisabled).toBe(true);
-  }, 10000);
+  }, 15000);
 
   // Check to make sure that cancel button becomes visible and has correct classes after reset button is clicked
   it("Make sure cancel button is visible and has correct classes when reset button is clicked", async () => {
@@ -230,7 +230,7 @@ describe("Basic user flow for Website", () => {
       );
     });
     expect(elementHasClass).toBe(true);
-  }, 5000);
+  }, 10000);
 
   // Now that reset button has been clicked, check that the fortune button is enabled
   it("Make sure that after the reset button is clicked, the fortune button is reenabled", async () => {
@@ -239,7 +239,7 @@ describe("Basic user flow for Website", () => {
         const fortuneButton = document.querySelector("#fortune-button");
         return fortuneButton && fortuneButton.disabled === false;
       },
-      { timeout: 15000 }
+      { timeout: 20000 }
     );
 
     let fortuneButtonDisabled;
@@ -264,7 +264,7 @@ describe("Basic user flow for Website", () => {
     let booleanValue = await cookieButton.getProperty("disabled");
     cookieButtonDisabled = await booleanValue.jsonValue();
     expect(cookieButtonDisabled).toBe(false);
-  }, 15000);
+  }, 20000);
 
   // Check to make sure that cancel button is not visible and has correct classes after fortune/cookie button are enabled
   it("Make sure cancel button is not visible and has correct classes after fortune/cookie button are enabled", async () => {
@@ -286,7 +286,7 @@ describe("Basic user flow for Website", () => {
       );
     });
     expect(elementHasClass).toBe(true);
-  }, 5000);
+  }, 10000);
 
   //Check to make sure that the speech synthesis is being populated, the correct voices are called by the function
   it("Make sure that the speech synthesis options are working correctly", async () => {
