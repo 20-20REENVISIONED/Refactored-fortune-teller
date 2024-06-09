@@ -41,33 +41,33 @@ describe("roundAngle Tests", () => {
 
 describe("getMappingLeft Tests", () => {
   test("should return the corresponding zodiac sign for a positive rounded angle", () => {
-    expect(getMappingLeft(0)).toBe("Capricorn");
-    expect(getMappingLeft(30)).toBe("Sagittarius");
-    expect(getMappingLeft(60)).toBe("Scorpio");
-    expect(getMappingLeft(90)).toBe("Libra");
-    expect(getMappingLeft(120)).toBe("Virgo");
-    expect(getMappingLeft(150)).toBe("Leo");
-    expect(getMappingLeft(180)).toBe("Cancer");
-    expect(getMappingLeft(210)).toBe("Gemini");
-    expect(getMappingLeft(240)).toBe("Taurus");
-    expect(getMappingLeft(270)).toBe("Aries");
-    expect(getMappingLeft(300)).toBe("Pisces");
-    expect(getMappingLeft(330)).toBe("Aquarius");
-    expect(getMappingLeft(360)).toBe("Capricorn");
+    expect(getMappingLeft(0)).toBe("zodiac-capricorn");
+    expect(getMappingLeft(30)).toBe("zodiac-sagittarius");
+    expect(getMappingLeft(60)).toBe("zodiac-scorpio");
+    expect(getMappingLeft(90)).toBe("zodiac-libra");
+    expect(getMappingLeft(120)).toBe("zodiac-virgo");
+    expect(getMappingLeft(150)).toBe("zodiac-leo");
+    expect(getMappingLeft(180)).toBe("zodiac-cancer");
+    expect(getMappingLeft(210)).toBe("zodiac-gemini");
+    expect(getMappingLeft(240)).toBe("zodiac-taurus");
+    expect(getMappingLeft(270)).toBe("zodiac-aries");
+    expect(getMappingLeft(300)).toBe("zodiac-pisces");
+    expect(getMappingLeft(330)).toBe("zodiac-aquarius");
+    expect(getMappingLeft(360)).toBe("zodiac-capricorn");
   });
   test("should return the corresponding zodiac sign for a negative rounded angle", () => {
-    expect(getMappingLeft(-30)).toBe("Aquarius");
-    expect(getMappingLeft(-60)).toBe("Pisces");
-    expect(getMappingLeft(-90)).toBe("Aries");
-    expect(getMappingLeft(-120)).toBe("Taurus");
-    expect(getMappingLeft(-150)).toBe("Gemini");
-    expect(getMappingLeft(-180)).toBe("Cancer");
-    expect(getMappingLeft(-210)).toBe("Leo");
-    expect(getMappingLeft(-240)).toBe("Virgo");
-    expect(getMappingLeft(-270)).toBe("Libra");
-    expect(getMappingLeft(-300)).toBe("Scorpio");
-    expect(getMappingLeft(-330)).toBe("Sagittarius");
-    expect(getMappingLeft(-360)).toBe("Capricorn");
+    expect(getMappingLeft(-30)).toBe("zodiac-aquarius");
+    expect(getMappingLeft(-60)).toBe("zodiac-pisces");
+    expect(getMappingLeft(-90)).toBe("zodiac-aries");
+    expect(getMappingLeft(-120)).toBe("zodiac-taurus");
+    expect(getMappingLeft(-150)).toBe("zodiac-gemini");
+    expect(getMappingLeft(-180)).toBe("zodiac-cancer");
+    expect(getMappingLeft(-210)).toBe("zodiac-leo");
+    expect(getMappingLeft(-240)).toBe("zodiac-virgo");
+    expect(getMappingLeft(-270)).toBe("zodiac-libra");
+    expect(getMappingLeft(-300)).toBe("zodiac-scorpio");
+    expect(getMappingLeft(-330)).toBe("zodiac-sagittarius");
+    expect(getMappingLeft(-360)).toBe("zodiac-capricorn");
   });
   test('should return "unknown" for an unrounded angle', () => {
     expect(getMappingLeft(45)).toBe("unknown");
@@ -79,34 +79,34 @@ describe("getMappingLeft Tests", () => {
 
 describe("getMappingRight", () => {
   test("should return the corresponding zodiac sign for a rounded positive angle", () => {
-    expect(getMappingRight(0)).toBe("Cancer");
-    expect(getMappingRight(30)).toBe("Gemini");
-    expect(getMappingRight(60)).toBe("Taurus");
-    expect(getMappingRight(90)).toBe("Aries");
-    expect(getMappingRight(120)).toBe("Pisces");
-    expect(getMappingRight(150)).toBe("Aquarius");
-    expect(getMappingRight(180)).toBe("Capricorn");
-    expect(getMappingRight(210)).toBe("Sagittarius");
-    expect(getMappingRight(240)).toBe("Scorpio");
-    expect(getMappingRight(270)).toBe("Libra");
-    expect(getMappingRight(300)).toBe("Virgo");
-    expect(getMappingRight(330)).toBe("Leo");
-    expect(getMappingRight(360)).toBe("Cancer");
+    expect(getMappingRight(0)).toBe("zodiac-cancer");
+    expect(getMappingRight(30)).toBe("zodiac-gemini");
+    expect(getMappingRight(60)).toBe("zodiac-taurus");
+    expect(getMappingRight(90)).toBe("zodiac-aries");
+    expect(getMappingRight(120)).toBe("zodiac-pisces");
+    expect(getMappingRight(150)).toBe("zodiac-aquarius");
+    expect(getMappingRight(180)).toBe("zodiac-capricorn");
+    expect(getMappingRight(210)).toBe("zodiac-sagittarius");
+    expect(getMappingRight(240)).toBe("zodiac-scorpio");
+    expect(getMappingRight(270)).toBe("zodiac-libra");
+    expect(getMappingRight(300)).toBe("zodiac-virgo");
+    expect(getMappingRight(330)).toBe("zodiac-leo");
+    expect(getMappingRight(360)).toBe("zodiac-cancer");
   });
 
   test("should return the corresponding zodiac sign for a rounded negative angle", () => {
-    expect(getMappingRight(-30)).toBe("Leo");
-    expect(getMappingRight(-60)).toBe("Virgo");
-    expect(getMappingRight(-90)).toBe("Libra");
-    expect(getMappingRight(-120)).toBe("Scorpio");
-    expect(getMappingRight(-150)).toBe("Sagittarius");
-    expect(getMappingRight(-180)).toBe("Capricorn");
-    expect(getMappingRight(-210)).toBe("Aquarius");
-    expect(getMappingRight(-240)).toBe("Pisces");
-    expect(getMappingRight(-270)).toBe("Aries");
-    expect(getMappingRight(-300)).toBe("Taurus");
-    expect(getMappingRight(-330)).toBe("Gemini");
-    expect(getMappingRight(-360)).toBe("Cancer");
+    expect(getMappingRight(-30)).toBe("zodiac-leo");
+    expect(getMappingRight(-60)).toBe("zodiac-virgo");
+    expect(getMappingRight(-90)).toBe("zodiac-libra");
+    expect(getMappingRight(-120)).toBe("zodiac-scorpio");
+    expect(getMappingRight(-150)).toBe("zodiac-sagittarius");
+    expect(getMappingRight(-180)).toBe("zodiac-capricorn");
+    expect(getMappingRight(-210)).toBe("zodiac-aquarius");
+    expect(getMappingRight(-240)).toBe("zodiac-pisces");
+    expect(getMappingRight(-270)).toBe("zodiac-aries");
+    expect(getMappingRight(-300)).toBe("zodiac-taurus");
+    expect(getMappingRight(-330)).toBe("zodiac-gemini");
+    expect(getMappingRight(-360)).toBe("zodiac-cancer");
   });
 
   test('should return "unknown" for an unknown angle', () => {
@@ -119,18 +119,18 @@ describe("getMappingRight", () => {
 
 describe("determineDateRangeLeft Tests", () => {
   test("should return the corresponding date range for the zodiac sign returned by determineDateRangeLeft", () => {
-    expect(determineDateRangeLeft(0)).toBe("Dec 22 - Jan 19"); // Capricorn
-    expect(determineDateRangeLeft(30)).toBe("Nov 22 - Dec 21"); // Sagittarius
-    expect(determineDateRangeLeft(60)).toBe("Oct 23 - Nov 21"); // Scorpio
-    expect(determineDateRangeLeft(90)).toBe("Sep 23 - Oct 22"); // Libra
-    expect(determineDateRangeLeft(120)).toBe("Aug 23 - Sep 22"); // Virgo
-    expect(determineDateRangeLeft(150)).toBe("Jul 23 - Aug 22"); // Leo
-    expect(determineDateRangeLeft(180)).toBe("Jun 21 - Jul 22"); // Cancer
-    expect(determineDateRangeLeft(210)).toBe("May 21 - Jun 20"); // Gemini
-    expect(determineDateRangeLeft(240)).toBe("Apr 20 - May 20"); // Taurus
-    expect(determineDateRangeLeft(270)).toBe("Mar 21 - Apr 19"); // Aries
-    expect(determineDateRangeLeft(300)).toBe("Feb 19 - Mar 20"); // Pisces
-    expect(determineDateRangeLeft(330)).toBe("Jan 20 - Feb 18"); // Aquarius
+    expect(determineDateRangeLeft(0)).toBe("date-range-capricorn"); // Capricorn
+    expect(determineDateRangeLeft(30)).toBe("date-range-sagittarius"); // Sagittarius
+    expect(determineDateRangeLeft(60)).toBe("date-range-scorpio"); // Scorpio
+    expect(determineDateRangeLeft(90)).toBe("date-range-libra"); // Libra
+    expect(determineDateRangeLeft(120)).toBe("date-range-virgo"); // Virgo
+    expect(determineDateRangeLeft(150)).toBe("date-range-leo"); // Leo
+    expect(determineDateRangeLeft(180)).toBe("date-range-cancer"); // Cancer
+    expect(determineDateRangeLeft(210)).toBe("date-range-gemini"); // Gemini
+    expect(determineDateRangeLeft(240)).toBe("date-range-taurus"); // Taurus
+    expect(determineDateRangeLeft(270)).toBe("date-range-aries"); // Aries
+    expect(determineDateRangeLeft(300)).toBe("date-range-pisces"); // Pisces
+    expect(determineDateRangeLeft(330)).toBe("date-range-aquarius"); // Aquarius
   });
 
   test('should return "unknown" for an unknown angle', () => {
@@ -142,18 +142,18 @@ describe("determineDateRangeLeft Tests", () => {
 
 describe("determineDateRangeRight Tests", () => {
   test("should return the corresponding date range for a known zodiac sign", () => {
-    expect(determineDateRangeRight(0)).toBe("Jun 21 - Jul 22"); // Cancer
-    expect(determineDateRangeRight(30)).toBe("May 21 - Jun 20"); // Gemini
-    expect(determineDateRangeRight(60)).toBe("Apr 20 - May 20"); // Taurus
-    expect(determineDateRangeRight(90)).toBe("Mar 21 - Apr 19"); // Aries
-    expect(determineDateRangeRight(120)).toBe("Feb 19 - Mar 20"); // Pisces
-    expect(determineDateRangeRight(150)).toBe("Jan 20 - Feb 18"); // Aquarius
-    expect(determineDateRangeRight(180)).toBe("Dec 22 - Jan 19"); // Capricorn
-    expect(determineDateRangeRight(210)).toBe("Nov 22 - Dec 21"); // Sagittarius
-    expect(determineDateRangeRight(240)).toBe("Oct 23 - Nov 21"); // Scorpio
-    expect(determineDateRangeRight(270)).toBe("Sep 23 - Oct 22"); // Libra
-    expect(determineDateRangeRight(300)).toBe("Aug 23 - Sep 22"); // Virgo
-    expect(determineDateRangeRight(330)).toBe("Jul 23 - Aug 22"); // Leo
+    expect(determineDateRangeRight(0)).toBe("date-range-cancer"); // Cancer
+    expect(determineDateRangeRight(30)).toBe("date-range-gemini"); // Gemini
+    expect(determineDateRangeRight(60)).toBe("date-range-taurus"); // Taurus
+    expect(determineDateRangeRight(90)).toBe("date-range-aries"); // Aries
+    expect(determineDateRangeRight(120)).toBe("date-range-pisces"); // Pisces
+    expect(determineDateRangeRight(150)).toBe("date-range-aquarius"); // Aquarius
+    expect(determineDateRangeRight(180)).toBe("date-range-capricorn"); // Capricorn
+    expect(determineDateRangeRight(210)).toBe("date-range-sagittarius"); // Sagittarius
+    expect(determineDateRangeRight(240)).toBe("date-range-scorpio"); // Scorpio
+    expect(determineDateRangeRight(270)).toBe("date-range-libra"); // Libra
+    expect(determineDateRangeRight(300)).toBe("date-range-virgo"); // Virgo
+    expect(determineDateRangeRight(330)).toBe("date-range-leo"); // Leo
   });
 
   test('should return "unknown" for an unknown angle', () => {
@@ -164,15 +164,27 @@ describe("determineDateRangeRight Tests", () => {
 
 describe("determinePairing Tests", () => {
   test("should return the zodiac sign pair for various angles", () => {
-    expect(determinePairing(120, 210)).toEqual(["Virgo", "Sagittarius"]);
-    expect(determinePairing(240, 330)).toEqual(["Taurus", "Leo"]);
-    expect(determinePairing(270, 150)).toEqual(["Aries", "Aquarius"]);
+    expect(determinePairing(120, 210)).toEqual([
+      "zodiac-virgo",
+      "zodiac-sagittarius",
+    ]);
+    expect(determinePairing(240, 330)).toEqual(["zodiac-taurus", "zodiac-leo"]);
+    expect(determinePairing(270, 150)).toEqual([
+      "zodiac-aries",
+      "zodiac-aquarius",
+    ]);
     // Add more test cases for different angle pairs and expected zodiac sign pairs
   });
 
   test("should return the zodiac sign pair when angles exceed 360 degrees and negative angles", () => {
-    expect(determinePairing(390, -45)).toEqual(["Sagittarius", "unknown"]);
-    expect(determinePairing(-180, 420)).toEqual(["Cancer", "Taurus"]);
+    expect(determinePairing(390, -45)).toEqual([
+      "zodiac-sagittarius",
+      "unknown",
+    ]);
+    expect(determinePairing(-180, 420)).toEqual([
+      "zodiac-cancer",
+      "zodiac-taurus",
+    ]);
     // Add more test cases for angles greater than 360 degrees and negative angles
   });
 
@@ -185,21 +197,26 @@ describe("determinePairing Tests", () => {
 
 describe("textGenerator Tests", () => {
   test("should generate the matching romantic compatibility text for various zodiac sign pairs", () => {
-    expect(textGenerator("Aries", "Taurus")).toBe(
-      "Aries and Taurus can experience an intense and passionate romantic relationship. Aries brings excitement, spontaneity, and a sense of adventure, while Taurus offers stability, loyalty, and sensuality. However, conflicts may arise due to Aries' impulsive nature and Taurus' desire for security and routine. Open communication and compromise are key to maintaining a harmonious and fulfilling romance."
+    expect(textGenerator("aries", "taurus")).toBe(
+      "description-romantic-aries-taurus"
     );
-    expect(textGenerator("Capricorn", "Gemini")).toBe(
-      "Gemini and Capricorn have contrasting personalities, which can create both attraction and challenges in their romantic relationship. Gemini is outgoing, adaptable, and enjoys social interactions, while Capricorn is more reserved, practical, and focused on long-term goals. Gemini is attracted to Capricorn's ambition, stability, and determination, while Capricorn admires Gemini's intelligence, wit, and ability to keep things interesting. However, their differences in communication styles and priorities can lead to misunderstandings and conflicts. Gemini's need for variety and freedom may clash with Capricorn's desire for structure and commitment. Building trust, practicing open and honest communication, and finding a balance between stability and flexibility are essential for Gemini and Capricorn to create a harmonious and fulfilling romantic partnership."
+
+    //There is no capricorn-gemini entry but there is one for the otherway
+    //around so that's should be returned.
+    expect(textGenerator("capricorn", "gemini")).toBe(
+      "description-romantic-gemini-capricorn"
     );
-    expect(textGenerator("Pisces", "Cancer")).toBe(
-      "Cancer and Pisces can have a deeply emotional and nurturing romantic relationship. Both signs are highly sensitive, empathetic, and seek emotional connection. Cancer is nurturing, protective, and values family, while Pisces is compassionate, intuitive, and values emotional depth. They can create a safe and comforting space for each other, where they can freely express their emotions and provide support. Both signs are romantic and enjoy the simple pleasures of life. However, conflicts may arise due to their emotional sensitivity and occasional mood swings. Building trust, open communication, and understanding each other's emotional needs are important for a successful and fulfilling romantic relationship between Cancer and Pisces."
+
+    //Similar to above test.
+    expect(textGenerator("pisces", "cancer")).toBe(
+      "description-romantic-cancer-pisces"
     );
-    expect(textGenerator("Virgo", "Virgo")).toBe(
-      "When two Virgo individuals come together in a romantic relationship, they create a bond based on shared values, practicality, and a mutual desire for stability. Both partners are detail-oriented, analytical, and seek perfection in their lives and relationships. They appreciate each other's intellect, reliability, and dedication. The relationship between two Virgos is likely to be well-organized, structured, and focused on personal growth. They excel in communication, problem-solving, and supporting each other's goals. However, their attention to detail and tendency to be critical can sometimes lead to over-analysis or nitpicking. It's important for Virgo partners to cultivate patience, understanding, and the ability to see the bigger picture in order to maintain harmony in their relationship."
+    expect(textGenerator("virgo", "virgo")).toBe(
+      "description-romantic-virgo-virgo"
     );
   });
   test("should tell the user there's an error if an unknown pair is passed into the function", () => {
-    expect(textGenerator("unknown", "unknown")).toBe("An error has occurred");
+    expect(textGenerator("unknown", "unknown")).toBe("error-occurred");
   });
 });
 
