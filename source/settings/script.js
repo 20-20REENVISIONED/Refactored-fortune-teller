@@ -24,3 +24,14 @@ languageSelector.addEventListener("change", () => {
   localStorage["language"] = languageSelector.value;
   setLang(localStorage["language"]);
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  var feedbackButton = document.getElementById('feedback-button');
+  
+  if (feedbackButton) {
+      feedbackButton.addEventListener('click', function() {
+          window.location.href = '../feedback-page/index.html'; // Change this URL to your feedback page URL
+      });
+  }
+});
