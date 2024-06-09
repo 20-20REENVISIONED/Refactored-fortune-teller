@@ -117,6 +117,7 @@ class Wheel {
     this.#elem.addEventListener("pointermove", this.#handlePointerMove);
     this.#elem.addEventListener("pointerup", this.#handlePointerUp);
     this.#elem.addEventListener("pointercancel", this.#handlePointerUp);
+    document.addEventListener("keydown", this.#handleKeydown);
   }
 
   /**
@@ -313,6 +314,34 @@ class Wheel {
 
     // Prevent the default scrolling behavior
     event.preventDefault();
+  };
+
+  #handleKeydown = (event) => {
+    const wheelAngle = this.#getAngle();
+
+    // Update the rotation angle based on the scrolling direction
+    if (this.#elem == document.getElementById("left-wheel-img")) {
+      if (event.key == "ArrowLeft") {
+        this.#setAngle(wheelAngle - 2);
+      }
+      if (event.key == "ArrowRight") {
+        this.#setAngle(wheelAngle + 2);
+      }
+    }
+    if (this.#elem == document.getElementById("right-wheel-img")) {
+      if (event.key == "ArrowUp") {
+        this.#setAngle(wheelAngle + 2);
+      }
+      if (event.key == "ArrowDown") {
+        this.#setAngle(wheelAngle - 2);
+      }
+    }
+
+    this.#stopMomentum();
+    this.#wheelTimeout = setTimeout(() => {
+      this.#wheelTimeout = null;
+      this.#snap();
+    }, 500);
   };
 
   /**
