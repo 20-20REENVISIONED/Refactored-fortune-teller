@@ -10,18 +10,18 @@ document.addEventListener("DOMContentLoaded", () => {
     "close-calculate-button"
   );
   const calculateNumberElement = document.getElementById("calculate-number");
-
-  // Populate day, month, and year selects
-  populateDateInputs();
+  const overlay = document.getElementById("overlay");
 
   calculateButton.addEventListener("click", async () => {
-    const day = parseInt(document.getElementById("day").value, 10);
-    const month = parseInt(document.getElementById("month").value, 10);
-    const year = parseInt(document.getElementById("year").value, 10);
-
-    if (!day || !month || !year) {
+    const birthdayInput = document.getElementById("birthday").value;
+    if (!birthdayInput) {
       alert("Please enter a valid date.");
-      hideOverlay();
+      return;
+    }
+
+    const birthday = new Date(birthdayInput);
+    if (isNaN(birthday.getTime())) {
+      alert("Invalid date. Please enter a valid date.");
       return;
     }
 
@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
     showOverlay();
 
     setTimeout(async () => {
-      const birthday = new Date(year, month - 1, day);
       const lifePathNumber = calculateLifePathNumber(birthday);
 
       // Fetch life path description
@@ -59,52 +58,6 @@ document.addEventListener("DOMContentLoaded", () => {
   closeCalculateButton.addEventListener("click", () => {
     calculatePopupWrapper.style.display = "none";
   });
-
-  // Function to populate date inputs
-  function populateDateInputs() {
-    const daySelect = document.getElementById("day");
-    const monthSelect = document.getElementById("month");
-    const yearSelect = document.getElementById("year");
-
-    // Populate days
-    for (let i = 1; i <= 31; i++) {
-      const option = document.createElement("option");
-      option.value = i;
-      option.textContent = i;
-      daySelect.appendChild(option);
-    }
-
-    // Populate months
-    const months = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ];
-    months.forEach((month, index) => {
-      const option = document.createElement("option");
-      option.value = index + 1; // Month values are 1-based
-      option.textContent = month;
-      monthSelect.appendChild(option);
-    });
-
-    // Populate years
-    const currentYear = new Date().getFullYear();
-    for (let i = currentYear; i >= currentYear - 100; i--) {
-      const option = document.createElement("option");
-      option.value = i;
-      option.textContent = i;
-      yearSelect.appendChild(option);
-    }
-  }
 
   // Function to calculate life path number
   function calculateLifePathNumber(date) {
@@ -138,22 +91,22 @@ document.addEventListener("DOMContentLoaded", () => {
       if (description) {
         return description;
       } else {
-        return "Invalid Life Path Number.";
+        return { Error: "Invalid Life Path Number." };
       }
     } catch (error) {
       console.error("Error fetching life path descriptions:", error);
-      return "Error fetching life path descriptions.";
+      return { Error: "Error fetching life path descriptions." };
     }
   }
 
   // Show the overlay when calculating the life path number
   function showOverlay() {
-    document.getElementById("overlay").style.display = "block";
+    overlay.style.display = "block";
   }
 
   // Hide the overlay when the calculation is complete
   function hideOverlay() {
-    document.getElementById("overlay").style.display = "none";
+    overlay.style.display = "none";
   }
 });
 
