@@ -1,7 +1,3 @@
-/**
- * This file contains the js code for the webcam functionality in the palm reading application.
- * It handles the webcam video, instructions, camera access, and the heartbeat graph.
- */
 import { wait } from "../utils.js";
 import { handleFortune } from "./script.js";
 

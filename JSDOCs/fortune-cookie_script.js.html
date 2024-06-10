@@ -26,15 +26,7 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/**
- * This JavaScript module implements the core functionality of the fortune cookie page.
- * It includes the ability to display random fortunes, handle user interactions with various buttons, 
- * and animate elements for visual effects. The module manages speech synthesis to read out fortunes and 
-synchronizes animations with sound effects for breaking cookies and revealing fortunes. 
- * Functions are provided to handle animations, manage fortune retrieval without repetition, and reset the application state.
- * Dependencies: utility functions from "../utils.js" for timing and selection, and fortunes data from "./fortunes.js".
- */
-import { pick, timeoutId, wait } from "../utils.js";
+            <pre class="prettyprint source linenums"><code>import { pick, timeoutId, wait } from "../utils.js";
 import { fortunes } from "./fortunes.js";
 
 let previousFortune = "";
