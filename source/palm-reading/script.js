@@ -45,3 +45,23 @@ tabLabels.forEach(function (label) {
     selectedContent.hidden = false;
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const howToUseButton = document.getElementById("how-to-use");
+  const popup = document.getElementById("how-to-use-popup");
+  const closeButton = document.querySelector(".close");
+
+  howToUseButton.addEventListener("click", () => {
+    popup.style.display = "block";
+  });
+
+  closeButton.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+
+  window.addEventListener("click", (event) => {
+    if (event.target === popup) {
+      popup.style.display = "none";
+    }
+  });
+});
