@@ -13,7 +13,7 @@ body {
   justify-content: center;
 }
 
-/* used to style the settings section */
+/* used to style the feedback section */
 feedback-section {
   --margin-block-size: 0.625rem;
   text-align: center;
@@ -39,6 +39,7 @@ feedback-section {
   }
 }
 
+/* submit button styling*/
 #feedback-button {
   display: inline-block;
   margin-block: calc(2 * var(--margin-block-size));
