@@ -1,19 +1,19 @@
 :root {
-    --h1-size: 5rem;
-    --h2-size: 3.125rem;
-    --footer-padding: 1.25rem;
-  }
-  
-  /* used to set background image */
-  body {
-    background-image: url("../common/Images/Background.jpg");
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* used to style the settings section */
+  --h1-size: 5rem;
+  --h2-size: 3.125rem;
+  --footer-padding: 1.25rem;
+}
+
+/* used to set background image */
+body {
+  background-image: url("../common/Images/Background.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* used to style the settings section */
 feedback-section {
   --margin-block-size: 0.625rem;
   text-align: center;
