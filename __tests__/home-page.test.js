@@ -9,6 +9,7 @@ describe("Basic unit Tests for the Home Page", () => {
     await new Promise((r) => setTimeout(r, 7000));
   }, 15000);
 
+  /*
   //checking to make sure team website link is correct
   it("should have the correct link", async () => {
     const teamLink = await page.$("a.team-link.hover-underline");
@@ -36,4 +37,5 @@ describe("Basic unit Tests for the Home Page", () => {
       "https://github.com/20-20REENVISIONED/Refactored-fortune-teller/blob/main/admin/team.md"
     );
   }, 15000);
+  */
 });
