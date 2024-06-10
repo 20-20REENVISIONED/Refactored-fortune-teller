@@ -1,3 +1,16 @@
+/**
+ *
+ * This file contains the logic to manage and animate two interactive zodiac wheels.
+ * It enables users to select zodiac signs using draggable wheels to determine astrological compatibility.
+ * Features include pointer events for interaction, momentum physics for wheel rotation, and dynamic update of date
+ * ranges based on wheel positions. Additional functionality manages pop-ups displaying compatibility results and guides.
+ *
+ * - utils.js: delay mechanism
+ * - zodiac-angles.js:calculate angles and zodiac signs based on date ranges.
+ *
+ * - Adds interaction capabilities to the wheels and buttons.
+ * - Manages pop-up for displaying results and instructions.
+ */
 import { wait } from "../utils.js";
 import {
   angleDiff,

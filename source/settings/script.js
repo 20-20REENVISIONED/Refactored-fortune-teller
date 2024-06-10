@@ -1,3 +1,17 @@
+/**
+ * This script manages user preferences for the 'Settings' page.
+ * It controls two main user settings: global volume and language preference.
+ *
+ * The volume setting is retrieved from and stored to the local storage when adjusted,
+ * allowing the user's preference to persist across sessions. The volume control is
+ * implemented using an input range slider within the "volume-adjust-global" container.
+ *
+ * The language setting allows the user to select their preferred language from a dropdown menu,
+ * which is also saved to local storage for consistency across the application. Language changes
+ * are dynamically applied using the imported `setLang` function from "../common/setLang.js".
+ *
+ */
+
 import { setLang } from "../common/setLang.js";
 
 //Attach the global volume bar to match and change the associated preference

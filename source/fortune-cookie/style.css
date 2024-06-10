@@ -1,3 +1,12 @@
+/**
+ * This CSS stylesheet for fortune cookie app.
+ * It facilitates the layout of the main body and components using flexible box layouts, centers items vertically and horizontally, and ensures responsive design.
+ *  The stylesheet also styles interactive elements like buttons and dropdowns for an engaging user interface.
+ * Advanced animations are used to simulate the opening of fortune cookies and the revealing of messages.
+ * Thera are considerations for users with reduced motion preferences to accommodate accessibility needs.
+ * Dependencies: Background images and icons are loaded from external sources .
+ */
+
 body {
   display: flex;
   flex-direction: column;
