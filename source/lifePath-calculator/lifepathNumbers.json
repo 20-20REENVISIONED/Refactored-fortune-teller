@@ -1,0 +1,174 @@
+{
+  "1": {
+    "Personality Traits": "Individuals with Life Path 1 are known for their independence, ambition, and innovation. They naturally assume leadership roles and are pioneers in their fields. They possess a strong sense of individuality and a desire to achieve great things. Their determination and self-reliance make them excellent at starting new projects and blazing their own trail.",
+    "Challenges": "Their strong sense of independence can sometimes make it difficult for them to work in teams or accept help from others. They may also struggle with impatience and a tendency to be overly critical of themselves and others.",
+    "Recommended Careers": [
+      "Entrepreneurship",
+      "Leadership positions",
+      "Innovation-driven roles",
+      "Inventors",
+      "Pioneers in various fields"
+    ],
+    "Hobbies": ["Solo sports", "Creative writing", "Traveling to new places"],
+    "Relationship Preferences": "In relationships, Life Path 1 individuals seek partners who are equally independent and driven. They value loyalty and mutual respect. They thrive in relationships where there is room for both partners to pursue their individual goals.",
+    "Notable Figures": ["Barack Obama", "Martin Luther King Jr.", "Steve Jobs"]
+  },
+  "2": {
+    "Personality Traits": "Life Path 2 individuals are cooperative, diplomatic, and intuitive. They thrive in partnerships and prioritize harmony in relationships. Their empathetic nature and ability to see multiple perspectives make them excellent mediators and collaborators.",
+    "Challenges": "Their sensitivity can sometimes lead to being overly affected by others' opinions and emotions. They may also struggle with decision-making due to their desire to keep everyone happy.",
+    "Recommended Careers": [
+      "Mediation",
+      "Counseling",
+      "Diplomatic roles",
+      "Human resources",
+      "Customer service"
+    ],
+    "Hobbies": ["Listening to music", "Gardening", "Volunteering"],
+    "Relationship Preferences": "Life Path 2 individuals value harmony and cooperation in relationships. They seek partners who are supportive and understanding, and who can provide a sense of security and stability.",
+    "Notable Figures": ["Mahatma Gandhi", "Mother Teresa", "Oprah Winfrey"]
+  },
+  "3": {
+    "Personality Traits": "Creative, expressive, and sociable, Life Path 3 individuals are natural communicators and enjoy self-expression. They are often found in artistic and creative fields, where they can use their talents to inspire and entertain others.",
+    "Challenges": "They may struggle with maintaining focus and discipline, and their tendency to seek approval can lead to self-doubt. They can also be prone to mood swings and a lack of follow-through on projects.",
+    "Recommended Careers": [
+      "Artistry",
+      "Writing",
+      "Performing Arts",
+      "Public speaking",
+      "Marketing and advertising"
+    ],
+    "Hobbies": ["Painting", "Dancing", "Theater and drama"],
+    "Relationship Preferences": "Life Path 3 individuals are charming and outgoing in relationships. They value fun and spontaneity, and seek partners who can appreciate their creative spirit and zest for life.",
+    "Notable Figures": ["Jimi Hendrix", "J.K. Rowling", "Taylor Swift"]
+  },
+  "4": {
+    "Personality Traits": "Life Path 4 individuals are known for their practicality, hard work, and discipline. They are reliable and dedicated workers who value stability and order.",
+    "Challenges": "Their need for control and routine can sometimes make them inflexible and resistant to change. They may also struggle with work-life balance and taking time for relaxation.",
+    "Recommended Careers": [
+      "Engineering",
+      "Accounting",
+      "Construction",
+      "Project management",
+      "Finance"
+    ],
+    "Hobbies": ["Building and DIY projects", "Gardening", "Puzzles"],
+    "Relationship Preferences": "In relationships, Life Path 4 individuals value stability and commitment. They are loyal and trustworthy partners who seek long-term relationships built on mutual respect and shared goals.",
+    "Notable Figures": ["Abraham Lincoln", "Angelina Jolie", "Warren Buffett"]
+  },
+  "5": {
+    "Personality Traits": "Adventurous, versatile, and freedom-loving, Life Path 5 individuals are curious explorers who embrace change and seek new experiences.",
+    "Challenges": "Their restlessness can lead to a lack of commitment and difficulty in sticking to one path. They may also struggle with impulsiveness and a need for constant stimulation.",
+    "Recommended Careers": [
+      "Travel",
+      "Sales",
+      "Journalism",
+      "Public relations",
+      "Entertainment"
+    ],
+    "Hobbies": ["Traveling", "Extreme sports", "Learning new languages"],
+    "Relationship Preferences": "Life Path 5 individuals seek partners who share their sense of adventure and freedom. They value independence and spontaneity, and thrive in relationships that allow for growth and exploration.",
+    "Notable Figures": ["Thomas Edison", "Marilyn Monroe", "Stephen King"]
+  },
+  "6": {
+    "Personality Traits": "Nurturing, responsible, and compassionate, Life Path 6 individuals are caretakers who prioritize family and community. They have a strong sense of duty and are often involved in service to others.",
+    "Challenges": "Their selflessness can sometimes lead to neglecting their own needs and becoming overwhelmed by responsibilities. They may also struggle with being overly controlling or perfectionistic.",
+    "Recommended Careers": [
+      "Teaching",
+      "Nursing",
+      "Social Work",
+      "Counseling",
+      "Interior design"
+    ],
+    "Hobbies": ["Cooking", "Volunteering", "Crafts"],
+    "Relationship Preferences": "Life Path 6 individuals are loving and supportive partners who prioritize harmony and balance in relationships. They seek partners who share their values and are committed to building a stable, nurturing environment.",
+    "Notable Figures": ["Albert Einstein", "Mother Teresa", "Will Smith"]
+  },
+  "7": {
+    "Personality Traits": "Analytical, introspective, and spiritual, Life Path 7 individuals are seekers of truth and knowledge. They value solitude and are often drawn to philosophical and spiritual pursuits.",
+    "Challenges": "Their introspective nature can lead to isolation and difficulty in forming close relationships. They may also struggle with skepticism and a tendency to overanalyze.",
+    "Recommended Careers": [
+      "Research",
+      "Philosophy",
+      "Spirituality",
+      "Science",
+      "Psychology"
+    ],
+    "Hobbies": ["Reading", "Meditation", "Nature walks"],
+    "Relationship Preferences": "Life Path 7 individuals value deep connections and intellectual stimulation in relationships. They seek partners who share their spiritual and philosophical interests and who can appreciate their need for solitude.",
+    "Notable Figures": [
+      "Sir Isaac Newton",
+      "Albert Schweitzer",
+      "Ludwig van Beethoven"
+    ]
+  },
+  "8": {
+    "Personality Traits": "Ambitious, driven, and authoritative, Life Path 8 individuals are natural leaders and achievers. They have a strong sense of purpose and are often involved in business and finance.",
+    "Challenges": "Their focus on success and power can sometimes lead to workaholism and a lack of balance. They may also struggle with being overly controlling and a fear of failure.",
+    "Recommended Careers": [
+      "Corporate Leadership",
+      "Politics",
+      "Finance",
+      "Real estate",
+      "Law"
+    ],
+    "Hobbies": ["Investing", "Competitive sports", "Networking"],
+    "Relationship Preferences": "Life Path 8 individuals seek partners who are equally ambitious and driven. They value power and success in relationships and seek partners who can match their intensity and drive.",
+    "Notable Figures": ["Nelson Mandela", "Donald Trump", "Queen Elizabeth II"]
+  },
+  "9": {
+    "Personality Traits": "Compassionate, humanitarian, and idealistic, Life Path 9 individuals are altruistic and empathetic. They are driven by a desire to make the world a better place and are often involved in humanitarian efforts.",
+    "Challenges": "Their idealism can sometimes lead to disappointment and disillusionment. They may also struggle with boundaries and taking on too much responsibility for others.",
+    "Recommended Careers": [
+      "Humanitarian Work",
+      "Activism",
+      "Counseling",
+      "Arts",
+      "Teaching"
+    ],
+    "Hobbies": ["Volunteering", "Creative writing", "Yoga"],
+    "Relationship Preferences": "Life Path 9 individuals value deep emotional connections and selflessness in relationships. They seek partners who share their ideals and values and who are committed to making a positive impact in the world.",
+    "Notable Figures": ["Mother Teresa", "Mahatma Gandhi", "Elton John"]
+  },
+  "11": {
+    "Personality Traits": "Intuitive, inspirational, and visionary, Life Path 11 individuals are spiritual leaders and seekers of higher truths. They possess a deep understanding of the world and a desire to inspire others.",
+    "Challenges": "Their heightened sensitivity can lead to anxiety and emotional instability. They may also struggle with self-doubt and a fear of not living up to their potential.",
+    "Recommended Careers": [
+      "Spiritual Leadership",
+      "Teaching",
+      "Creative Arts",
+      "Healing professions",
+      "Writing"
+    ],
+    "Hobbies": ["Meditation", "Creative arts", "Spiritual studies"],
+    "Relationship Preferences": "Life Path 11 individuals seek partners who understand their spiritual journey and support their quest for enlightenment. They value deep, meaningful connections and mutual growth in relationships.",
+    "Notable Figures": ["Nelson Mandela", "Bill Clinton", "Prince William"]
+  },
+  "22": {
+    "Personality Traits": "Master builder, practical visionary, and achiever, Life Path 22 individuals are capable of manifesting big dreams into reality. They possess a unique combination of practicality and vision, making them powerful and effective leaders.",
+    "Challenges": "Their high expectations can sometimes lead to stress and frustration. They may also struggle with balancing their visionary goals with practical realities.",
+    "Recommended Careers": [
+      "Architecture",
+      "Engineering",
+      "Entrepreneurship",
+      "Politics",
+      "Large-scale project management"
+    ],
+    "Hobbies": ["Building models", "Strategic games", "Traveling"],
+    "Relationship Preferences": "Life Path 22 individuals seek partners who share their ambitious vision and drive for success. They value relationships that support their goals and provide stability and mutual respect.",
+    "Notable Figures": ["Walt Disney", "Bill Gates", "Sir Richard Branson"]
+  },
+  "33": {
+    "Personality Traits": "Master teacher, compassionate healer, and spiritual guide, Life Path 33 individuals are dedicated to serving humanity and uplifting others. They possess a deep sense of responsibility and a desire to make a significant impact on the world.",
+    "Challenges": "Their selflessness can sometimes lead to burnout and neglecting their own needs. They may also struggle with feeling overwhelmed by their responsibilities and expectations.",
+    "Recommended Careers": [
+      "Healing Arts",
+      "Teaching",
+      "Philanthropy",
+      "Spiritual counseling",
+      "Social work"
+    ],
+    "Hobbies": ["Meditation", "Volunteering", "Art and music therapy"],
+    "Relationship Preferences": "Life Path 33 individuals seek partners who are equally compassionate and dedicated to making a positive impact in the world. They value deep, meaningful connections and mutual support in relationships.",
+    "Notable Figures": ["Mahatma Gandhi", "Dalai Lama", "Deepak Chopra"]
+  }
+}
