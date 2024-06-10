@@ -9,6 +9,10 @@ function updateTexts() {
     const key = el.getAttribute("data-i18n");
     el.textContent = banana.i18n(key);
   });
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+    const key = el.getAttribute("data-i18n-placeholder");
+    el.placeholder = banana.i18n(key);
+  });
 }
 
 export function setLang(lang = "zh-hans") {
