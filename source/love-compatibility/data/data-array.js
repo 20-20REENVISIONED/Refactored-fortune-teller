@@ -1,5 +1,5 @@
 /**
- * @file contains data arrays related to love compatibility (zodiac wheel order, dates, and romantic pairing messages).
+ * data-arry: contains data arrays related to love compatibility (zodiac wheel order, dates, and romantic pairing messages).
  */
 
 /**
