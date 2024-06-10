@@ -161,7 +161,7 @@ class Wheel {
     this.#angle = angle;
     // Apply the rotation transform to the wheel element
     this.#elem.style.transform = `rotate(${this.#angle}deg)`;
-    this.#dateInput.value = this.#getDateRange();
+    this.#dateInput.value = window.i18n.i18n(this.#getDateRange());
   }
 
   /**
@@ -473,9 +473,14 @@ async function displayResults() {
   document.body.classList.add("remove-wheels");
 
   const pairingHeader = popup.querySelector("#pairing");
-  pairingHeader.textContent = left + " and " + right;
+  pairingHeader.textContent =
+    window.i18n.i18n(left) +
+    window.i18n.i18n("romantic-and") +
+    window.i18n.i18n(right);
   const pairingText = popup.querySelector("#pairing-text");
-  pairingText.innerHTML = textGenerator(left, right);
+  pairingText.textContent = window.i18n.i18n(
+    textGenerator(left.split("-")[1], right.split("-")[1])
+  );
 
   /**
    * Displays the popup with the pairing information after a delay.

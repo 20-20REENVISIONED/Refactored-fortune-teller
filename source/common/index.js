@@ -4,3 +4,7 @@
  */
 
 import "./nav.js";
+
+import "./create-preferences.js";
+import { setLang } from "./setLang.js";
+setLang(localStorage["language"]);

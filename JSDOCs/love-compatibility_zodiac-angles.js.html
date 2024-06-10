@@ -104,9 +104,9 @@ export function determinePairing(angleLeft, angleRight) {
  */
 export function textGenerator(leftSign, rightSign) {
   return (
-    romantic.get(`${leftSign} and ${rightSign}`) ??
-    romantic.get(`${rightSign} and ${leftSign}`) ??
-    "An error has occurred"
+    romantic.get(`romantic-${leftSign}-${rightSign}`) ??
+    romantic.get(`romantic-${rightSign}-${leftSign}`) ??
+    "error-occurred"
   );
 }
 

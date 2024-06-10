@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: common/nav.js</title>
+    <title>JSDoc: Source: common/create-preferences.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: common/nav.js</h1>
+    <h1 class="page-title">Source: common/create-preferences.js</h1>
 
     
 
@@ -26,115 +26,51 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>// @ts-check
-
-/**
- * @file Creates a navigation menu that gets added to all pages on the web app,
- * linking all pages with each other.
+            <pre class="prettyprint source linenums"><code>/**
+ * Defines what the preference keys and values are.
+ * @typedef {object} defaultPreferenceKeyValues
+ * @property {float} globalVolume - The globalVolume of all sounds in the web app.
+ * @property {string} language - The language to display the web app in.
  */
 
 /**
- * Defines an entry in the navigation menu.
- * @typedef {object} Link
- * @property {string} label - The text to show for the link.
- * @property {string} i18n - Label for data-i18n for translations.
- * @property {string} url - The URL of the page to link to.
- * @property {string} imageUrlBase - The URL base of the image icon to show next
- *  to the link text.
- * @property {string[]} imageFormats - The possible formats for the image icons.
- * This is just appended to the URL base to create valid references. Each string
- * must start with a "." and the array is ordered from highest priority to least
- * priority.
+ * An object that has as all the  preference keys and values.
+ * @type {defaultPreferenceKeyValues}
  */
+const defaultPreferenceKeyValues = {
+  globalVolume: 0.5,
+  language: "en",
+};
 
-/**
- * The list of entries in the navigation menu.
- * @type {Link[]}
- */
-const links = [
-  {
-    label: "Home",
-    i18n: "home",
-    url: "../home-page/",
-    imageUrlBase: "../common/icons/home",
-    imageFormats: [".svg"],
-  },
-  {
-    label: "Love Compatibility",
-    i18n: "love-compatibility",
-    url: "../love-compatibility/",
-    imageUrlBase: "../home-page/images/new-love-compatibility-img",
-    imageFormats: [".avif", ".webp", ".jpg"],
-  },
-  {
-    label: "Fortune Cookie",
-    i18n: "fortune-cookie",
-    url: "../fortune-cookie/",
-    imageUrlBase: "../home-page/images/new-fortune-cookie-img",
-    imageFormats: [".avif", ".webp", ".jpg"],
-  },
-  {
-    label: "Palm Reading",
-    i18n: "palm-reading",
-    url: "../palm-reading/",
-    imageUrlBase: "../home-page/images/new-palm-reading-img",
-    imageFormats: [".avif", ".webp", ".jpg"],
-  },
-  {
-    label: "Settings",
-    url: "../settings/",
-    i18n: "settings",
-    imageUrlBase: "../common/icons/settings-img",
-    imageFormats: [".svg"],
-  },
-];
+if (localStorage.length != Object.entries(defaultPreferenceKeyValues).length) {
+  localStorage.clear();
+  for (const [key, value] of Object.entries(defaultPreferenceKeyValues)) {
+    console.log(key);
+    localStorage[key] = value;
+    if (key == "language") {
+      let langauge = navigator.language.split("-")[0];
 
-/**
- * The created `&lt;nav>` element that gets prepended to `&lt;body>` containing the
- * navigation menu.
- * @type {HTMLElement}
- */
-const nav = document.createElement("nav");
-nav.className = "site-nav";
+      //Decision logic to decide to use traditional or simplifed Chinese.
+      if (langauge == "zh") {
+        //Use Simplified characters by default
+        let characterStyle = "hans";
 
-/**
- * The menu icon, which is a focusable element to allow the menu contents to be
- * tab accessible.
- * @type {HTMLAnchorElement}
- */
-const menuButton = document.createElement("a");
-menuButton.className = "site-nav-menu-icon";
-menuButton.tabIndex = 0;
-nav.append(menuButton);
+        //If navigator.language specifies traditional characters, or if it
+        //specifies Chinese as used in Hong Kong, Macau or Taiwan, use traditional.
+        navigator.language
+          .split("-")
+          .map((e) => e.toLowerCase())
+          .forEach((e) => {
+            if (["hant", "hk", "mo", "tw"].includes(e)) {
+              characterStyle = "hant";
+            }
+          });
 
-for (const { label, i18n, imageUrlBase, url, imageFormats } of links) {
-  const link = document.createElement("a");
-  link.className = "site-nav-link";
-  link.href = url;
-  nav.append(link);
-
-  const picture = document.createElement("picture");
-
-  const image = document.createElement("img");
-  image.className = "site-nav-image";
-  image.src = imageUrlBase + imageFormats.pop();
-
-  for (const format of imageFormats) {
-    const source = document.createElement("source");
-    source.srcset = imageUrlBase + format;
-    picture.append(source);
+        localStorage[key] = langauge + "-" + characterStyle;
+      }
+    }
   }
-
-  picture.append(image);
-
-  const text = document.createElement("div");
-  text.setAttribute("data-i18n", i18n);
-  text.append(label);
-
-  link.append(picture, text);
 }
-
-document.body.prepend(nav);
 </code></pre>
         </article>
     </section>

@@ -4,10 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Palm Reading | Envision Your Destiny</title>
+    <title data-i18n="palm-reading-title">
+      Palm Reading | Envision Your Destiny
+    </title>
     <meta
       name="description"
       content="Capture your heartbeat with your webcam to decode the hidden messages in your hands to create a brighter future."
+      data-i18n="palm-reading-description"
     />
     <meta name="theme-color" content="#f1c86c" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,7 +35,7 @@
 
     <div class="camera-frame">
       <div class="webcam-wrapper" id="webcam-wrapper">
-        <h1 class="title">Palm Reading</h1>
+        <h1 class="title" data-i18n="palm-reading">Palm Reading</h1>
         <canvas
           id="result-palm"
           width="1"
@@ -48,8 +51,12 @@
           playsinline
         ></video>
         <div class="request-webcam-wrapper stretch-box">
-          <button id="request-webcam" class="button">Begin</button>
-          <p>Enable your camera to permit analysis.</p>
+          <button id="request-webcam" class="button" data-i18n="begin-button">
+            Begin
+          </button>
+          <p data-i18n="enable-camera">
+            Enable your camera to permit analysis.
+          </p>
         </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -59,13 +66,19 @@
         >
           <path id="ecg-path" d="M 0 0 h 20 l 2 20 l 2 -40 l 2 20 h 20" />
         </svg>
-        <button class="button" id="read-another-hand">Read Another Hand</button>
+        <button
+          class="button"
+          id="read-another-hand"
+          data-i18n="read-another-hand-button"
+        >
+          Read Another Hand
+        </button>
       </div>
     </div>
 
     <div id="results-frame-anchor">
       <div id="results-frame">
-        <h2 id="results-title">Results</h2>
+        <h2 id="results-title" data-i18n="results-title">Results</h2>
         <picture>
           <source srcset="images/palm-reading.avif" type="image/avif" />
           <source srcset="images/webp.avif" type="image/webp" />
@@ -73,36 +86,37 @@
             id="palm-guide"
             class="align-div"
             src="images/palm-reading.PNG"
+            data-i18n="palm-guide-alt"
           />
         </picture>
         <div class="tabs-wrapper">
           <div class="tabs">
             <label class="tab" style="--color: #f7ac80">
               <input type="radio" name="tab" value="head" checked />
-              <span class="tab-label">Head</span>
+              <span class="tab-label" data-i18n="head-tab-label">Head</span>
             </label>
             <label class="tab" style="--color: #ee6ea7">
               <input type="radio" name="tab" value="heart" />
-              <span class="tab-label">Heart</span>
+              <span class="tab-label" data-i18n="heart-tab-label">Heart</span>
             </label>
             <label class="tab" style="--color: #89cba0">
               <input type="radio" name="tab" value="life" />
-              <span class="tab-label">Life</span>
+              <span class="tab-label" data-i18n="life-tab-label">Life</span>
             </label>
             <label class="tab" style="--color: #8293c9">
               <input type="radio" name="tab" value="fate" />
-              <span class="tab-label">Fate</span>
+              <span class="tab-label" data-i18n="fate-tab-label">Fate</span>
             </label>
             <label class="tab" style="--color: #fef898">
               <input type="radio" name="tab" value="sun" />
-              <span class="tab-label">Sun</span>
+              <span class="tab-label" data-i18n="sun-tab-label">Sun</span>
             </label>
           </div>
         </div>
         <div class="content-wrapper">
           <div class="tab-content" id="head-tab" style="--color: #f7ac80">
-            <h3>Head Line</h3>
-            <p>
+            <h3 data-i18n="head-line-title">Head Line</h3>
+            <p data-i18n="head-line-description">
               A head line is said to represent a person's intellectual qualities
               and how they approach life. It can provide insight into how a
               person forms ideas, processes information and makes decisions. In
@@ -118,8 +132,8 @@
             id="heart-tab"
             style="--color: #ee6ea7"
           >
-            <h3>Heart Line</h3>
-            <p>
+            <h3 data-i18n="heart-line-title">Heart Line</h3>
+            <p data-i18n="heart-line-description">
               A heart line, according to palmistry, is believed to signify a
               person's emotional nature and their approach to matters of the
               heart. It offers valuable insights into how an individual
@@ -133,8 +147,8 @@
             id="life-tab"
             style="--color: #89cba0"
           >
-            <h3>Life Line</h3>
-            <p>
+            <h3 data-i18n="life-line-title">Life Line</h3>
+            <p data-i18n="life-line-description">
               A life line is one of the major lines analyzed to gain insight
               into a person's overall well-being and vitality. It is also known
               as the "vitality line" or "earth line." Contrary to popular
@@ -149,8 +163,8 @@
             id="fate-tab"
             style="--color: #8293c9"
           >
-            <h3>Fate Line</h3>
-            <p>
+            <h3 data-i18n="fate-line-title">Fate Line</h3>
+            <p data-i18n="fate-line-description">
               A fate line, also known as the "career line" or "line of destiny,"
               is a major line that is believed to provide insights into a
               person's career, achievements, and overall life path. The fate
@@ -159,8 +173,8 @@
             </p>
           </div>
           <div hidden class="tab-content" id="sun-tab" style="--color: #fef898">
-            <h3>Sun Line</h3>
-            <p>
+            <h3 data-i18n="sun-line-title">Sun Line</h3>
+            <p data-i18n="sun-line-description">
               A sun line, also known as the "Apollo line" or "line of success,"
               is a vertical line that is believed to reveal insights about a
               person's success, fame, and reputation. The sun line is not

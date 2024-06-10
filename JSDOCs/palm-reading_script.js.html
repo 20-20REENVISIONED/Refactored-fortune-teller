@@ -44,12 +44,16 @@ export function handleFortune() {
   let fateResult = fates[fateIndex];
   let sunResult = suns[sunIndex];
 
-  document.getElementById("head-tab").querySelector("p").innerText = headResult;
+  document.getElementById("head-tab").querySelector("p").innerText =
+    window.i18n.i18n(headResult);
   document.getElementById("heart-tab").querySelector("p").innerText =
-    heartResult;
-  document.getElementById("life-tab").querySelector("p").innerText = lifeResult;
-  document.getElementById("fate-tab").querySelector("p").innerText = fateResult;
-  document.getElementById("sun-tab").querySelector("p").innerText = sunResult;
+    window.i18n.i18n(heartResult);
+  document.getElementById("life-tab").querySelector("p").innerText =
+    window.i18n.i18n(lifeResult);
+  document.getElementById("fate-tab").querySelector("p").innerText =
+    window.i18n.i18n(fateResult);
+  document.getElementById("sun-tab").querySelector("p").innerText =
+    window.i18n.i18n(sunResult);
 }
 
 /**
