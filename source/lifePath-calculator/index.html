@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Life Path Number Calculator | Envision Your Destiny</title>
+    <title data-i18n="life-path-title">
+      Life Path Number Calculator | Envision Your Destiny
+    </title>
     <!-- CSS -->
     <link rel="stylesheet" href="../common/styles.css" />
     <link rel="stylesheet" href="styles.css" />
@@ -19,18 +21,27 @@
     <!-- JavaScript Disabled Popup -->
     <noscript>
       <popup-widget>
-        <h2>JavaScript is disabled</h2>
-        <p>Please enable JavaScript to ensure the app will work properly.</p>
+        <h2 data-i18n="js-disabled-title">JavaScript is disabled</h2>
+        <p data-i18n="js-disabled-text">
+          Please enable JavaScript to ensure the app will work properly.
+        </p>
       </popup-widget>
     </noscript>
 
     <div class="container">
       <!-- Header -->
       <header>
-        <h1 class="title">Life Path Number Calculator</h1>
+        <h1 class="title" data-i18n="life-path-header-title">
+          Life Path Number Calculator
+        </h1>
         <div id="guide">
           <!-- "How to Use" Button -->
-          <button class="button" id="how-to" aria-label="How to Use">
+          <button
+            class="button"
+            id="how-to"
+            aria-label="How to Use"
+            data-i18n="button-how-to"
+          >
             How to Use
           </button>
           <!-- "Life Path Summary" Button -->
@@ -38,6 +49,7 @@
             class="button"
             id="life-path-summary"
             aria-label="Life Path Summary"
+            data-i18n="button-life-path-summary"
           >
             Life Path Summary
           </button>
@@ -46,14 +58,21 @@
       <!-- Birthday Input Form -->
       <div class="bday-input" id="birthday-input">
         <form id="life-path-form">
-          <label for="birthday" id="birthday-label">YOUR DATE OF BIRTH:</label>
+          <label for="birthday" id="birthday-label" data-i18n="label-birthday"
+            >YOUR DATE OF BIRTH:</label
+          >
           <br />
           <input type="date" id="birthday" aria-label="Birthday" />
         </form>
       </div>
       <!-- Calculate Button -->
       <div class="middle">
-        <button class="button" id="calculate" aria-label="Calculate">
+        <button
+          class="button"
+          id="calculate"
+          aria-label="Calculate"
+          data-i18n="button-calculate"
+        >
           Calculate
         </button>
       </div>
@@ -79,9 +98,11 @@
               </picture>
             </button>
             <!-- Content for Calculate Popup -->
-            <h2 id="calculate-title">Your Life Path Number is:</h2>
+            <h2 id="calculate-title" data-i18n="calculate-title">
+              Your Life Path Number is:
+            </h2>
             <div id="calculate-number" class="calculate-number"></div>
-            <p id="life-path-description">
+            <p id="life-path-description" data-i18n="life-path-description">
               Description of the Life Path Number will be displayed here.
             </p>
           </div>
@@ -112,14 +133,18 @@
             </picture>
           </button>
           <!-- Content for "How to Use" Popup -->
-          <h2 id="pairing">How to Use</h2>
-          <p>
+          <h2 id="pairing" data-i18n="how-to-title">How to Use</h2>
+          <p data-i18n="how-to-welcome">
             Welcome to the Life Path Number Calculator! Here's how to use it:
           </p>
           <ol>
-            <li>Enter your date of birth in the provided fields.</li>
-            <li>Click the "Calculate" button to get your Life Path Number.</li>
-            <li>
+            <li data-i18n="how-to-step1">
+              Enter your date of birth in the provided fields.
+            </li>
+            <li data-i18n="how-to-step2">
+              Click the "Calculate" button to get your Life Path Number.
+            </li>
+            <li data-i18n="how-to-step3">
               Read the description to learn about your Life Path Number's
               significance.
             </li>
@@ -146,52 +171,56 @@
             </picture>
           </button>
           <!-- Content for "Life Path Summary" Popup -->
-          <h2 id="summary-title">Life Path Number Calculation Summary</h2>
-          <p>
+          <h2 id="summary-title" data-i18n="summary-title">
+            Life Path Number Calculation Summary
+          </h2>
+          <p data-i18n="summary-intro">
             The Life Path Number calculation is a method used in numerology to
             determine a single-digit number (from 1 to 9, or the master numbers
             11, 22, and sometimes 33) that represents a person's core
             personality and life path.
           </p>
-          <p>
+          <p data-i18n="summary-derived">
             It is derived from the person's birth date and involves the
             following steps:
           </p>
           <ol>
-            <li>
+            <li data-i18n="summary-step1">
               <strong>Break Down the Birth Date:</strong> Separate the birth
               date into day, month, and year components.
             </li>
-            <li>
+            <li data-i18n="summary-step2">
               <strong>Reduce Each Component to a Single Digit:</strong> Sum the
               digits of each component to obtain single-digit numbers.
             </li>
-            <li>
+            <li data-i18n="summary-step3">
               <strong>Sum the Reduced Components:</strong> Add the reduced day,
               month, and year components together.
             </li>
-            <li>
+            <li data-i18n="summary-step4">
               <strong>Reduce the Sum to a Single Digit:</strong> Continue
               reducing the sum until you get a single digit or a master number.
             </li>
           </ol>
-          <p>
+          <p data-i18n="summary-result">
             The final result is the Life Path Number, which provides insights
             into the individual's personality and life path.
           </p>
           <!-- High-level description of life path number -->
-          <h3>Life Path Background and Context</h3>
-          <p>
+          <h3 data-i18n="summary-background-title">
+            Life Path Background and Context
+          </h3>
+          <p data-i18n="summary-background1">
             Your Life Path Number is one of the most important numbers in
             numerology. It represents the essence of who you are and the path
             you will take in life.
           </p>
-          <p>
+          <p data-i18n="summary-background2">
             Derived from your birth date, your Life Path Number reveals your
             natural talents, strengths, and challenges. It provides insights
             into your personality, relationships, and life purpose.
           </p>
-          <p>
+          <p data-i18n="summary-background3">
             Understanding your Life Path Number can help you make better
             decisions, navigate challenges, and live a more fulfilling life.
           </p>
