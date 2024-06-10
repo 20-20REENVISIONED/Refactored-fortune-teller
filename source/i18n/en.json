@@ -10,6 +10,7 @@
   "volume-adjust": "Volume Adjust",
   "language-selector": "Language Selector",
   "submit-feedback": "Got Feedback?",
+  "feedback-goto": "Got Feedback?",
   "love-compatibility": "Love Compatibility",
   "homepage-title": "Envision Your Destiny",
   "homepage-body-title": "Envision Your Destiny",
@@ -352,5 +353,8 @@
   "description-romantic-aquarius-aquarius": "When two Aquarius individuals come together in a romantic relationship, they form a unique and intellectually stimulating bond. Both partners value their individuality, freedom, and intellectual pursuits. They are drawn to each other's innovative ideas, unconventional thinking, and progressive outlook on life. Aquarius partners have a deep desire to make a difference in the world and often share common interests in humanitarian causes or social justice. They enjoy engaging in deep conversations, exchanging ideas, and exploring new concepts together. However, their independent nature and need for personal freedom can sometimes create a sense of detachment or emotional distance in the relationship. It's important for Aquarius partners to establish open lines of communication, express their emotions, and make an effort to connect on an emotional level. When they combine their intellectual compatibility, shared values, and respect for individuality, Aquarius partners can create a unique and intellectually fulfilling romantic partnership.",
   "description-romantic-pisces-pisces": "When two Pisces individuals come together in a romantic relationship, they create a deep and emotionally rich connection. Both partners have a sensitive and compassionate nature, making them highly attuned to each other's emotional needs. They understand and empathize with each other's emotions, creating a safe and nurturing space for love to flourish. Pisces partners share a strong spiritual and intuitive connection, often feeling like they can understand each other on a profound level without the need for words. They enjoy creating a romantic and dreamy atmosphere, filled with love, romance, and imaginative gestures. However, their deep emotional sensitivity can sometimes lead to emotional intensity or mood swings within the relationship. It's important for Pisces partners to practice effective communication, establish healthy boundaries, and support each other's emotional well-being. When they embrace their shared empathy, emotional depth, and spiritual connection, Pisces partners can create a truly magical and soulful romantic bond.",
   "romantic-and": " and ",
-  "error-occurred": "An error has occurred"
+  "error-occurred": "An error has occurred",
+  "feedback-title": "We want to hear from you",
+  "your-feedback": "Your Feedback",
+  "feedback-clear": "Clear Textbox"
 }

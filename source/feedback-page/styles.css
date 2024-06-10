@@ -18,6 +18,10 @@ feedback-section {
   --margin-block-size: 0.625rem;
   text-align: center;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   * {
     margin-block: var(--margin-block-size);
