@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Hide the loading overlay after calculation is complete
       hideOverlay();
-    }, 5000); // 5-second delay
+    }, 0); // 5-second delay
   });
 
   closeCalculateButton.addEventListener("click", () => {
