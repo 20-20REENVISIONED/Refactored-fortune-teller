@@ -1,9 +1,3 @@
-/**
- * This file contains the JavaScript code for the home page of the fortune teller application.
- * It includes functions for handling randomization of card containers, animating card containers,
- * and resetting animations and styles when the page is loaded from the browser cache.
- * dependencies: gsap, utils.js
- */
 import { pick } from "../utils.js";
 
 /**

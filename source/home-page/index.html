@@ -1,7 +1,3 @@
-<!-- index.html:
-  This HTML file for thehome page, which requires Javascript.
-  Utilizes external stylesheets for layout and design, and JavaScript for interactive functionalities.
--->
 <!DOCTYPE html>
 <html>
   <head>
@@ -73,16 +69,28 @@
               </span>
             </span>
           </a>
+          <!-- New Card Container Added Here -->
+          <a href="../lifePath-calculator/" class="card-container card">
+            <picture>
+              <source srcset="images/lifepath.avif" type="image/avif" />
+              <source srcset="images/lifepath.webp" type="image/webp" />
+              <img src="images/lifepath.JPG" alt="LifePath Card" />
+            </picture>
+            <span class="description">
+              <strong data-i18n="life-path">Life Path Number</strong>
+              <span data-i18n="life-path-description"
+                >Discover your unique life path number to gain profound clarity
+                and inspiration for your future endeavors.</span
+              >
+            </span>
+          </a>
           <a href="../fortune-cookie/" class="card-container card">
             <picture>
               <source
                 srcset="images/new-fortune-cookie-img.avif"
                 type="image/avif"
               />
-              <source
-                srcset="images/new-fortune-cookie-img.webp"
-                type="image/webp"
-              />
+              <source srcset="images/new-fortune-cookie-img.webp" />
               <img
                 src="images/new-fortune-cookie-img.jpg"
                 alt="Fortune Cookie Card"
@@ -127,7 +135,11 @@
         <h2 data-i18n="cant-decide-title">Can't decide?</h2>
         <p data-i18n="cant-decide-description">Your destiny is in our hands.</p>
       </div>
-      <button class="randomize-button button" data-i18n="randomize-button">
+      <button
+        class="randomize-button button"
+        aria-label="Randomize your choice"
+        data-i18n="randomize-button"
+      >
         Randomize
       </button>
     </div>
