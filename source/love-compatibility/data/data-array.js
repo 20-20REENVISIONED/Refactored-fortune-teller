@@ -1,8 +1,4 @@
 /**
- * @file contains data arrays related to love compatibility (zodiac wheel order, dates, and romantic pairing messages).
- */
-
-/**
  * The order of the zodiacs along a wheel.
  * @type {string[]}
  */
