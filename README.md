@@ -1,6 +1,6 @@
 # Envision Your Destiny
 
-Improving the student experience by alleviating decision-making anxiety. Brought to you by [20/20 Visionaries](./admin/team.md) (CSE 110 SP23 Team 20).
+Improving the student experience by alleviating decision-making anxiety. Brought to you by [20/20 Visionaries](./admin/team.md) (CSE 112 SP24 Team 14).
 
 [![Try it out button](./docs/images/try-button.svg)](https://20-20reenvisioned.github.io/Refactored-fortune-teller/source/home-page/)
 [![Documentation button](./docs/images/docs-button.svg)](https://20-20reenvisioned.github.io/Refactored-fortune-teller/JSDOCs/)

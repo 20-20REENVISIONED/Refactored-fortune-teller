@@ -39,6 +39,13 @@ const links = [
     imageFormats: [".avif", ".webp", ".jpg"],
   },
   {
+    label: "Life Path Number",
+    url: "../lifePath-calculator/",
+    i18n: "life-path",
+    imageUrlBase: "../home-page/images/lifepath",
+    imageFormats: [".avif", ".webp", ".JPG"],
+  },
+  {
     label: "Fortune Cookie",
     i18n: "fortune-cookie",
     url: "../fortune-cookie/",
