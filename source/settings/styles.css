@@ -1,3 +1,13 @@
+/**
+ * This CSS stylesheet tailored for the 'Settings' page
+ * It defines global styles, particularly focusing on the visual presentation of various
+ * settings-related elements such as volume controls, language selection, and feedback submission.
+ * 
+ * The root selector defines custom properties for repeated values like font sizes and padding,
+ * ensuring consistency and ease of maintenance. The body is styled to center its contents and
+ * uses a background image from relative path.
+ */
+
 :root {
   --h1-size: 5rem;
   --h2-size: 3.125rem;
