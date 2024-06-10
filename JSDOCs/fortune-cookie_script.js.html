@@ -40,6 +40,7 @@ const cookieLeft = document.getElementById("fortune-image-left");
 const background = document.getElementById("background");
 const resetButton = document.getElementById("reset-button");
 const cancelButton = document.getElementById("cancel-animation-btn");
+const howTo = document.getElementById("how-to");
 
 let hasEnabledVoice = false;
 
@@ -51,6 +52,31 @@ document.addEventListener("click", () => {
   lecture.volume = 0;
   speechSynthesis.speak(lecture);
   hasEnabledVoice = true;
+});
+
+// Pop-up element and close button
+const popup = document.getElementById("popup");
+const closePopup = document.getElementById("close-popup");
+
+// Function to open the pop-up
+function openPopup() {
+  popup.style.display = "block";
+}
+
+// Function to close the pop-up
+closePopup.onclick = function() {
+  popup.style.display = "none";
+}
+
+// Close the pop-up when clicking outside of it
+window.onclick = function(event) {
+  if (event.target == popup) {
+    popup.style.display = "none";
+  }
+}
+
+howTo.addEventListener("click", () => {
+  openPopup(); //help.parentElement.classList.add("open");
 });
 
 /**
