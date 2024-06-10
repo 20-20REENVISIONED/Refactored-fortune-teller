@@ -172,12 +172,12 @@ li.audio-dropdown {
 }
 
 .button {
-  position: absolute;
-  top: 100%;
+  top: -10px;
   margin-top: 20px;
 }
+
 .button:disabled {
-  opacity: 0;
+  display: none;
   pointer-events: none;
 }
 
