@@ -1,4 +1,5 @@
 /**
+ *
  * The order of the zodiacs along a wheel.
  * @type {string[]}
  */
