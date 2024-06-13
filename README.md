@@ -4,6 +4,8 @@ Improving the student experience by alleviating decision-making anxiety (with ad
 
 Private Video for CSE 112 - Team 14: [link](https://drive.google.com/file/d/16b8gC8yYVQiifbqy8-_sZ34zOlvSjXI4/view?usp=sharing)
 
+Public Video for CSE 112 - Team 14: [link](https://www.youtube.com/watch?v=nN0XetPUZ78)
+
 Adapted from [20/20 Visionaries](./admin/team.md).
 
 [![Try it out button](./docs/images/try-button.svg)](https://20-20reenvisioned.github.io/Refactored-fortune-teller/source/home-page/)
