@@ -26,7 +26,7 @@ N/A
   - Task: JS docs.
   - Task: CI/CD pipeline and latency.
 - Dony: ⅖ tasks = 0.4 velocity
-  - Task: 
+  - Task:
 - JD: 2/4 hours = 0.5 velocity
   - Task: Adding background music to the app.
 
@@ -66,6 +66,7 @@ M: Medium
 L: Low
 
 ### 🕜 Backlog
+
 - [L] Setup of a CI/CD pipeline that automatically flattens HTML, CSS, and JavaScript files into one HTML file to reduce ping-ponging (latency). Maybe use something like [this](https://github.com/remy/inliner).
 - [L/M] {uncertainty: high} Add a fortune-telling feature that uses ChatGPT to generate a response for the user & implement/configure a backend for managing ChatGPT calls [#8](https://github.com/20-20REENVISIONED/Refactored-fortune-teller/issues/8).
 - [L] Fix skip animation button is intermittently broken. Occurs when opening cookie several times (potentially asynchronous call issue; reproduce by adding timeout calls to experiment with different event ordering). Fix skipping animation in Fortune Cookie also means the text-to-speech is skipped.
@@ -75,6 +76,7 @@ L: Low
 - [L — leave for later] Some text does not meet WCAG standards for accessible text.
 
 ### ➡️ In-Progress
+
 - [H — first step] Improve the documentation: [#1](https://github.com/20-20REENVISIONED/Refactored-fortune-teller/issues/1). Open door in README (incl. class/code diagrams — tool: PlantUML), file headers, CI/CD pipeline.
 - [H/M] Fix the open cookie button not being visible on an iPhone SE3 if it's in landscape [#3](https://github.com/20-20REENVISIONED/Refactored-fortune-teller/issues/3). May be a flexbox-related issue.
 - [M] {uncertainty: low} Make site installable as a [Progressive Web App](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) with offline access [#4](https://github.com/20-20REENVISIONED/Refactored-fortune-teller/issues/4).
@@ -90,5 +92,6 @@ L: Low
   - Reference user’s font settings/Increase font size.
 
 ### ✅ Done
+
 - [L] {uncertainty: high} Add the opening animation (CSS animation?) [#10](https://github.com/20-20REENVISIONED/Refactored-fortune-teller/issues/10).
 - [H, Easy] Notify users with JavaScript off that the site will not work (Probably a `<noscript>` tag). [#2](https://github.com/20-20REENVISIONED/Refactored-fortune-teller/issues/2).

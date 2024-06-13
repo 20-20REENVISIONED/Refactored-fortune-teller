@@ -22,20 +22,20 @@
   - Task: Looking for tasks to help on.
   - Task: Going to either help with settings page or anything else that needs to be done.
   - Task: Maybe share on social media feature?
-- Holden: __ hours = {velocity}
+- Holden: \_\_ hours = {velocity}
   - Task: Optimizations.
   - Task: Did some ad-hoc testing with throttling and found website is generally performant enough.
   - Task: Wrote minal questions + compiled final draft.
-- Bill: __ hours = {velocity}
-  - Task: 
-- Joseph: __ hours = {velocity}
-  - Task: 
+- Bill: \_\_ hours = {velocity}
+  - Task:
+- Joseph: \_\_ hours = {velocity}
+  - Task:
 - Emily: 3-4 hours = 0.7 velocity
   - Task: Minal questions.
   - Task: File headers/doc.
   - Task: Clarify messages.
-- Dony: __ hours = {velocity}
-  - Task: 
+- Dony: \_\_ hours = {velocity}
+  - Task:
 - JD: 3/4 hours = 0.75 velocity
   - Task: Worked on the minal questions.
 
@@ -75,6 +75,7 @@ M: Medium
 L: Low
 
 ### 🕜 Backlog
+
 - [L] Setup of a CI/CD pipeline that automatically flattens HTML, CSS, and JavaScript files into one HTML file to reduce ping-ponging (latency). Maybe use something like [this](https://github.com/remy/inliner).
 - [L/M] {uncertainty: high} Add a fortune-telling feature that uses ChatGPT to generate a response for the user & implement/configure a backend for managing ChatGPT calls [#8](https://github.com/20-20REENVISIONED/Refactored-fortune-teller/issues/8).
 - [L] Fix poor practices in HTML (use of `<div>` over `<section>`, no usage of `<picture>`, just `<img>`, background PNG -> WEBPs, JPGs).
@@ -82,6 +83,7 @@ L: Low
 - [L — leave for later] Some text does not meet WCAG standards for accessible text.
 
 ### ➡️ In-Progress
+
 - [H — first step] Improve the documentation: [#1](https://github.com/20-20REENVISIONED/Refactored-fortune-teller/issues/1). Open door in README (incl. class/code diagrams — tool: PlantUML), file headers, CI/CD pipeline.
 - [H/M] Fix the open cookie button not being visible on an iPhone SE3 if it's in landscape [#3](https://github.com/20-20REENVISIONED/Refactored-fortune-teller/issues/3). May be a flexbox-related issue.
 - [M] {uncertainty: low} Make site installable as a [Progressive Web App](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) with offline access [#4](https://github.com/20-20REENVISIONED/Refactored-fortune-teller/issues/4).
@@ -99,5 +101,6 @@ L: Low
   - Reference user’s font settings/Increase font size.
 
 ### ✅ Done
+
 - [L] {uncertainty: high} Add the opening animation (CSS animation?) [#10](https://github.com/20-20REENVISIONED/Refactored-fortune-teller/issues/10).
 - [H, Easy] Notify users with JavaScript off that the site will not work (Probably a `<noscript>` tag). [#2](https://github.com/20-20REENVISIONED/Refactored-fortune-teller/issues/2).
