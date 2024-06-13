@@ -1,6 +1,6 @@
 # Envision Your Destiny
 
-Improving the student experience by alleviating decision-making anxiety (with added features). New and improved from 20-20 Re-Envisioned! (CSE 112 SP24 Team 14)!
+Improving the student experience by alleviating decision-making anxiety (with added features). New and improved from 20-20 Re-Envisioned! (CSE 112 SP24 Team 14)
 
 Adapted from [20/20 Visionaries](./admin/team.md).
 
