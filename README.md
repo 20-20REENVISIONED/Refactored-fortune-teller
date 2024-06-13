@@ -3,6 +3,7 @@
 Improving the student experience by alleviating decision-making anxiety (with added features). New and improved from 20-20 Re-Envisioned! (CSE 112 SP24 Team 14)
 
 Private Video for CSE 112 - Team 14: [link](https://drive.google.com/file/d/16b8gC8yYVQiifbqy8-_sZ34zOlvSjXI4/view?usp=sharing)
+
 Adapted from [20/20 Visionaries](./admin/team.md).
 
 [![Try it out button](./docs/images/try-button.svg)](https://20-20reenvisioned.github.io/Refactored-fortune-teller/source/home-page/)
